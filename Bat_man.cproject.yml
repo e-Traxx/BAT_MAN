@@ -1,0 +1,73 @@
+project:
+  packs:
+    - pack: Keil::STM32F7xx_DFP@2.16.0
+    - pack: ARM::CMSIS@6.1.0
+    - pack: ARM::CMSIS-NN@6.0.0
+    - pack: ARM::CMSIS-DSP@1.16.2
+  setups:
+    - setup: Options for Target_1
+      processor:
+        fpu: dp
+      debug: "on"
+      misc:
+        - C:
+            - -std=c99
+          C-CPP:
+            - -fno-rtti
+            - -funsigned-char
+            - -fshort-enums
+            - -fshort-wchar
+            - -ffunction-sections
+            - -Wall
+            - -Wextra
+            - -Wno-packed
+            - -Wno-reserved-id-macro
+            - -Wno-unused-macros
+            - -Wno-documentation-unknown-command
+            - -Wno-documentation
+            - -Wno-license-management
+            - -Wno-parentheses-equality
+          CPP:
+            - -xc++
+            - -std=c++11
+          ASM:
+            - -masm=auto
+          Link:
+            - --map
+            - --load_addr_map_info
+            - --xref
+            - --callgraph
+            - --symbols
+            - --info sizes
+            - --info totals
+            - --info unused
+            - --info veneers
+            - --strict
+            - --summary_stderr
+            - --info summarysizes
+  components:
+    - component: ARM::CMSIS:CORE
+    - component: Keil::Device:STM32Cube Framework:STM32CubeMX
+    - component: Keil::Device:STM32Cube HAL:CAN
+    - component: Keil::Device:STM32Cube HAL:Common
+    - component: Keil::Device:STM32Cube HAL:Cortex
+    - component: Keil::Device:STM32Cube HAL:DMA
+    - component: Keil::Device:STM32Cube HAL:ETH
+    - component: Keil::Device:STM32Cube HAL:GPIO
+    - component: Keil::Device:STM32Cube HAL:PWR
+    - component: Keil::Device:STM32Cube HAL:RCC
+    - component: Keil::Device:STM32Cube HAL:SPI
+    - component: Keil::Device:STM32Cube HAL:UART
+    - component: Keil::Device:STM32Cube HAL:USART
+    - component: Keil::Device:Startup
+    - component: Keil::CMSIS Driver:CAN
+    - component: ARM::CMSIS Driver:Ethernet:Custom
+    - component: ARM::CMSIS Driver:GPIO:Custom
+    - component: Keil::CMSIS Driver:SPI
+    - component: ARM::CMSIS:OS Tick:SysTick
+    - component: Keil::CMSIS Driver:USART
+    - component: Keil::Device:STM32Cube LL:RCC@1.3.0
+    - component: Keil::Device:STM32Cube LL:Common@1.3.0
+    - component: Keil::Device:STM32Cube LL:UTILS@1.3.0
+    - component: Keil::Device:STM32Cube LL:PWR@1.3.0
+    - component: ARM::CMSIS:DSP&Source

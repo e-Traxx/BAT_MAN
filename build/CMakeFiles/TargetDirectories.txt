@@ -1,0 +1,6 @@
+/Users/akame/Documents/BAT-MAN/build/CMakeFiles/Bat_man+Target_1.dir
+/Users/akame/Documents/BAT-MAN/build/CMakeFiles/Bat_man+Target_1-build.dir
+/Users/akame/Documents/BAT-MAN/build/CMakeFiles/Bat_man+Target_1-configure.dir
+/Users/akame/Documents/BAT-MAN/build/CMakeFiles/Bat_man+Target_1-database.dir
+/Users/akame/Documents/BAT-MAN/build/CMakeFiles/edit_cache.dir
+/Users/akame/Documents/BAT-MAN/build/CMakeFiles/rebuild_cache.dir
