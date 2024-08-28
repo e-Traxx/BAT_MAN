@@ -1,0 +1,24 @@
+# ninja log v6
+1168	1184	1724770335730151000	CMakeFiles/Bat_man+Target_1-complete	209595331ad9943d
+1156	1168	1724770335713706000	/Users/akame/Documents/BAT-MAN/tmp/Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-test	99f1da7feeaec728
+1147	1156	1724770335693647507	/Users/akame/Documents/BAT-MAN/tmp/Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-install	bce6322da7e37280
+1	1147	1724770334546951862	/Users/akame/Documents/BAT-MAN/out/Bat_man/Target_1/Bat_man.axf	8cefd36e0203fb29
+1156	1168	1724770335713706000	Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-test	99f1da7feeaec728
+1	1147	1724770334546951862	Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-build	8cefd36e0203fb29
+1147	1156	1724770335693647507	Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-install	bce6322da7e37280
+0	14	1724725417064284214	Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-mkdir	a034e665c6ac604d
+26	39	1724725417089351204	/Users/akame/Documents/BAT-MAN/tmp/Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-update	e974f2804edbc2
+1168	1184	1724770335730151000	/Users/akame/Documents/BAT-MAN/tmp/CMakeFiles/Bat_man+Target_1-complete	209595331ad9943d
+1	410	1724793151642977248	Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-database	d618723181eeeb63
+14	26	1724725417076178812	Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-download	b5a04813b0d76993
+51	693	1724725417744093778	Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-configure	a1781cffb83ea66
+1	410	1724793151642977248	/Users/akame/Documents/BAT-MAN/tmp/Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-database	d618723181eeeb63
+1168	1184	1724770335730151000	/Users/akame/Documents/BAT-MAN/tmp/Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-done	209595331ad9943d
+39	51	1724725417101510386	/Users/akame/Documents/BAT-MAN/tmp/Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-patch	33811db188171a1b
+26	39	1724725417089351204	Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-update	e974f2804edbc2
+51	693	1724725417744093778	/Users/akame/Documents/BAT-MAN/tmp/Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-configure	a1781cffb83ea66
+1168	1184	1724770335730151000	Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-done	209595331ad9943d
+39	51	1724725417101510386	Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-patch	33811db188171a1b
+0	14	1724725417064284214	/Users/akame/Documents/BAT-MAN/tmp/Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-mkdir	a034e665c6ac604d
+1	1147	1724770334546951862	/Users/akame/Documents/BAT-MAN/tmp/Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-build	8cefd36e0203fb29
+14	26	1724725417076178812	/Users/akame/Documents/BAT-MAN/tmp/Bat_man+Target_1/src/Bat_man+Target_1-stamp/Bat_man+Target_1-download	b5a04813b0d76993
