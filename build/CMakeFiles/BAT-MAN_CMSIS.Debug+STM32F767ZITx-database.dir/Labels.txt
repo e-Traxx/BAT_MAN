@@ -1,0 +1,11 @@
+# Target labels
+ BAT-MAN_CMSIS.Debug+STM32F767ZITx
+# Source files and their labels
+/Users/akame/Documents/Etraxx/BAT-MAN/build/CMakeFiles/BAT-MAN_CMSIS.Debug+STM32F767ZITx-database
+/Users/akame/Documents/Etraxx/BAT-MAN/build/CMakeFiles/BAT-MAN_CMSIS.Debug+STM32F767ZITx-database.rule
+/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-database.rule
+/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-configure.rule
+/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-patch.rule
+/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-update.rule
+/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-download.rule
+/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-mkdir.rule

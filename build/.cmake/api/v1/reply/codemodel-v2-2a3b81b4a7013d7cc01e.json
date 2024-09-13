@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "BATMAN",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BAT-MAN_CMSIS.Debug+STM32F767ZITx-Debug-6ade1c4580de7bcc03f9.json",
+					"name" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx-build::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BAT-MAN_CMSIS.Debug+STM32F767ZITx-build-Debug-d3ca84bfc63d62c6a2c8.json",
+					"name" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx-build",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx-configure::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BAT-MAN_CMSIS.Debug+STM32F767ZITx-configure-Debug-b556d8185e1eac4ae59a.json",
+					"name" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx-configure",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx-database::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BAT-MAN_CMSIS.Debug+STM32F767ZITx-database-Debug-1cf5be80059cacab879c.json",
+					"name" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx-database",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/akame/Documents/Etraxx/BAT-MAN/build",
+		"source" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
