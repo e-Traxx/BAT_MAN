@@ -1,0 +1,37 @@
+# A project translates into one executable or library.
+project:
+
+  groups:
+    - group: Source Files
+      files:
+        - file: ./main.c
+      groups:
+        - group: Inc
+          files:
+            - file: Inc/uart_handler.h
+        - group: Inc_c
+          files:
+            - file: Inc_c/uart_handler.c
+
+  # List components to use for your application.
+  # A software component is a re-usable unit that may be configurable.
+  components:
+    - component: ARM::CMSIS:CORE
+    - component: Device:Startup
+    - component: Keil::CMSIS Driver:USART
+    - component: Keil::Device:STM32Cube HAL:Common@1.3.0
+    - component: Keil::Device:STM32Cube HAL:RCC@1.3.0
+    - component: Keil::Device:STM32Cube HAL:GPIO@1.3.0
+    - component: Keil::Device:STM32Cube HAL:DMA@1.3.0
+    - component: Keil::Device:STM32Cube LL:RCC@1.3.0
+    - component: Keil::Device:STM32Cube Framework:Classic@1.3.0
+    - component: Keil::Device:STM32Cube HAL:Cortex@1.3.0
+    - component: Keil::Device:STM32Cube HAL:PWR@1.3.0
+    - component: Keil::Device:STM32Cube LL:Common@1.3.0
+    - component: Keil::Device:STM32Cube LL:UTILS@1.3.0
+    - component: Keil::Device:STM32Cube LL:PWR@1.3.0
+    - component: ARM::CMSIS:OS Tick:SysTick
+    - component: ARM::CMSIS Driver:GPIO:Custom
+    - component: ARM::CMSIS Driver:USART:Custom
+  packs:
+    - pack: ARM::CMSIS@6.1.0

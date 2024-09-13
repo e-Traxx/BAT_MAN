@@ -1,0 +1,120 @@
+{
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"_ep_step_add_target",
+			"ExternalProject_Add_StepTargets"
+		],
+		"files" : 
+		[
+			"/Users/akame/.vcpkg/artifacts/2139c4c6/tools.kitware.cmake/3.28.4/share/cmake-3.28/Modules/ExternalProject.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 57,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 2365,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2238,
+				"parent" : 2
+			}
+		]
+	},
+	"folder" : 
+	{
+		"name" : "ExternalProjectTargets/BAT-MAN_CMSIS.Debug+STM32F767ZITx"
+	},
+	"id" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx-configure::@6890427a1f51a3e7e1df",
+	"name" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx-configure",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "/Users/akame/Documents/Etraxx/BAT-MAN/build/CMakeFiles/BAT-MAN_CMSIS.Debug+STM32F767ZITx-configure",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/Users/akame/Documents/Etraxx/BAT-MAN/build/CMakeFiles/BAT-MAN_CMSIS.Debug+STM32F767ZITx-configure.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-configure.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-patch.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-update.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-download.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-mkdir.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,37 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/CMakeFiles/BAT-MAN_CMSIS.Debug+STM32F767ZITx-database"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/CMakeFiles/BAT-MAN_CMSIS.Debug+STM32F767ZITx-database.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-database.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-configure.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-patch.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-update.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-download.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-mkdir.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BAT-MAN_CMSIS.Debug+STM32F767ZITx"
+		],
+		"name" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx-database"
+	}
+}

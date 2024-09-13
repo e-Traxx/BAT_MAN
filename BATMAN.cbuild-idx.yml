@@ -1,0 +1,11 @@
+build-idx:
+  generated-by: csolution version 2.5.0
+  cdefault: ${CMSIS_COMPILER_ROOT}/cdefault.yml
+  csolution: BATMAN.csolution.yml
+  tmpdir: tmp
+  cprojects:
+    - cproject: BAT-MAN_CMSIS/BAT-MAN_CMSIS.cproject.yml
+  cbuilds:
+    - cbuild: BAT-MAN_CMSIS/BAT-MAN_CMSIS.Debug+STM32F767ZITx.cbuild.yml
+      project: BAT-MAN_CMSIS
+      configuration: .Debug+STM32F767ZITx

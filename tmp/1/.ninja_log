@@ -1,0 +1,27 @@
+# ninja log v6
+2	273	1726093206293946373	CMakeFiles/Keil_Device_STM32Cube_HAL_DMA_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o	fee5785c96471541
+3	996	1726261870715357705	CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/uart_handler.o	ac9c500265c7cc90
+3	518	1726257449883329704	CMakeFiles/Group_Source_Files.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/main.o	f25b223cc093264b
+1	156	1726093206292508164	CMakeFiles/ARM_CMSIS_OS_Tick_SysTick_1_0_5.dir/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Source/os_systick.o	c79e244ccafd7f3d
+3	162	1726093206294293791	CMakeFiles/Keil_Device_STM32Cube_HAL_GPIO_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.o	240f707fb130213d
+996	1146	1726261871855397072	ac6_linker_script.sct	9ca029cf90edb143
+3	173	1726093206294434666	CMakeFiles/Keil_Device_STM32Cube_HAL_PWR_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.o	1698d5183c5f0001
+1	187	1726093206292848206	CMakeFiles/Keil_Device_STM32Cube_HAL_Common_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o	56689b1287a50f92
+142	275	1726093206433454136	CMakeFiles/Keil_Device_STM32Cube_HAL_PWR_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.o	13025a90442432cd
+2	227	1726093206293577706	CMakeFiles/Keil_Device_STM32Cube_HAL_DMA_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o	79cb9028b266af8c
+188	313	1726093206479119556	CMakeFiles/Keil_Device_STM32Cube_LL_UTILS_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_utils.o	68d8582474d902da
+194	1215	1726093206485312021	CMakeFiles/Keil_Device_Startup_1_2_5.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx/startup_stm32f767xx.o	d11a37f36b24b5a5
+151	306	1726093206442925770	CMakeFiles/Keil_Device_STM32Cube_HAL_RCC_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o	1dd00fe022e68a2c
+162	272	1726093206453531698	CMakeFiles/Keil_Device_STM32Cube_LL_PWR_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_pwr.o	65717a14a256360
+156	298	1726093206447588733	CMakeFiles/Keil_Device_STM32Cube_HAL_RCC_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o	335658d301f557dc
+227	330	1726093206518254720	CMakeFiles/Keil_Device_Startup_1_2_5.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx/system_stm32f7xx.o	9e5629e39c34f42b
+2	194	1726093206293302998	CMakeFiles/Keil_Device_STM32Cube_HAL_Cortex_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o	55f8b5bb2d8d43de
+1	253	1726093385500340872	build.ninja	b7f526d8e9077ae3
+996	1146	1726261871855397072	/Users/akame/Documents/Etraxx/BAT-MAN/out/BAT-MAN_CMSIS/STM32F767ZITx/Debug/BAT-MAN_CMSIS.axf	9ca029cf90edb143
+2	13	1726256332721553947	CMakeFiles/database	c62f0d63f796ff7
+173	321	1726093206464964625	CMakeFiles/Keil_Device_STM32Cube_LL_RCC_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_rcc.o	ce22e1dd8ef5534d
+2	13	1726256332721553947	/Users/akame/Documents/Etraxx/BAT-MAN/tmp/1/CMakeFiles/database	c62f0d63f796ff7
+996	1146	1726261871855397072	/Users/akame/Documents/Etraxx/BAT-MAN/tmp/1/ac6_linker_script.sct	9ca029cf90edb143
+3	532	1726255917219566321	CMakeFiles/Keil_CMSIS_Driver_USART_1_21_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USART_STM32F7xx.o	d3b3d39d68286735
+3	11	1726263618036772570	CMakeFiles/database	c62f0d63f796ff7
+3	11	1726263618036772570	/Users/akame/Documents/Etraxx/BAT-MAN/tmp/1/CMakeFiles/database	c62f0d63f796ff7

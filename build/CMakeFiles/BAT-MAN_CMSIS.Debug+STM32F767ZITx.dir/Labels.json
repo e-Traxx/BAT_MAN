@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/build/CMakeFiles/BAT-MAN_CMSIS.Debug+STM32F767ZITx"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/build/CMakeFiles/BAT-MAN_CMSIS.Debug+STM32F767ZITx.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/build/CMakeFiles/BAT-MAN_CMSIS.Debug+STM32F767ZITx-complete.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-build.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-configure.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-download.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-install.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-mkdir.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-patch.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-test.rule"
+		},
+		{
+			"file" : "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BAT-MAN_CMSIS.Debug+STM32F767ZITx"
+		],
+		"name" : "BAT-MAN_CMSIS.Debug+STM32F767ZITx"
+	}
+}
