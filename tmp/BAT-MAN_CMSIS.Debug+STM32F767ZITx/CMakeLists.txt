@@ -94,11 +94,14 @@ target_link_libraries(${CONTEXT} PUBLIC
   Group_Source_Files_Inc
   Group_Source_Files_Inc_c
   Group_Source_Files
+  ARM_CMSIS_Driver_Ethernet_Custom_1_0_0
   ARM_CMSIS_Driver_GPIO_Custom_1_0_0
   ARM_CMSIS_Driver_USART_Custom_1_0_0
+  ARM_CMSIS_Driver_USB_Device_Custom_1_0_0
   ARM_CMSIS_CORE_6_1_0
   ARM_CMSIS_OS_Tick_SysTick_1_0_5
-  Keil_CMSIS_Driver_USART_1_21_0
+  Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0
+  Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0
   Keil_Device_STM32Cube_Framework_Classic_1_3_0
   Keil_Device_STM32Cube_HAL_Common_1_3_0
   Keil_Device_STM32Cube_HAL_Cortex_1_3_0

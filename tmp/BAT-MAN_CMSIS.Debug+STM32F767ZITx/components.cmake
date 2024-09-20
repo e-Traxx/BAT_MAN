@@ -1,5 +1,15 @@
 # components.cmake
 
+# component ARM::CMSIS Driver:Ethernet:Custom@1.0.0
+add_library(ARM_CMSIS_Driver_Ethernet_Custom_1_0_0 INTERFACE)
+target_include_directories(ARM_CMSIS_Driver_Ethernet_Custom_1_0_0 INTERFACE
+  $<TARGET_PROPERTY:${CONTEXT},INTERFACE_INCLUDE_DIRECTORIES>
+  ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include
+)
+target_compile_definitions(ARM_CMSIS_Driver_Ethernet_Custom_1_0_0 INTERFACE
+  $<TARGET_PROPERTY:${CONTEXT},INTERFACE_COMPILE_DEFINITIONS>
+)
+
 # component ARM::CMSIS Driver:GPIO:Custom@1.0.0
 add_library(ARM_CMSIS_Driver_GPIO_Custom_1_0_0 INTERFACE)
 target_include_directories(ARM_CMSIS_Driver_GPIO_Custom_1_0_0 INTERFACE
@@ -17,6 +27,16 @@ target_include_directories(ARM_CMSIS_Driver_USART_Custom_1_0_0 INTERFACE
   ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include
 )
 target_compile_definitions(ARM_CMSIS_Driver_USART_Custom_1_0_0 INTERFACE
+  $<TARGET_PROPERTY:${CONTEXT},INTERFACE_COMPILE_DEFINITIONS>
+)
+
+# component ARM::CMSIS Driver:USB Device:Custom@1.0.0
+add_library(ARM_CMSIS_Driver_USB_Device_Custom_1_0_0 INTERFACE)
+target_include_directories(ARM_CMSIS_Driver_USB_Device_Custom_1_0_0 INTERFACE
+  $<TARGET_PROPERTY:${CONTEXT},INTERFACE_INCLUDE_DIRECTORIES>
+  ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include
+)
+target_compile_definitions(ARM_CMSIS_Driver_USB_Device_Custom_1_0_0 INTERFACE
   $<TARGET_PROPERTY:${CONTEXT},INTERFACE_COMPILE_DEFINITIONS>
 )
 
@@ -47,20 +67,39 @@ target_link_libraries(ARM_CMSIS_OS_Tick_SysTick_1_0_5 PUBLIC
   ${CONTEXT}_ABSTRACTIONS
 )
 
-# component Keil::CMSIS Driver:USART@1.21.0
-add_library(Keil_CMSIS_Driver_USART_1_21_0 OBJECT
-  "${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USART_STM32F7xx.c"
+# component Keil::CMSIS Driver:USB Device:Full-speed@1.13.0
+add_library(Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0 OBJECT
+  "${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/OTG_FS_STM32F7xx.c"
+  "${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USBD_FS_STM32F7xx.c"
 )
-target_include_directories(Keil_CMSIS_Driver_USART_1_21_0 PUBLIC
+target_include_directories(Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0 PUBLIC
   $<TARGET_PROPERTY:${CONTEXT},INTERFACE_INCLUDE_DIRECTORIES>
 )
-target_compile_definitions(Keil_CMSIS_Driver_USART_1_21_0 PUBLIC
+target_compile_definitions(Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0 PUBLIC
   $<TARGET_PROPERTY:${CONTEXT},INTERFACE_COMPILE_DEFINITIONS>
 )
-target_compile_options(Keil_CMSIS_Driver_USART_1_21_0 PUBLIC
+target_compile_options(Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0 PUBLIC
   $<TARGET_PROPERTY:${CONTEXT},INTERFACE_COMPILE_OPTIONS>
 )
-target_link_libraries(Keil_CMSIS_Driver_USART_1_21_0 PUBLIC
+target_link_libraries(Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0 PUBLIC
+  ${CONTEXT}_ABSTRACTIONS
+)
+
+# component Keil::CMSIS Driver:USB Device:High-speed@1.19.0
+add_library(Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0 OBJECT
+  "${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/OTG_HS_STM32F7xx.c"
+  "${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USBD_HS_STM32F7xx.c"
+)
+target_include_directories(Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0 PUBLIC
+  $<TARGET_PROPERTY:${CONTEXT},INTERFACE_INCLUDE_DIRECTORIES>
+)
+target_compile_definitions(Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0 PUBLIC
+  $<TARGET_PROPERTY:${CONTEXT},INTERFACE_COMPILE_DEFINITIONS>
+)
+target_compile_options(Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0 PUBLIC
+  $<TARGET_PROPERTY:${CONTEXT},INTERFACE_COMPILE_OPTIONS>
+)
+target_link_libraries(Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0 PUBLIC
   ${CONTEXT}_ABSTRACTIONS
 )
 
