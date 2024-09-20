@@ -48,7 +48,7 @@ build database: phony CMakeFiles/database
 #############################################
 # Order-only phony target for BAT-MAN_CMSIS.Debug+STM32F767ZITx
 
-build cmake_object_order_depends_target_BAT-MAN_CMSIS.Debug+STM32F767ZITx: phony || cmake_object_order_depends_target_ARM_CMSIS_OS_Tick_SysTick_1_0_5 cmake_object_order_depends_target_Group_Source_Files cmake_object_order_depends_target_Group_Source_Files_Inc_c cmake_object_order_depends_target_Keil_CMSIS_Driver_USART_1_21_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_HAL_Common_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_HAL_Cortex_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_HAL_DMA_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_HAL_GPIO_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_HAL_PWR_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_HAL_RCC_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_LL_PWR_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_LL_RCC_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_LL_UTILS_1_3_0 cmake_object_order_depends_target_Keil_Device_Startup_1_2_5
+build cmake_object_order_depends_target_BAT-MAN_CMSIS.Debug+STM32F767ZITx: phony || cmake_object_order_depends_target_ARM_CMSIS_OS_Tick_SysTick_1_0_5 cmake_object_order_depends_target_Group_Source_Files cmake_object_order_depends_target_Group_Source_Files_Inc cmake_object_order_depends_target_Group_Source_Files_Inc_c cmake_object_order_depends_target_Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0 cmake_object_order_depends_target_Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_HAL_Common_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_HAL_Cortex_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_HAL_DMA_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_HAL_GPIO_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_HAL_PWR_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_HAL_RCC_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_LL_PWR_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_LL_RCC_1_3_0 cmake_object_order_depends_target_Keil_Device_STM32Cube_LL_UTILS_1_3_0 cmake_object_order_depends_target_Keil_Device_Startup_1_2_5
 
 
 # =============================================================================
@@ -58,7 +58,7 @@ build cmake_object_order_depends_target_BAT-MAN_CMSIS.Debug+STM32F767ZITx: phony
 #############################################
 # Link the executable /Users/akame/Documents/Etraxx/BAT-MAN/out/BAT-MAN_CMSIS/STM32F767ZITx/Debug/BAT-MAN_CMSIS.axf
 
-build /Users/akame/Documents/Etraxx/BAT-MAN/out/BAT-MAN_CMSIS/STM32F767ZITx/Debug/BAT-MAN_CMSIS.axf ac6_linker_script.sct | ${cmake_ninja_workdir}ac6_linker_script.sct: C_EXECUTABLE_LINKER__BAT-MAN_CMSIS.2eDebug.2bSTM32F767ZITx_ CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/uart_handler.o CMakeFiles/Group_Source_Files.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/main.o CMakeFiles/ARM_CMSIS_OS_Tick_SysTick_1_0_5.dir/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Source/os_systick.o CMakeFiles/Keil_CMSIS_Driver_USART_1_21_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USART_STM32F7xx.o CMakeFiles/Keil_Device_STM32Cube_HAL_Common_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o CMakeFiles/Keil_Device_STM32Cube_HAL_Cortex_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o CMakeFiles/Keil_Device_STM32Cube_HAL_DMA_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o CMakeFiles/Keil_Device_STM32Cube_HAL_DMA_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o CMakeFiles/Keil_Device_STM32Cube_HAL_GPIO_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.o CMakeFiles/Keil_Device_STM32Cube_HAL_PWR_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.o CMakeFiles/Keil_Device_STM32Cube_HAL_PWR_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.o CMakeFiles/Keil_Device_STM32Cube_HAL_RCC_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o CMakeFiles/Keil_Device_STM32Cube_HAL_RCC_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o CMakeFiles/Keil_Device_STM32Cube_LL_PWR_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_pwr.o CMakeFiles/Keil_Device_STM32Cube_LL_RCC_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_rcc.o CMakeFiles/Keil_Device_STM32Cube_LL_UTILS_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_utils.o CMakeFiles/Keil_Device_Startup_1_2_5.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx/startup_stm32f767xx.o CMakeFiles/Keil_Device_Startup_1_2_5.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx/system_stm32f7xx.o | /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx/ac6_linker_script.sct.src || ARM_CMSIS_OS_Tick_SysTick_1_0_5 Group_Source_Files Group_Source_Files_Inc_c Keil_CMSIS_Driver_USART_1_21_0 Keil_Device_STM32Cube_HAL_Common_1_3_0 Keil_Device_STM32Cube_HAL_Cortex_1_3_0 Keil_Device_STM32Cube_HAL_DMA_1_3_0 Keil_Device_STM32Cube_HAL_GPIO_1_3_0 Keil_Device_STM32Cube_HAL_PWR_1_3_0 Keil_Device_STM32Cube_HAL_RCC_1_3_0 Keil_Device_STM32Cube_LL_PWR_1_3_0 Keil_Device_STM32Cube_LL_RCC_1_3_0 Keil_Device_STM32Cube_LL_UTILS_1_3_0 Keil_Device_Startup_1_2_5
+build /Users/akame/Documents/Etraxx/BAT-MAN/out/BAT-MAN_CMSIS/STM32F767ZITx/Debug/BAT-MAN_CMSIS.axf ac6_linker_script.sct | ${cmake_ninja_workdir}ac6_linker_script.sct: C_EXECUTABLE_LINKER__BAT-MAN_CMSIS.2eDebug.2bSTM32F767ZITx_ CMakeFiles/Group_Source_Files_Inc.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/spi_handler.o CMakeFiles/Group_Source_Files_Inc.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/usb_handler.o CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/uart_handler.o CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/can_handler.o CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/usb_handler.o CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/spi_handler.o CMakeFiles/Group_Source_Files.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/main.o CMakeFiles/ARM_CMSIS_OS_Tick_SysTick_1_0_5.dir/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Source/os_systick.o CMakeFiles/Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/OTG_FS_STM32F7xx.o CMakeFiles/Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USBD_FS_STM32F7xx.o CMakeFiles/Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/OTG_HS_STM32F7xx.o CMakeFiles/Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USBD_HS_STM32F7xx.o CMakeFiles/Keil_Device_STM32Cube_HAL_Common_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o CMakeFiles/Keil_Device_STM32Cube_HAL_Cortex_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o CMakeFiles/Keil_Device_STM32Cube_HAL_DMA_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o CMakeFiles/Keil_Device_STM32Cube_HAL_DMA_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o CMakeFiles/Keil_Device_STM32Cube_HAL_GPIO_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.o CMakeFiles/Keil_Device_STM32Cube_HAL_PWR_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.o CMakeFiles/Keil_Device_STM32Cube_HAL_PWR_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.o CMakeFiles/Keil_Device_STM32Cube_HAL_RCC_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o CMakeFiles/Keil_Device_STM32Cube_HAL_RCC_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o CMakeFiles/Keil_Device_STM32Cube_LL_PWR_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_pwr.o CMakeFiles/Keil_Device_STM32Cube_LL_RCC_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_rcc.o CMakeFiles/Keil_Device_STM32Cube_LL_UTILS_1_3_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_utils.o CMakeFiles/Keil_Device_Startup_1_2_5.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx/startup_stm32f767xx.o CMakeFiles/Keil_Device_Startup_1_2_5.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx/system_stm32f7xx.o | /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx/ac6_linker_script.sct.src || ARM_CMSIS_OS_Tick_SysTick_1_0_5 Group_Source_Files Group_Source_Files_Inc Group_Source_Files_Inc_c Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0 Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0 Keil_Device_STM32Cube_HAL_Common_1_3_0 Keil_Device_STM32Cube_HAL_Cortex_1_3_0 Keil_Device_STM32Cube_HAL_DMA_1_3_0 Keil_Device_STM32Cube_HAL_GPIO_1_3_0 Keil_Device_STM32Cube_HAL_PWR_1_3_0 Keil_Device_STM32Cube_HAL_RCC_1_3_0 Keil_Device_STM32Cube_LL_PWR_1_3_0 Keil_Device_STM32Cube_LL_RCC_1_3_0 Keil_Device_STM32Cube_LL_UTILS_1_3_0 Keil_Device_Startup_1_2_5
   FLAGS = --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard
   LINK_FLAGS = --cpu=Cortex-M7 --scatter=/Users/akame/Documents/Etraxx/BAT-MAN/tmp/1/ac6_linker_script.sct --entry=Reset_Handler --map --info summarysizes --summary_stderr --diag_suppress=L6314W
   OBJECT_DIR = CMakeFiles/BAT-MAN_CMSIS.Debug+STM32F767ZITx.dir
@@ -93,6 +93,38 @@ build CMakeFiles/Group_Source_Files.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT
 build Group_Source_Files: phony CMakeFiles/Group_Source_Files.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/main.o
 
 # =============================================================================
+# Object build statements for OBJECT_LIBRARY target Group_Source_Files_Inc
+
+
+#############################################
+# Order-only phony target for Group_Source_Files_Inc
+
+build cmake_object_order_depends_target_Group_Source_Files_Inc: phony || CMakeFiles/Group_Source_Files_Inc.dir
+
+build CMakeFiles/Group_Source_Files_Inc.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/spi_handler.o: C_COMPILER__Group_Source_Files_Inc_unscanned_ /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/spi_handler.c || cmake_object_order_depends_target_Group_Source_Files_Inc
+  DEFINES = -DSTM32F767xx -D_RTE_
+  DEP_FILE = CMakeFiles/Group_Source_Files_Inc.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/spi_handler.o.d
+  FLAGS = --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -c -mlittle-endian -std=gnu11 -Wno-macro-redefined -Wno-pragma-pack -Wno-parentheses-equality -Wno-license-management -include /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx/Pre_Include_Global.h -g -O0
+  INCLUDES = -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc -isystem /Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/include
+  OBJECT_DIR = CMakeFiles/Group_Source_Files_Inc.dir
+  OBJECT_FILE_DIR = CMakeFiles/Group_Source_Files_Inc.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c
+
+build CMakeFiles/Group_Source_Files_Inc.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/usb_handler.o: C_COMPILER__Group_Source_Files_Inc_unscanned_ /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/usb_handler.c || cmake_object_order_depends_target_Group_Source_Files_Inc
+  DEFINES = -DSTM32F767xx -D_RTE_
+  DEP_FILE = CMakeFiles/Group_Source_Files_Inc.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/usb_handler.o.d
+  FLAGS = --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -c -mlittle-endian -std=gnu11 -Wno-macro-redefined -Wno-pragma-pack -Wno-parentheses-equality -Wno-license-management -include /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx/Pre_Include_Global.h -g -O0
+  INCLUDES = -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc -isystem /Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/include
+  OBJECT_DIR = CMakeFiles/Group_Source_Files_Inc.dir
+  OBJECT_FILE_DIR = CMakeFiles/Group_Source_Files_Inc.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c
+
+
+
+#############################################
+# Object library Group_Source_Files_Inc
+
+build Group_Source_Files_Inc: phony CMakeFiles/Group_Source_Files_Inc.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/spi_handler.o CMakeFiles/Group_Source_Files_Inc.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/usb_handler.o
+
+# =============================================================================
 # Object build statements for OBJECT_LIBRARY target Group_Source_Files_Inc_c
 
 
@@ -109,12 +141,36 @@ build CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-M
   OBJECT_DIR = CMakeFiles/Group_Source_Files_Inc_c.dir
   OBJECT_FILE_DIR = CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c
 
+build CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/can_handler.o: C_COMPILER__Group_Source_Files_Inc_c_unscanned_ /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/can_handler.c || cmake_object_order_depends_target_Group_Source_Files_Inc_c
+  DEFINES = -DSTM32F767xx -D_RTE_
+  DEP_FILE = CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/can_handler.o.d
+  FLAGS = --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -c -mlittle-endian -std=gnu11 -Wno-macro-redefined -Wno-pragma-pack -Wno-parentheses-equality -Wno-license-management -include /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx/Pre_Include_Global.h -g -O0
+  INCLUDES = -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc -isystem /Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/include
+  OBJECT_DIR = CMakeFiles/Group_Source_Files_Inc_c.dir
+  OBJECT_FILE_DIR = CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c
+
+build CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/usb_handler.o: C_COMPILER__Group_Source_Files_Inc_c_unscanned_ /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/usb_handler.c || cmake_object_order_depends_target_Group_Source_Files_Inc_c
+  DEFINES = -DSTM32F767xx -D_RTE_
+  DEP_FILE = CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/usb_handler.o.d
+  FLAGS = --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -c -mlittle-endian -std=gnu11 -Wno-macro-redefined -Wno-pragma-pack -Wno-parentheses-equality -Wno-license-management -include /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx/Pre_Include_Global.h -g -O0
+  INCLUDES = -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc -isystem /Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/include
+  OBJECT_DIR = CMakeFiles/Group_Source_Files_Inc_c.dir
+  OBJECT_FILE_DIR = CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c
+
+build CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/spi_handler.o: C_COMPILER__Group_Source_Files_Inc_c_unscanned_ /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/spi_handler.c || cmake_object_order_depends_target_Group_Source_Files_Inc_c
+  DEFINES = -DSTM32F767xx -D_RTE_
+  DEP_FILE = CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/spi_handler.o.d
+  FLAGS = --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -c -mlittle-endian -std=gnu11 -Wno-macro-redefined -Wno-pragma-pack -Wno-parentheses-equality -Wno-license-management -include /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx/Pre_Include_Global.h -g -O0
+  INCLUDES = -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc -isystem /Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/include
+  OBJECT_DIR = CMakeFiles/Group_Source_Files_Inc_c.dir
+  OBJECT_FILE_DIR = CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c
+
 
 
 #############################################
 # Object library Group_Source_Files_Inc_c
 
-build Group_Source_Files_Inc_c: phony CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/uart_handler.o
+build Group_Source_Files_Inc_c: phony CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/uart_handler.o CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/can_handler.o CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/usb_handler.o CMakeFiles/Group_Source_Files_Inc_c.dir/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc_c/spi_handler.o
 
 # =============================================================================
 # Object build statements for OBJECT_LIBRARY target ARM_CMSIS_OS_Tick_SysTick_1_0_5
@@ -141,28 +197,68 @@ build CMakeFiles/ARM_CMSIS_OS_Tick_SysTick_1_0_5.dir/Users/akame/.cache/arm/pack
 build ARM_CMSIS_OS_Tick_SysTick_1_0_5: phony CMakeFiles/ARM_CMSIS_OS_Tick_SysTick_1_0_5.dir/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Source/os_systick.o
 
 # =============================================================================
-# Object build statements for OBJECT_LIBRARY target Keil_CMSIS_Driver_USART_1_21_0
+# Object build statements for OBJECT_LIBRARY target Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0
 
 
 #############################################
-# Order-only phony target for Keil_CMSIS_Driver_USART_1_21_0
+# Order-only phony target for Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0
 
-build cmake_object_order_depends_target_Keil_CMSIS_Driver_USART_1_21_0: phony || CMakeFiles/Keil_CMSIS_Driver_USART_1_21_0.dir
+build cmake_object_order_depends_target_Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0: phony || CMakeFiles/Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0.dir
 
-build CMakeFiles/Keil_CMSIS_Driver_USART_1_21_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USART_STM32F7xx.o: C_COMPILER__Keil_CMSIS_Driver_USART_1_21_0_unscanned_ /Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USART_STM32F7xx.c || cmake_object_order_depends_target_Keil_CMSIS_Driver_USART_1_21_0
+build CMakeFiles/Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/OTG_FS_STM32F7xx.o: C_COMPILER__Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0_unscanned_ /Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/OTG_FS_STM32F7xx.c || cmake_object_order_depends_target_Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0
   DEFINES = -DSTM32F767xx -D_RTE_
-  DEP_FILE = CMakeFiles/Keil_CMSIS_Driver_USART_1_21_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USART_STM32F7xx.o.d
+  DEP_FILE = CMakeFiles/Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/OTG_FS_STM32F7xx.o.d
   FLAGS = --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -c -mlittle-endian -std=gnu11 -Wno-macro-redefined -Wno-pragma-pack -Wno-parentheses-equality -Wno-license-management -include /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx/Pre_Include_Global.h -g -O0
   INCLUDES = -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc -isystem /Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/include
-  OBJECT_DIR = CMakeFiles/Keil_CMSIS_Driver_USART_1_21_0.dir
-  OBJECT_FILE_DIR = CMakeFiles/Keil_CMSIS_Driver_USART_1_21_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver
+  OBJECT_DIR = CMakeFiles/Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver
+
+build CMakeFiles/Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USBD_FS_STM32F7xx.o: C_COMPILER__Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0_unscanned_ /Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USBD_FS_STM32F7xx.c || cmake_object_order_depends_target_Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0
+  DEFINES = -DSTM32F767xx -D_RTE_
+  DEP_FILE = CMakeFiles/Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USBD_FS_STM32F7xx.o.d
+  FLAGS = --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -c -mlittle-endian -std=gnu11 -Wno-macro-redefined -Wno-pragma-pack -Wno-parentheses-equality -Wno-license-management -include /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx/Pre_Include_Global.h -g -O0
+  INCLUDES = -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc -isystem /Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/include
+  OBJECT_DIR = CMakeFiles/Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver
 
 
 
 #############################################
-# Object library Keil_CMSIS_Driver_USART_1_21_0
+# Object library Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0
 
-build Keil_CMSIS_Driver_USART_1_21_0: phony CMakeFiles/Keil_CMSIS_Driver_USART_1_21_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USART_STM32F7xx.o
+build Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0: phony CMakeFiles/Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/OTG_FS_STM32F7xx.o CMakeFiles/Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USBD_FS_STM32F7xx.o
+
+# =============================================================================
+# Object build statements for OBJECT_LIBRARY target Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0
+
+
+#############################################
+# Order-only phony target for Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0
+
+build cmake_object_order_depends_target_Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0: phony || CMakeFiles/Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0.dir
+
+build CMakeFiles/Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/OTG_HS_STM32F7xx.o: C_COMPILER__Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0_unscanned_ /Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/OTG_HS_STM32F7xx.c || cmake_object_order_depends_target_Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0
+  DEFINES = -DSTM32F767xx -D_RTE_
+  DEP_FILE = CMakeFiles/Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/OTG_HS_STM32F7xx.o.d
+  FLAGS = --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -c -mlittle-endian -std=gnu11 -Wno-macro-redefined -Wno-pragma-pack -Wno-parentheses-equality -Wno-license-management -include /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx/Pre_Include_Global.h -g -O0
+  INCLUDES = -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc -isystem /Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/include
+  OBJECT_DIR = CMakeFiles/Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver
+
+build CMakeFiles/Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USBD_HS_STM32F7xx.o: C_COMPILER__Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0_unscanned_ /Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USBD_HS_STM32F7xx.c || cmake_object_order_depends_target_Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0
+  DEFINES = -DSTM32F767xx -D_RTE_
+  DEP_FILE = CMakeFiles/Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USBD_HS_STM32F7xx.o.d
+  FLAGS = --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -mcpu=Cortex-M7 -mfpu=fpv5-d16 -mfloat-abi=hard --target=arm-arm-none-eabi -c -mlittle-endian -std=gnu11 -Wno-macro-redefined -Wno-pragma-pack -Wno-parentheses-equality -Wno-license-management -include /Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx/Pre_Include_Global.h -g -O0
+  INCLUDES = -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include -I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc -isystem /Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/include
+  OBJECT_DIR = CMakeFiles/Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver
+
+
+
+#############################################
+# Object library Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0
+
+build Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0: phony CMakeFiles/Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/OTG_HS_STM32F7xx.o CMakeFiles/Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0.dir/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USBD_HS_STM32F7xx.o
 
 # =============================================================================
 # Object build statements for OBJECT_LIBRARY target Keil_Device_STM32Cube_HAL_Common_1_3_0
@@ -481,7 +577,7 @@ build BAT-MAN_CMSIS.axf: phony /Users/akame/Documents/Etraxx/BAT-MAN/out/BAT-MAN
 #############################################
 # Folder: /Users/akame/Documents/Etraxx/BAT-MAN/tmp/1
 
-build all: phony /Users/akame/Documents/Etraxx/BAT-MAN/out/BAT-MAN_CMSIS/STM32F767ZITx/Debug/BAT-MAN_CMSIS.axf Group_Source_Files Group_Source_Files_Inc_c ARM_CMSIS_OS_Tick_SysTick_1_0_5 Keil_CMSIS_Driver_USART_1_21_0 Keil_Device_STM32Cube_HAL_Common_1_3_0 Keil_Device_STM32Cube_HAL_Cortex_1_3_0 Keil_Device_STM32Cube_HAL_DMA_1_3_0 Keil_Device_STM32Cube_HAL_GPIO_1_3_0 Keil_Device_STM32Cube_HAL_PWR_1_3_0 Keil_Device_STM32Cube_HAL_RCC_1_3_0 Keil_Device_STM32Cube_LL_PWR_1_3_0 Keil_Device_STM32Cube_LL_RCC_1_3_0 Keil_Device_STM32Cube_LL_UTILS_1_3_0 Keil_Device_Startup_1_2_5
+build all: phony /Users/akame/Documents/Etraxx/BAT-MAN/out/BAT-MAN_CMSIS/STM32F767ZITx/Debug/BAT-MAN_CMSIS.axf Group_Source_Files Group_Source_Files_Inc Group_Source_Files_Inc_c ARM_CMSIS_OS_Tick_SysTick_1_0_5 Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0 Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0 Keil_Device_STM32Cube_HAL_Common_1_3_0 Keil_Device_STM32Cube_HAL_Cortex_1_3_0 Keil_Device_STM32Cube_HAL_DMA_1_3_0 Keil_Device_STM32Cube_HAL_GPIO_1_3_0 Keil_Device_STM32Cube_HAL_PWR_1_3_0 Keil_Device_STM32Cube_HAL_RCC_1_3_0 Keil_Device_STM32Cube_LL_PWR_1_3_0 Keil_Device_STM32Cube_LL_RCC_1_3_0 Keil_Device_STM32Cube_LL_UTILS_1_3_0 Keil_Device_Startup_1_2_5
 
 # =============================================================================
 # Built-in targets

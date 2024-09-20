@@ -10,11 +10,12 @@
 #include <stdint.h>
 
 
-void USART_Tx_Data(unsigned char x);
+
 void UART_INIT(void);
-
+void USART_Tx_Data(unsigned char x);
 int U_debug(char Tx[]);
-
+void USART3_IRQHandler(void);
+uint8_t USART_receive(void);
 #ifdef __cplusplus
 }
 #endif

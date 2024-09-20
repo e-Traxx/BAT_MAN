@@ -69,6 +69,30 @@ build:
     - type: elf
       file: BAT-MAN_CMSIS.axf
   components:
+    - component: ARM::CMSIS Driver:Ethernet:Custom@1.0.0
+      from-pack: ARM::CMSIS@6.1.0
+      selected-by: ARM::CMSIS Driver:Ethernet:Custom
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include/Driver_ETH_MAC.h
+          category: api
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include/Driver_ETH_PHY.h
+          category: api
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/DriverTemplates/Driver_ETH_MAC.c
+          category: sourceC
+          attr: template
+          version: 1.0.0
+          select: Ethernet PHY and MAC Driver
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/DriverTemplates/Driver_ETH_PHY.c
+          category: sourceC
+          attr: template
+          version: 1.0.0
+          select: Ethernet PHY and MAC Driver
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include/Driver_ETH_MAC.h
+          category: header
+          version: 1.0.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include/Driver_ETH_PHY.h
+          category: header
+          version: 1.0.0
     - component: ARM::CMSIS Driver:GPIO:Custom@1.0.0
       from-pack: ARM::CMSIS@6.1.0
       selected-by: ARM::CMSIS Driver:GPIO:Custom
@@ -95,6 +119,20 @@ build:
           version: 1.0.0
           select: USART Driver
         - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include/Driver_USART.h
+          category: header
+          version: 1.0.0
+    - component: ARM::CMSIS Driver:USB Device:Custom@1.0.0
+      from-pack: ARM::CMSIS@6.1.0
+      selected-by: ARM::CMSIS Driver:USB Device:Custom
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include/Driver_USBD.h
+          category: api
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/DriverTemplates/Driver_USBD.c
+          category: sourceC
+          attr: template
+          version: 1.0.0
+          select: USB Device Driver
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include/Driver_USBD.h
           category: header
           version: 1.0.0
     - component: ARM::CMSIS:CORE@6.1.0
@@ -131,16 +169,32 @@ build:
         - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Source/os_systick.c
           category: sourceC
           version: 1.0.5
-    - component: Keil::CMSIS Driver:USART@1.21.0
-      condition: STM32F7 CMSIS_Driver USART
+    - component: Keil::CMSIS Driver:USB Device:Full-speed@1.13.0
+      condition: STM32F7 CMSIS_Driver USB
       from-pack: Keil::STM32F7xx_DFP@2.16.0
-      selected-by: Keil::CMSIS Driver:USART
+      selected-by: Keil::CMSIS Driver:USB Device:Full-speed
       files:
-        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include/Driver_USART.h
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include/Driver_USBD.h
           category: api
-        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USART_STM32F7xx.c
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/OTG_FS_STM32F7xx.c
           category: source
-          version: 1.21.0
+          version: 1.13.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USBD_FS_STM32F7xx.c
+          category: source
+          version: 1.13.0
+    - component: Keil::CMSIS Driver:USB Device:High-speed@1.19.0
+      condition: STM32F7 CMSIS_Driver USB
+      from-pack: Keil::STM32F7xx_DFP@2.16.0
+      selected-by: Keil::CMSIS Driver:USB Device:High-speed
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include/Driver_USBD.h
+          category: api
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/OTG_HS_STM32F7xx.c
+          category: source
+          version: 1.19.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/CMSIS/Driver/USBD_HS_STM32F7xx.c
+          category: source
+          version: 1.19.0
     - component: Keil::Device:STM32Cube Framework:Classic@1.3.0
       condition: STM32F7 Framework Classic
       from-pack: Keil::STM32F7xx_DFP@2.16.0
@@ -332,9 +386,21 @@ build:
           files:
             - file: Inc/uart_handler.h
               category: header
+            - file: Inc/can_handler.h
+              category: header
+            - file: Inc_c/spi_handler.c
+              category: sourceC
+            - file: Inc_c/usb_handler.c
+              category: sourceC
         - group: Inc_c
           files:
             - file: Inc_c/uart_handler.c
+              category: sourceC
+            - file: Inc_c/can_handler.c
+              category: sourceC
+            - file: Inc_c/usb_handler.c
+              category: sourceC
+            - file: Inc_c/spi_handler.c
               category: sourceC
   constructed-files:
     - file: RTE/_Debug_STM32F767ZITx/Pre_Include_Global.h
@@ -348,7 +414,8 @@ build:
         - pack: Keil::STM32F7xx_DFP@2.16.0
       components:
         - component: ::Device:STM32Cube Framework(API)
-        - component: Keil::CMSIS Driver:USART@1.21.0
+        - component: Keil::CMSIS Driver:USB Device:Full-speed@1.13.0
+        - component: Keil::CMSIS Driver:USB Device:High-speed@1.19.0
         - component: Keil::Device:STM32Cube Framework:Classic@1.3.0
         - component: Keil::Device:STM32Cube HAL:Common@1.3.0
         - component: Keil::Device:STM32Cube HAL:Cortex@1.3.0
@@ -365,10 +432,14 @@ build:
       packs:
         - pack: ARM::CMSIS@6.1.0
       components:
+        - component: ::CMSIS Driver:Ethernet(API)
         - component: ::CMSIS Driver:GPIO(API)
         - component: ::CMSIS Driver:USART(API)
+        - component: ::CMSIS Driver:USB Device(API)
         - component: ::CMSIS:OS Tick(API)
+        - component: ARM::CMSIS Driver:Ethernet:Custom@1.0.0
         - component: ARM::CMSIS Driver:GPIO:Custom@1.0.0
         - component: ARM::CMSIS Driver:USART:Custom@1.0.0
+        - component: ARM::CMSIS Driver:USB Device:Custom@1.0.0
         - component: ARM::CMSIS:CORE@6.1.0
         - component: ARM::CMSIS:OS Tick:SysTick@1.0.5

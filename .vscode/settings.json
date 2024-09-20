@@ -1,0 +1,12 @@
+{
+    "cmake.sourceDirectory": "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx",
+    "cmsis-csolution.actions": [
+        {
+            "path": "BATMAN.csolution.yml",
+            "target": "STM32F767ZITx",
+            "config": {
+                "run": "arm-debugger.flash: Flash Device"
+            }
+        }
+    ]
+}
