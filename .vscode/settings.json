@@ -8,5 +8,8 @@
                 "run": "arm-debugger.flash: Flash Device"
             }
         }
+    ],
+    "clangd.arguments": [
+        "--compile-commands-dir=/Users/akame/Documents/Etraxx/BAT-MAN/out/BAT-MAN_CMSIS/STM32F767ZITx/Debug"
     ]
 }
