@@ -1,7 +1,6 @@
 #include "can_handler.h"
 #include "stm32f767xx.h"
 #include "core_cm7.h"
-#include "system_stm32f7xx.h"
 
 
 
