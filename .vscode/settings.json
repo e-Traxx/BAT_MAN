@@ -5,11 +5,23 @@
             "path": "BATMAN.csolution.yml",
             "target": "STM32F767ZITx",
             "config": {
-                "run": "arm-debugger.flash: Flash Device"
-            }
+                "run": "arm-debugger.flash: Flash Device",
+                "debug": "Debug with ST-Link"
+            },
+            "projects": [
+                {
+                    "path": "BAT-MAN_CMSIS/BAT-MAN_CMSIS.cproject.yml",
+                    "config": {
+                        "run": "arm-debugger.flash: Flash Device",
+                        "debug": "Debug with ST-Link"
+                    }
+                }
+            ]
         }
     ],
     "clangd.arguments": [
         "--compile-commands-dir=/Users/akame/Documents/Etraxx/BAT-MAN/out/BAT-MAN_CMSIS/STM32F767ZITx/Debug"
-    ]
+    ],
+    "java.project.explorer.showNonJavaResources": false,
+    "java.dependency.syncWithFolderExplorer": false
 }
