@@ -2,10 +2,6 @@
 #include "stm32f767xx.h"
 #include "core_cm7.h"
 
-
-
-
-
 void CAN1_INIT() {
 
     // Enable Peripheral Clock
@@ -57,6 +53,7 @@ void CAN1_INIT() {
     // Filters 
     CAN1->FMR |= CAN_FMR_FINIT;
 
+    // ! MUST SET IT TO 0x173
     // Configure Filter 0 to accept all messages 
     CAN1->FA1R &= ~(1U << 0);   // Deactivate Filter 0
     CAN1->FS1R |= (1U << 0);    // Set to Single 32 Filter
@@ -79,7 +76,6 @@ void CAN1_INIT() {
 void CAN1_TX_IRQHandler() {
     if (CAN1->TSR & CAN_TSR_RQCP0) {
         CAN1->TSR |= CAN_TSR_RQCP0; // Clear Interrupt Flag
-
     } 
 }
 

@@ -1,5 +1,5 @@
 build-idx:
-  generated-by: csolution version 2.5.0
+  generated-by: csolution version 2.6.0
   cdefault: ${CMSIS_COMPILER_ROOT}/cdefault.yml
   csolution: BATMAN.csolution.yml
   tmpdir: tmp
@@ -9,3 +9,8 @@ build-idx:
     - cbuild: BAT-MAN_CMSIS/BAT-MAN_CMSIS.Debug+STM32F767ZITx.cbuild.yml
       project: BAT-MAN_CMSIS
       configuration: .Debug+STM32F767ZITx
+      messages:
+        info:
+          - BATMAN.cbuild-set.yml - file is already up-to-date
+          - BATMAN.cbuild-pack.yml - file is already up-to-date
+          - BAT-MAN_CMSIS.Debug+STM32F767ZITx.cbuild.yml - file is already up-to-date

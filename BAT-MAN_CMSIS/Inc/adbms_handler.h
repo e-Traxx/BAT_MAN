@@ -5,6 +5,7 @@
  extern "C" {
 #endif
 
+void ADBMS_MAIN();
 
 
 

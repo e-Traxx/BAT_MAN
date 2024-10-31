@@ -33,16 +33,6 @@ rule C_COMPILER__Group_Source_Files_unscanned_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__Group_Source_Files_Inc_unscanned_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}/Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/bin//armclang --target=arm-arm-none-eabi $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for compiling C files.
-
 rule C_COMPILER__Group_Source_Files_Inc_c_unscanned_
   depfile = $DEP_FILE
   deps = gcc
@@ -63,107 +53,7 @@ rule C_COMPILER__ARM_CMSIS_OS_Tick_SysTick_1_0_5_unscanned_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0_unscanned_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}/Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/bin//armclang --target=arm-arm-none-eabi $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER__Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0_unscanned_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}/Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/bin//armclang --target=arm-arm-none-eabi $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER__Keil_Device_STM32Cube_HAL_Common_1_3_0_unscanned_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}/Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/bin//armclang --target=arm-arm-none-eabi $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER__Keil_Device_STM32Cube_HAL_Cortex_1_3_0_unscanned_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}/Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/bin//armclang --target=arm-arm-none-eabi $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER__Keil_Device_STM32Cube_HAL_DMA_1_3_0_unscanned_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}/Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/bin//armclang --target=arm-arm-none-eabi $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER__Keil_Device_STM32Cube_HAL_GPIO_1_3_0_unscanned_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}/Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/bin//armclang --target=arm-arm-none-eabi $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER__Keil_Device_STM32Cube_HAL_PWR_1_3_0_unscanned_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}/Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/bin//armclang --target=arm-arm-none-eabi $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER__Keil_Device_STM32Cube_HAL_RCC_1_3_0_unscanned_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}/Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/bin//armclang --target=arm-arm-none-eabi $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER__Keil_Device_STM32Cube_LL_PWR_1_3_0_unscanned_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}/Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/bin//armclang --target=arm-arm-none-eabi $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER__Keil_Device_STM32Cube_LL_RCC_1_3_0_unscanned_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}/Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/bin//armclang --target=arm-arm-none-eabi $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER__Keil_Device_STM32Cube_LL_UTILS_1_3_0_unscanned_
+rule C_COMPILER__ARM_CMSIS_RTOS2_Keil_RTX5_Library_5_9_0_unscanned_
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/Users/akame/.vcpkg/artifacts/2139c4c6/compilers.arm.armclang/6.22.0/bin//armclang --target=arm-arm-none-eabi $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in

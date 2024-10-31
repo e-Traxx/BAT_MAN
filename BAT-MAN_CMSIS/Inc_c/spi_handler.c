@@ -1,5 +1,7 @@
 #include "stm32f767xx.h"
 #include "core_cm7.h"  
+#include <stdint.h>
+#include "spi_handler.h"
 
 
 void SPI_INIT() {
@@ -47,6 +49,7 @@ void SPI1_IRQHandler(void) {
     if (SPI1->SR & SPI_SR_RXNE) {
         uint8_t received_data = SPI1->DR;  // Read the data
         // Handle received data here (e.g., store in buffer)
+
     }
 
     // Check if the TXE flag is set (ready to transmit)

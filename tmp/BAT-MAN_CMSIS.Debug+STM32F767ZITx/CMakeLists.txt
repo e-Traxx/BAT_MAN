@@ -1,4 +1,7 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.27)
+
+# Roots
+include("../roots.cmake")
 
 set(CONTEXT BAT-MAN_CMSIS.Debug+STM32F767ZITx)
 set(TARGET ${CONTEXT})
@@ -20,7 +23,10 @@ include("toolchain.cmake")
 project(${CONTEXT} LANGUAGES C ASM)
 
 # Compilation database
-add_custom_target(database COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_BINARY_DIR}/compile_commands.json" "${OUT_DIR}")
+add_custom_target(database
+  COMMAND ${CMAKE_COMMAND} -E make_directory "${OUT_DIR}"
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_BINARY_DIR}/compile_commands.json" "${OUT_DIR}"
+)
 set(CMAKE_C_STANDARD_INCLUDE_DIRECTORIES ${CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES})
 
 # Setup context
@@ -32,13 +38,11 @@ add_library(${CONTEXT}_GLOBAL INTERFACE)
 # Includes
 target_include_directories(${CONTEXT} PUBLIC
   ${SOLUTION_ROOT}/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx
-  ${SOLUTION_ROOT}/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx
+  ${SOLUTION_ROOT}/BAT-MAN_CMSIS/RTE/CMSIS
+  ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Include
   ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Core/Include
-  ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include
   ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include
   ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include
-  ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc
-  ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy
   ${SOLUTION_ROOT}/BAT-MAN_CMSIS/Inc
 )
 
@@ -68,9 +72,6 @@ target_compile_options(${CONTEXT} PUBLIC
     "SHELL:-Wno-parentheses-equality"
     "SHELL:-Wno-license-management"
   >
-  $<$<COMPILE_LANGUAGE:C,CXX>:
-    "SHELL:${_PI}\"${SOLUTION_ROOT}/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx/Pre_Include_Global.h\""
-  >
 )
 
 # Compile Options Abstractions
@@ -94,25 +95,9 @@ target_link_libraries(${CONTEXT} PUBLIC
   Group_Source_Files_Inc
   Group_Source_Files_Inc_c
   Group_Source_Files
-  ARM_CMSIS_Driver_Ethernet_Custom_1_0_0
-  ARM_CMSIS_Driver_GPIO_Custom_1_0_0
-  ARM_CMSIS_Driver_USART_Custom_1_0_0
-  ARM_CMSIS_Driver_USB_Device_Custom_1_0_0
   ARM_CMSIS_CORE_6_1_0
   ARM_CMSIS_OS_Tick_SysTick_1_0_5
-  Keil_CMSIS_Driver_USB_Device_Full-speed_1_13_0
-  Keil_CMSIS_Driver_USB_Device_High-speed_1_19_0
-  Keil_Device_STM32Cube_Framework_Classic_1_3_0
-  Keil_Device_STM32Cube_HAL_Common_1_3_0
-  Keil_Device_STM32Cube_HAL_Cortex_1_3_0
-  Keil_Device_STM32Cube_HAL_DMA_1_3_0
-  Keil_Device_STM32Cube_HAL_GPIO_1_3_0
-  Keil_Device_STM32Cube_HAL_PWR_1_3_0
-  Keil_Device_STM32Cube_HAL_RCC_1_3_0
-  Keil_Device_STM32Cube_LL_Common_1_3_0
-  Keil_Device_STM32Cube_LL_PWR_1_3_0
-  Keil_Device_STM32Cube_LL_RCC_1_3_0
-  Keil_Device_STM32Cube_LL_UTILS_1_3_0
+  ARM_CMSIS_RTOS2_Keil_RTX5_Library_5_9_0
   Keil_Device_Startup_1_2_5
 )
 

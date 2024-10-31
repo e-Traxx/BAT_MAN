@@ -1,9 +1,9 @@
 
 cmake_minimum_required(VERSION 3.15)
 
-set(command "/Users/akame/.vcpkg/artifacts/2139c4c6/tools.kitware.cmake/3.28.4/bin/cmake;-G;Ninja;-S;/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx;-B;/Users/akame/Documents/Etraxx/BAT-MAN/tmp/1;-DSOLUTION_ROOT=/Users/akame/Documents/Etraxx/BAT-MAN;-DCMSIS_PACK_ROOT=/Users/akame/.cache/arm/packs;-DCMSIS_COMPILER_ROOT=/Users/akame/.vcpkg/artifacts/2139c4c6/tools.open.cmsis.pack.cmsis.toolbox/2.5.0/etc")
+set(command "/Users/akame/.vcpkg/artifacts/2139c4c6/tools.kitware.cmake/3.28.4/bin/cmake;-G;Ninja;-S;/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx;-B;/Users/akame/Documents/Etraxx/BAT-MAN/tmp/1;-DSOLUTION_ROOT=/Users/akame/Documents/Etraxx/BAT-MAN;-DCMSIS_PACK_ROOT=/Users/akame/.cache/arm/packs;-DCMSIS_COMPILER_ROOT=/Users/akame/.vcpkg/artifacts/2139c4c6/tools.open.cmsis.pack.cmsis.toolbox/2.6.1/etc")
 set(log_merged "")
-set(log_output_on_failure "")
+set(log_output_on_failure "ON")
 set(stdout_log "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-configure-out.log")
 set(stderr_log "/Users/akame/Documents/Etraxx/BAT-MAN/tmp/BAT-MAN_CMSIS.Debug+STM32F767ZITx/src/BAT-MAN_CMSIS.Debug+STM32F767ZITx-stamp/BAT-MAN_CMSIS.Debug+STM32F767ZITx-configure-err.log")
 execute_process(

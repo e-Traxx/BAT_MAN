@@ -405,15 +405,10 @@ CompileFlags:
     - '-D__ARMCOMPILER_LIBCXX=1'
     - >-
       -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/_Debug_STM32F767ZITx
-    - >-
-      -I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/Device/STM32F767ZITx
+    - '-I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/RTE/CMSIS'
+    - '-I/Users/akame/.cache/arm/packs/ARM/CMSIS-RTX/5.9.0/Include'
     - '-I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include'
-    - '-I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include'
     - '-I/Users/akame/.cache/arm/packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include'
     - >-
       -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include
-    - >-
-      -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc
-    - >-
-      -I/Users/akame/.cache/arm/packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy
     - '-I/Users/akame/Documents/Etraxx/BAT-MAN/BAT-MAN_CMSIS/Inc'
