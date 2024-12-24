@@ -1,1 +1,0 @@
-cmd='/Users/akame/.vcpkg/artifacts/2139c4c6/tools.kitware.cmake/3.28.4/bin/cmake;-G;Ninja;-S;<SOURCE_DIR>;-B;<BINARY_DIR>;-DSOLUTION_ROOT=/Users/akame/Documents/Etraxx/BAT-MAN;-DCMSIS_PACK_ROOT=/Users/akame/.cache/arm/packs;-DCMSIS_COMPILER_ROOT=/Users/akame/.vcpkg/artifacts/2139c4c6/tools.open.cmsis.pack.cmsis.toolbox/2.6.1/etc'

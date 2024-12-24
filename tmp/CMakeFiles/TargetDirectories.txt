@@ -1,6 +1,0 @@
-/Users/akame/Documents/Etraxx/BAT-MAN/tmp/CMakeFiles/BAT-MAN_CMSIS.Debug+STM32F767ZITx.dir
-/Users/akame/Documents/Etraxx/BAT-MAN/tmp/CMakeFiles/BAT-MAN_CMSIS.Debug+STM32F767ZITx-build.dir
-/Users/akame/Documents/Etraxx/BAT-MAN/tmp/CMakeFiles/BAT-MAN_CMSIS.Debug+STM32F767ZITx-configure.dir
-/Users/akame/Documents/Etraxx/BAT-MAN/tmp/CMakeFiles/BAT-MAN_CMSIS.Debug+STM32F767ZITx-database.dir
-/Users/akame/Documents/Etraxx/BAT-MAN/tmp/CMakeFiles/edit_cache.dir
-/Users/akame/Documents/Etraxx/BAT-MAN/tmp/CMakeFiles/rebuild_cache.dir
