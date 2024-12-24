@@ -1,0 +1,35 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/cu.usbserial-0001 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d633b: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:71
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d6338: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:70 (discriminator 1)
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d633b: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:71
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d6338: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:70 (discriminator 1)
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d633b: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:71
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d6338: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:70 (discriminator 1)
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m
