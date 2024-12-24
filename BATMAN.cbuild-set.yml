@@ -1,4 +1,0 @@
-cbuild-set:
-  generated-by: csolution version 2.5.0
-  contexts:
-    - context: BAT-MAN_CMSIS.Debug+STM32F767ZITx
