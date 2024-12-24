@@ -1,0 +1,215 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/cu.usbserial-0001 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d635a: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:77
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400d6357: CAN_sendMessage at /Users/akame/Documents/Batman_esp/main/can_handler.c:76
+0x4008625d: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m
