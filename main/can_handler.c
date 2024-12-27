@@ -3,6 +3,7 @@
 #include "driver/twai.h"
 #include "esp_err.h"
 #include "esp_intr_alloc.h"
+#include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/idf_additions.h"
 #include "freertos/projdefs.h"
@@ -15,6 +16,8 @@
 
 #define TX_NUM GPIO_NUM_21
 #define RX_NUM GPIO_NUM_22
+
+static const char *TAG = "CAN_HANDLER";
 
 // handles the Can Rtos Scheduling
 QueueHandle_t can_queue;
@@ -39,25 +42,25 @@ void CAN_Setup(void) {
   // Semaphore setup
   can_semaphore_start_transmit = xSemaphoreCreateMutex();
   if (can_semaphore_start_transmit == NULL) {
-    printf("[-] Failed to create CAN Semaphore\n");
+    ESP_LOGE(TAG, "[-] Failed to create CAN Semaphore");
   }
 
   // CAN Queue
   can_queue = xQueueCreate(CAN_QUEUE_SIZE, sizeof(can_message_t *));
   if (can_queue == NULL) {
-    printf("[-] Failed to create CAN queue\n");
+    ESP_LOGE(TAG, "[-] Failed to create CAN queue");
   }
 
   // Install and start TWAI driver
   if (twai_driver_install(&g_config, &t_config, &f_config) == ESP_OK) {
     if (twai_start() == ESP_OK) {
-      printf("[+] TWAI Driver installed and started\n");
+      ESP_LOGI(TAG, "[+] TWAI Driver installed and started");
     } else {
-      printf("[-] Failed to Start TWAI\n");
+      ESP_LOGE(TAG, "[-] Failed to Start TWAI");
       vTaskDelete(NULL);
     }
   } else {
-    printf("[-] Failed to Install TWAI\n");
+    ESP_LOGE(TAG, "[-] Failed to Install TWAI");
   }
 };
 
@@ -68,11 +71,8 @@ void CAN_sendMessage(void *arguments) {
 
     // take data present on the Queue
     if (xQueueReceive(can_queue, &msg_arg, portMAX_DELAY) == pdPASS) {
-      printf("[*] Received MSG with ID %" PRIu32 " and DLC %" PRIu8 "\n",
-             msg_arg->identifier, msg_arg->DLC);
-
-      // Notice to start operation (take mutex)
-      printf("[*] Starting Can Transmission\n");
+      /* printf("[*] Received MSG with ID %" PRIu32 " and DLC %" PRIu8 "\n", */
+      /* msg_arg->identifier, msg_arg->DLC); */
 
       twai_message_t msg = {
           .identifier = msg_arg->identifier,
@@ -84,13 +84,11 @@ void CAN_sendMessage(void *arguments) {
 
       // send Can Message
       esp_err_t res = twai_transmit(&msg, pdMS_TO_TICKS(200));
-      if (res == ESP_OK) {
-        printf("[+] CAN Message Sent\n"); // remove later, just for testing
-      } else {
-        printf("[-] Failed to send Message\n");
+      if (res != ESP_OK) {
+        ESP_LOGW(TAG, "[-] Failed to send Message");
       }
     } else {
-      printf("[-] Did not receive Msg from Queue\n");
+      ESP_LOGW(TAG, "[-] Did not receive Msg from Queue");
     }
     // free the allocated memory after use
     free(msg_arg);
@@ -101,7 +99,7 @@ void CAN_TX_enqueue(uint32_t identifier, uint8_t DLC, uint8_t data[8]) {
   // format msg
   can_message_t *msg = malloc(sizeof(can_message_t));
   if (msg == NULL) {
-    printf("[-] Failed to allocate memory for CAN Message\n");
+    ESP_LOGW(TAG, "[-] Failed to allocate memory for CAN Message");
   }
 
   // format msg
@@ -111,7 +109,7 @@ void CAN_TX_enqueue(uint32_t identifier, uint8_t DLC, uint8_t data[8]) {
 
   // enqueue message
   if (xQueueSend(can_queue, &msg, portMAX_DELAY) != pdPASS) {
-    printf("[-] Failed to enqueue CAN Message\n");
+    ESP_LOGW(TAG, "[-] Failed to enqueue CAN Message");
     free(msg);
   }
 }

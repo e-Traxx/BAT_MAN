@@ -18,6 +18,8 @@ void initialise_setups(void) {
   CAN_Setup();
   SPI_Setup();
 
+  spi_add_device();
+
   // Setup Diagnostic system
   Diag_Setup();
   ADBMS_Setup();
@@ -27,7 +29,7 @@ void Start_schedule(void) {
 
   // Start Timer scheduling
   if (xTimerStart(diagnostic_timer, 0) != pdPASS) {
-    printf("[-] Failed to start diagnostic_timer\n");
+    ESP_LOGE(TAG, "[-] Failed to start diagnostic_timer\n");
   }
 
   if (xTimerStart(adbms_timer, 0) != pdPASS) {
@@ -46,6 +48,6 @@ void Start_schedule(void) {
 void app_main(void) {
 
   initialise_setups();
-  printf("[+] System Initialised\n");
+  ESP_LOGI(TAG, "[+] System Initialised\n");
   Start_schedule();
 }

@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "Batman_esp",
-    "project_version":    "9c0eeaf-dirty",
+    "project_version":    "f448586-dirty",
     "project_path":       "/Users/akame/Documents/BAT-MAN",
     "idf_path":           "/Users/akame/esp/esp-idf",
     "build_dir":          "/Users/akame/Documents/BAT-MAN/build",

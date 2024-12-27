@@ -1,11 +1,12 @@
 #ifndef SPIH_H
 #define SPIH_H
 
-#include "esp_err.h"
+#include <stddef.h>
+#include <stdint.h>
 
 void SPI_Setup(void);
 void spi_add_device(void);
 
-esp_err_t spi_read_data(void);
+void read_all_modules(uint8_t *response, size_t resp_len);
 
 #endif
