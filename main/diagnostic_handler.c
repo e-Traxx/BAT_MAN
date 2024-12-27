@@ -1,6 +1,7 @@
 #include "diagnostic_handler.h"
 #include "Batman_esp.h"
 #include "can_handler.h"
+#include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/idf_additions.h"
 #include "freertos/projdefs.h"
@@ -10,6 +11,8 @@
 
 SemaphoreHandle_t diagnostic_semaphore;
 TimerHandle_t diagnostic_timer;
+
+static const char *TAG = "Diag";
 
 void diagnostic_timer_callback(TimerHandle_t DiagTimer);
 void Diagnostic_check(void *arguments);
@@ -49,7 +52,7 @@ void Diagnostic_check(void *arguments) {
   while (1) {
     if (xSemaphoreTake(diagnostic_semaphore, portMAX_DELAY) == pdTRUE) {
       // Perform the diagnostic test
-      printf("[*] Running diagnostic test...\n");
+      ESP_LOGV(TAG, "[*] Running diagnostic test...");
 
       // Insert diagnostic operations here
       // e.g., reading sensors, checking system health, etc.
@@ -78,9 +81,7 @@ void Diagnostic_check(void *arguments) {
       CAN_TX_enqueue(0x199, 8, frame.bytes);
 
       // for now
-      spi_read_data();
-
-      printf("[+] Diagnostic test completed.\n");
+      ESP_LOGV(TAG, "[+] Diagnostic test completed.\n");
     }
   }
 }

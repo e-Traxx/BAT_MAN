@@ -1,0 +1,2043 @@
+v1.0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32me : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32m�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.3.2 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Dec 27 2024 10:11:54[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v1.0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0bd24h ( 48420) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001bd4c vaddr=3ffb0000 size=02488h (  9352) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001e1dc vaddr=40080000 size=01e3ch (  7740) load[0m
+[0;32mI (129) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=184e4h ( 99556) map[0m
+[0;32mI (168) esp_image: segment 4: paddr=0003850c vaddr=40081e3c size=0c7a0h ( 51104) load[0m
+[0;32mI (196) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (196) boot: Disabling RNG early entropy source...[0m
+[0;32mI (208) cpu_start: Multicore app[0m
+[0;32mI (216) cpu_start: Pro cpu start user code[0m
+[0;32mI (216) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (216) app_init: Application information:[0m
+[0;32mI (219) app_init: Project name:     Batman_esp[0m
+[0;32mI (224) app_init: App version:      f448586-dirty[0m
+[0;32mI (230) app_init: Compile time:     Dec 27 2024 10:11:49[0m
+[0;32mI (236) app_init: ELF file SHA256:  14bf699a6...[0m
+[0;32mI (241) app_init: ESP-IDF:          v5.3.2[0m
+[0;32mI (246) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (251) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (256) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (261) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (268) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFB2ED0 len 0002D130 (180 KiB): DRAM[0m
+[0;32mI (280) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (293) heap_init: At 4008E5DC len 00011A24 (70 KiB): IRAM[0m
+[0;32mI (300) spi_flash: detected chip: generic[0m
+[0;32mI (304) spi_flash: flash io: dio[0m
+[0;33mW (307) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (321) main_task: Started on CPU0[0m
+[0;32mI (331) main_task: Calling app_main()[0m
+[0;32mI (331) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (331) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (341) CAN_HANDLER: [+] TWAI Driver installed and started[0m
+[0;32mI (351) Setup: [+] System Initialised
+[0m
+[0;32mI (351) main_task: Returned from app_main()[0m
+[0;31mE (1351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[0;33mW (1551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (1751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (1951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (2151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (2351) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (2351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[0;33mW (2551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (2751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (2951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (3151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (3351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (3551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (3751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (3951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (4151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (4351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (4551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (4751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (4951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (5151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (5351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (5551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (5751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (5951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (6151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (6351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (6551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (6751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (6951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (7151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (7351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (7551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (7751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (7951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (8151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (8351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (8551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (8751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (8951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (9151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (9351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (9551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (9751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (9951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (10151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (10351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (10551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (10751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (10951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (11151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (11351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (11551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (11751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (11951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (12151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (12351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (12551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (12751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (12951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (13151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (13351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (13551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (13751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (13951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (14151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (14351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (14551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (14751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (14951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (15151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (15351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (15551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (15751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (15951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (16151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (16351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (16551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (16751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (16951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (17151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (17351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (17551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (17751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (17951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (18151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (18351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (18551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (18751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (18951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (19151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (19351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (19551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (19751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (19951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (20151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (20351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (20551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (20751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (20951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (21151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (21351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (21551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (21751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (21951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (22151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (22351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (22551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (22751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (22951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (23151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (23351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (23551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (23751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (23951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (24151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (24351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (24551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (24751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (24951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (25151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (25351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (25551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (25751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (25951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (26151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (26351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (26551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (26751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (26951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (27151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (27351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (27551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (27751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (27951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (28151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (28351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (28551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (28751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (28951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (29151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (29351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (29551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (29751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (29951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (30151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (30351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (30551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (30751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (30951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (31151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (31351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (31551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (31751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (31951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (32151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (32351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (32551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (32751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (32951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (33151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (33351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (33551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (33751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (33951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (34151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (34351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (34551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (34751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (34951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (35151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (35351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (35551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (35751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (35951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (36151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (36351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (36551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (36751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (36951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (37151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (37351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (37551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (37751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (37951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (38151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (38351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (38551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (38751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (38951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (39151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (39351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (39551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (39751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (39951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (40151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (40351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (40551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (40751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (40951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (41151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (41351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (41551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (41751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (41951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (42151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (42351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (42551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (42751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (42951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (43151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (43351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (43551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (43751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (43951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (44151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (44351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (44551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (44751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (44951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (45151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (45351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (45551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (45751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (45951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (46151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (46351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (46551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (46751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (46951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (47151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (47351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (47551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (47751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (47951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (48151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (48351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (48551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (48751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (48951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (49151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (49351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (49551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (49751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (49951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (50151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (50351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (50551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (50751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (50951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (51151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (51351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (51551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (51751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (51951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (52151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (52351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (52551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (52751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (52951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (53151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (53351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (53551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (53751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (53951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (54151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (54351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (54551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (54751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (54951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (55151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (55351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (55551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (55751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (55951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (56151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (56351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (56551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (56751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (56951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (57151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (57351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (57551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (57751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (57951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (58151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (58351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (58551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (58751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (58951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (59151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (59351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (59551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (59751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (59951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (60151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (60351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (60551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (60751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (60951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (61151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (61351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (61551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (61751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (61951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (62151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (62351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (62551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (62751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (62951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (63151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (63351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (63551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (63751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (63951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (64151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (64351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (64551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (64751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (64951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (65151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (65351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (65551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (65751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (65951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (66151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (66351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (66551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (66751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (66951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (67151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (67351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (67551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (67751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (67951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (68151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (68351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (68551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (68751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (68951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (69151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (69351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (69551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (69751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (69951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (70151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (70351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (70551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (70751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (70951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (71151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (71351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (71551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (71751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (71951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (72151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (72351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (72551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (72751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (72951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (73151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (73351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (73551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (73751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (73951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (74151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (74351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (74551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (74751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (74951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (75151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (75351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (75551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (75751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (75951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (76151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (76351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (76551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (76751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (76951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (77151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (77351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (77551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (77751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (77951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (78151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (78351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (78551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (78751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (78951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (79151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (79351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (79551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (79751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (79951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (80151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (80351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (80551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (80751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (80951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (81151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (81351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (81551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (81751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (81951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (82151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (82351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (82551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (82751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (82951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (83151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (83351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (83551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (83751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (83951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (84151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (84351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (84551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (84751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (84951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (85151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (85351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (85551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (85751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (85951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (86151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (86351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (86551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (86751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (86951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (87151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (87351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (87551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (87751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (87951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (88151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (88351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (88551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (88751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (88951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (89151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (89351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (89551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (89751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (89951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (90151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (90351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (90551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (90751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (90951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (91151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (91351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (91551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (91751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (91951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (92151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (92351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (92551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (92751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (92951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (93151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (93351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (93551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (93751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (93951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (94151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (94351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (94551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (94751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (94951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (95151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (95351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (95551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (95751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (95951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (96151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (96351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (96551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (96751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (96951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (97151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (97351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (97551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (97751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (97951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (98151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (98351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (98551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (98751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (98951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (99151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (99351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (99551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (99751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (99951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (100151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (100351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (100551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (100751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (100951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (101151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (101351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (101551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (101751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (101951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (102151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (102351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (102551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (102751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (102951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (103151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (103351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (103551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (103751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (103951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (104151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (104351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (104551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (104751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (104951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (105151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (105351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (105551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (105751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (105951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (106151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (106351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (106551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (106751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (106951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (107151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (107351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (107551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (107751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (107951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (108151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (108351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (108551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (108751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (108951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (109151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (109351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (109551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (109751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (109951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (110151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (110351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (110551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (110751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (110951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (111151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (111351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (111551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (111751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (111951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (112151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (112351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (112551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (112751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (112951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (113151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (113351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (113551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (113751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (113951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (114151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (114351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (114551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (114751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (114951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (115151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (115351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (115551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (115751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (115951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (116151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (116351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (116551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (116751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (116951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (117151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (117351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (117551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (117751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (117951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (118151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (118351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (118551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (118751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (118951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (119151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (119351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (119551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (119751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (119951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (120151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (120351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (120551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (120751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (120951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (121151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (121351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (121551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (121751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (121951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (122151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (122351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (122551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (122751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (122951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (123151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (123351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (123551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (123751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (123951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (124151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (124351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (124551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (124751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (124951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (125151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (125351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (125551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (125751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (125951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (126151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (126351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (126551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (126751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (126951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (127151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (127351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (127551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (127751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (127951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (128151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (128351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (128551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (128751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (128951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (129151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (129351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (129551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (129751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (129951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (130151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (130351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (130551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (130751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (130951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (131151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (131351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (131551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (131751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (131951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (132151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (132351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (132551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (132751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (132951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (133151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (133351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (133551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (133751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (133951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (134151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (134351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (134551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (134751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (134951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (135151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (135351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (135551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (135751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (135951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (136151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (136351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (136551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (136751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (136951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (137151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (137351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (137551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (137751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (137951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (138151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (138351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (138551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (138751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (138951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (139151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (139351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (139551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (139751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (139951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (140151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (140351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (140551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (140751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (140951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (141151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (141351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (141551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (141751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (141951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (142151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (142351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (142551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (142751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (142951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (143151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (143351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (143551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (143751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (143951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (144151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (144351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (144551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (144751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (144951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (145151) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (145351) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[0;33mW (145551) CAN_HANDLER: [-] Failed to send Message[0m
+[+] Diagnostic test completed.
+[0;33mW (145751) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (145951) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (146151) CAN_HANDLER: [-] Failed to send Message[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (147351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (148351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (149351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (150351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (151351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (152351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (153351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (154351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (155351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (156351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (157351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (158351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (159351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (160351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (161351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (162351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (163351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (164351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (165351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (166351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (167351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (168351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (169351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (170351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (171351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (172351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (173351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (174351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (175351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (176351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (177351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (178351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (179351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (180351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (181351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (182351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (183351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (184351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (185351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (186351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (187351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (188351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (189351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (190351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (191351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (192351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (193351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (194351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (195351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (196351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (197351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (198351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (199351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (200351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (201351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (202351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (203351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (204351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (205351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (206351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (207351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (208351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (209351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (210351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (211351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (212351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (213351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (214351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (215351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (216351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (217351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (218351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (219351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (220351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (221351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (222351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (223351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (224351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (225351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (226351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (227351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (228351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (229351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (230351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (231351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (232351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (233351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (234351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (235351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (236351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (237351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (238351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (239351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (240351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (241351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (242351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (243351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (244351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (245351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (246351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (247351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (248351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (249351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (250351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (251351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (252351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (253351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (254351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (255351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (256351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (257351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (258351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (259351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (260351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (261351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (262351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (263351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (264351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (265351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (266351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (267351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (268351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (269351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (270351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (271351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (272351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (273351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (274351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (275351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (276351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (277351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (278351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (279351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (280351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (281351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (282351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (283351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (284351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (285351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (286351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (287351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (288351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (289351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (290351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (291351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (292351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (293351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (294351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (295351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (296351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (297351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (298351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (299351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (300351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (301351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (302351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (303351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (304351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (305351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (306351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (307351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (308351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (309351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (310351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (311351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (312351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (313351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (314351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (315351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (316351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (317351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (318351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (319351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (320351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (321351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (322351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (323351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (324351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (325351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (326351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (327351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (328351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (329351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (330351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (331351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (332351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (333351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (334351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (335351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (336351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (337351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (338351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (339351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (340351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (341351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (342351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (343351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (344351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (345351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (346351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (347351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (348351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (349351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (350351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (351351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (352351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (353351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (354351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (355351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (356351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (357351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (358351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (359351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (360351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (361351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (362351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (363351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (364351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (365351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (366351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (367351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (368351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (369351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (370351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (371351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (372351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (373351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (374351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (375351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (376351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (377351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (378351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (379351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (380351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (381351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (382351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (383351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (384351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (385351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (386351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (387351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (388351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (389351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (390351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (391351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (392351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (393351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (394351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (395351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (396351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (397351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (398351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (399351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (400351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (401351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (402351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (403351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (404351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (405351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (406351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (407351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (408351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (409351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (410351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (411351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (412351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (413351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (414351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (415351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (416351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (417351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (418351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (419351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (420351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (421351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (422351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (423351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (424351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (425351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (426351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (427351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (428351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (429351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (430351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (431351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (432351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (433351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (434351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (435351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (436351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (437351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (438351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (439351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (440351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (441351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (442351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (443351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (444351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (445351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (446351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (447351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (448351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (449351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (450351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (451351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (452351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (453351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (454351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (455351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (456351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (457351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (458351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (459351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (460351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (461351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (462351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (463351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (464351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.
+[0;31mE (465351) ADBMS_Query: [-]  Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[+] Diagnostic test completed.

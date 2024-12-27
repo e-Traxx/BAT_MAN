@@ -1,0 +1,33 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/cu.usbserial-0001 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40088b44: xTaskRemoveFromEventList at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3898
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x40088b41: xTaskRemoveFromEventList at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3898
+0x40086a63: xQueueGenericSend at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:993
+0x400d65f3: CAN_TX_enqueue at /Users/akame/Documents/BAT-MAN/main/can_handler.c:113
+0x400d6a75: System_report_to_user at /Users/akame/Documents/BAT-MAN/main/Adbms_handler.c:119
+0x400d6b89: Robin_query at /Users/akame/Documents/BAT-MAN/main/Adbms_handler.c:93
+0x400870bd: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40088b44: xTaskRemoveFromEventList at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3898
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x40088b41: xTaskRemoveFromEventList at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3898
+0x40086a63: xQueueGenericSend at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:993
+0x400d65f3: CAN_TX_enqueue at /Users/akame/Documents/BAT-MAN/main/can_handler.c:113
+0x400d6a75: System_report_to_user at /Users/akame/Documents/BAT-MAN/main/Adbms_handler.c:119
+0x400d6b89: Robin_query at /Users/akame/Documents/BAT-MAN/main/Adbms_handler.c:93
+0x400870bd: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

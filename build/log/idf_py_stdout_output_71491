@@ -1,0 +1,1363 @@
+v1.0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32m��: 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.3.2 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Dec 27 2024 10:11:54[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v1.0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0bd24h ( 48420) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001bd4c vaddr=3ffb0000 size=02488h (  9352) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001e1dc vaddr=40080000 size=01e3ch (  7740) load[0m
+[0;32mI (129) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=184e4h ( 99556) map[0m
+[0;32mI (168) esp_image: segment 4: paddr=0003850c vaddr=40081e3c size=0c7a0h ( 51104) load[0m
+[0;32mI (196) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (196) boot: Disabling RNG early entropy source...[0m
+[0;32mI (208) cpu_start: Multicore app[0m
+[0;32mI (216) cpu_start: Pro cpu start user code[0m
+[0;32mI (216) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (216) app_init: Application information:[0m
+[0;32mI (219) app_init: Project name:     Batman_esp[0m
+[0;32mI (224) app_init: App version:      f448586-dirty[0m
+[0;32mI (230) app_init: Compile time:     Dec 27 2024 10:11:49[0m
+[0;32mI (236) app_init: ELF file SHA256:  53e6cb816...[0m
+[0;32mI (241) app_init: ESP-IDF:          v5.3.2[0m
+[0;32mI (246) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (251) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (256) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (261) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (268) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFB2ED0 len 0002D130 (180 KiB): DRAM[0m
+[0;32mI (280) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (293) heap_init: At 4008E5DC len 00011A24 (70 KiB): IRAM[0m
+[0;32mI (300) spi_flash: detected chip: generic[0m
+[0;32mI (304) spi_flash: flash io: dio[0m
+[0;33mW (307) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (321) main_task: Started on CPU0[0m
+[0;32mI (331) main_task: Calling app_main()[0m
+[0;32mI (331) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (331) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (341) CAN_HANDLER: [+] TWAI Driver installed and started
+[0m
+[0;32mI (351) Setup: [+] System Initialised
+[0m
+[0;32mI (351) main_task: Returned from app_main()[0m
+[0;31mE (1351) ADBMS_Query: [-] Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[0;33mW (1551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (1751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (1951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (2151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (2351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;31mE (2351) ADBMS_Query: [-] Failed to give Semaphore to ADBMS query[0m
+[*] Running diagnostic test...
+[0;33mW (2551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (2751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (2951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (3151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (3351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (3551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (3751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (3951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (4151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (4351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (4551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (4751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (4951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (5151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (5351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (5551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (5751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (5951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (6151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (6351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (6551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (6751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (6951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (7151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (7351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (7551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (7751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (7951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (8151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (8351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (8551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (8751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (8951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (9151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (9351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (9551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (9751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (9951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (10151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (10351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (10551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (10751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (10951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (11151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (11351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (11551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (11751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (11951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (12151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (12351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (12551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (12751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (12951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (13151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (13351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (13551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (13751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (13951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (14151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (14351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (14551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (14751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (14951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (15151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (15351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (15551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (15751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (15951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (16151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (16351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (16551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (16751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (16951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (17151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (17351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (17551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (17751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (17951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (18151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (18351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (18551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (18751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (18951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (19151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (19351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (19551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (19751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (19951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (20151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (20351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (20551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (20751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (20951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (21151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (21351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (21551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (21751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (21951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (22151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (22351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (22551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (22751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (22951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (23151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (23351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (23551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (23751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (23951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (24151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (24351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (24551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (24751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (24951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (25151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (25351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (25551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (25751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (25951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (26151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (26351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (26551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (26751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (26951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (27151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (27351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (27551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (27751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (27951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (28151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (28351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (28551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (28751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (28951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (29151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (29351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (29551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (29751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (29951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (30151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (30351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (30551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (30751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (30951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (31151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (31351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (31551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (31751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (31951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (32151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (32351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (32551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (32751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (32951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (33151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (33351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (33551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (33751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (33951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (34151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (34351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (34551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (34751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (34951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (35151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (35351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (35551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (35751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (35951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (36151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (36351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (36551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (36751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (36951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (37151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (37351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (37551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (37751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (37951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (38151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (38351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (38551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (38751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (38951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (39151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (39351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (39551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (39751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (39951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (40151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (40351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (40551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (40751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (40951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (41151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (41351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (41551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (41751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (41951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (42151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (42351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (42551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (42751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (42951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (43151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (43351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (43551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (43751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (43951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (44151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (44351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (44551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (44751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (44951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (45151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (45351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (45551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (45751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (45951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (46151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (46351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (46551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (46751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (46951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (47151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (47351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (47551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (47751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (47951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (48151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (48351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (48551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (48751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (48951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (49151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (49351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (49551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (49751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (49951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (50151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (50351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (50551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (50751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (50951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (51151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (51351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (51551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (51751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (51951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (52151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (52351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (52551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (52751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (52951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (53151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (53351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (53551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (53751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (53951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (54151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (54351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (54551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (54751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (54951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (55151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (55351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (55551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (55751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (55951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (56151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (56351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (56551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (56751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (56951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (57151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (57351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (57551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (57751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (57951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (58151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (58351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (58551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (58751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (58951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (59151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (59351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (59551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (59751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (59951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (60151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (60351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (60551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (60751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (60951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (61151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (61351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (61551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (61751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (61951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (62151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (62351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (62551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (62751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (62951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (63151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (63351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (63551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (63751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (63951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (64151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (64351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (64551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (64751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (64951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (65151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (65351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (65551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (65751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (65951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (66151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (66351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (66551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (66751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (66951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (67151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (67351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (67551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (67751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (67951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (68151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (68351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (68551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (68751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (68951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (69151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (69351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (69551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (69751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (69951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (70151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (70351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (70551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (70751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (70951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (71151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (71351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (71551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (71751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (71951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (72151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (72351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (72551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (72751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (72951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (73151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (73351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (73551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (73751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (73951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (74151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (74351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (74551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (74751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (74951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (75151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (75351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (75551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (75751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (75951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (76151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (76351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (76551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (76751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (76951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (77151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (77351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (77551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (77751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (77951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (78151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (78351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (78551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (78751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (78951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (79151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (79351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (79551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (79751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (79951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (80151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (80351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (80551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (80751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (80951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (81151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (81351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (81551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (81751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (81951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (82151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (82351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (82551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (82751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (82951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (83151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (83351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (83551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (83751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (83951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (84151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (84351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (84551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (84751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (84951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (85151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (85351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (85551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (85751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (85951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (86151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (86351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (86551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (86751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (86951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (87151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (87351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (87551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (87751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (87951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (88151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (88351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (88551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (88751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (88951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (89151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (89351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (89551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (89751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (89951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (90151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (90351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (90551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (90751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (90951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (91151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (91351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (91551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (91751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (91951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (92151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (92351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (92551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (92751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (92951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (93151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (93351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (93551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (93751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (93951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (94151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (94351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (94551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (94751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (94951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (95151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (95351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (95551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (95751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (95951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (96151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (96351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (96551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (96751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (96951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (97151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (97351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (97551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (97751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (97951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (98151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (98351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (98551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (98751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (98951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (99151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (99351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (99551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (99751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (99951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (100151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (100351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (100551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (100751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (100951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (101151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (101351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (101551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (101751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (101951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (102151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (102351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (102551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (102751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (102951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (103151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (103351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (103551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (103751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (103951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (104151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (104351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (104551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (104751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (104951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (105151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (105351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (105551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (105751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (105951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (106151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (106351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (106551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (106751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (106951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (107151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (107351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (107551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (107751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (107951) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (108151) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (108351) CAN_HANDLER: [-] Failed to send Message
+[0m
+[*] Running diagnostic test...
+[0;33mW (108551) CAN_HANDLER: [-] Failed to send Message
+[0m
+[+] Diagnostic test completed.
+[0;33mW (108751) CAN_HANDLER: [-] Failed to send Message
+[0m
+[0;33mW (108951) CAN_HANDLER: [-] Failed to send Message
+[0m
