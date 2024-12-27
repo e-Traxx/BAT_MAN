@@ -1,0 +1,41 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/cu.usbserial-0001 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4008190e: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:463
+0x40085d21: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4008c439: __assert_func at /Users/akame/esp/esp-idf/components/newlib/assert.c:80
+0x400d692d: System_report at /Users/akame/Documents/BAT-MAN/main/Adbms_handler.c:102 (discriminator 1)
+0x400d6aa9: Robin_query at /Users/akame/Documents/BAT-MAN/main/Adbms_handler.c:72
+0x40086865: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4008190e: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:463
+0x40085d21: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4008c439: __assert_func at /Users/akame/esp/esp-idf/components/newlib/assert.c:80
+0x400d692d: System_report at /Users/akame/Documents/BAT-MAN/main/Adbms_handler.c:102 (discriminator 1)
+0x400d6aa9: Robin_query at /Users/akame/Documents/BAT-MAN/main/Adbms_handler.c:72
+0x40086865: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4008190e: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:463
+0x40085d21: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4008c439: __assert_func at /Users/akame/esp/esp-idf/components/newlib/assert.c:80
+0x400d692d: System_report at /Users/akame/Documents/BAT-MAN/main/Adbms_handler.c:102 (discriminator 1)
+0x400d6aa9: Robin_query at /Users/akame/Documents/BAT-MAN/main/Adbms_handler.c:72
+0x40086865: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4008190e: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:463
+0x40085d21: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4008c439: __assert_func at /Users/akame/esp/esp-idf/components/newlib/assert.c:80
+0x400d692d: System_report at /Users/akame/Documents/BAT-MAN/main/Adbms_handler.c:102 (discriminator 1)
+0x400d6aa9: Robin_query at /Users/akame/Documents/BAT-MAN/main/Adbms_handler.c:72
+0x40086865: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

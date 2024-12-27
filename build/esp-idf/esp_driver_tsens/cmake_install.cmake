@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/akame/Documents/Batman_esp/build/esp-idf/esp_driver_tsens/install_local_manifest.txt"
+  file(WRITE "/Users/akame/Documents/BAT-MAN/build/esp-idf/esp_driver_tsens/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
