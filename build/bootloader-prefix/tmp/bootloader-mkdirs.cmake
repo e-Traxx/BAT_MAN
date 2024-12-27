@@ -10,18 +10,18 @@ if(NOT EXISTS "/Users/akame/esp/esp-idf/components/bootloader/subproject")
   file(MAKE_DIRECTORY "/Users/akame/esp/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "/Users/akame/Documents/Batman_esp/build/bootloader"
-  "/Users/akame/Documents/Batman_esp/build/bootloader-prefix"
-  "/Users/akame/Documents/Batman_esp/build/bootloader-prefix/tmp"
-  "/Users/akame/Documents/Batman_esp/build/bootloader-prefix/src/bootloader-stamp"
-  "/Users/akame/Documents/Batman_esp/build/bootloader-prefix/src"
-  "/Users/akame/Documents/Batman_esp/build/bootloader-prefix/src/bootloader-stamp"
+  "/Users/akame/Documents/BAT-MAN/build/bootloader"
+  "/Users/akame/Documents/BAT-MAN/build/bootloader-prefix"
+  "/Users/akame/Documents/BAT-MAN/build/bootloader-prefix/tmp"
+  "/Users/akame/Documents/BAT-MAN/build/bootloader-prefix/src/bootloader-stamp"
+  "/Users/akame/Documents/BAT-MAN/build/bootloader-prefix/src"
+  "/Users/akame/Documents/BAT-MAN/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/Users/akame/Documents/Batman_esp/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/Users/akame/Documents/BAT-MAN/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/Users/akame/Documents/Batman_esp/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/Users/akame/Documents/BAT-MAN/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

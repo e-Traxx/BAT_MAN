@@ -5,6 +5,7 @@
 #include "freertos/idf_additions.h"
 #include "freertos/projdefs.h"
 #include "portmacro.h"
+#include "spi_handler.h"
 #include <stdint.h>
 
 SemaphoreHandle_t diagnostic_semaphore;
@@ -13,7 +14,7 @@ TimerHandle_t diagnostic_timer;
 void diagnostic_timer_callback(TimerHandle_t DiagTimer);
 void Diagnostic_check(void *arguments);
 void Diagnostic_packet_formatter(diag_frame_t *frame, uint16_t voltage,
-                                 uint16_t current, uint8_t temp, uint8_t soc,
+                                 uint16_t current, uint16_t temp, uint8_t soc,
                                  uint8_t soh, uint8_t flags[8]);
 
 void Diag_Setup(void) {
@@ -56,7 +57,7 @@ void Diagnostic_check(void *arguments) {
       diag_frame_t frame;
       uint16_t overall_voltage = 5600;
       uint16_t current = 40;
-      uint8_t temp = 40;
+      uint16_t temp = 400;
       uint8_t soc = 80;
       uint8_t soh = 80;
 
@@ -76,13 +77,16 @@ void Diagnostic_check(void *arguments) {
       // enqueue data to CAN_TX send function
       CAN_TX_enqueue(0x199, 8, frame.bytes);
 
+      // for now
+      spi_read_data();
+
       printf("[+] Diagnostic test completed.\n");
     }
   }
 }
 
 void Diagnostic_packet_formatter(diag_frame_t *frame, uint16_t voltage,
-                                 uint16_t current, uint8_t temp, uint8_t soc,
+                                 uint16_t current, uint16_t temp, uint8_t soc,
                                  uint8_t soh, uint8_t flags[8]) {
 
   frame->fields.Overall_voltage = voltage & 0x1FFF;
