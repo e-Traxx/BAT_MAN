@@ -56,12 +56,22 @@ void SPI_Setup(void) {
  *  //! Continous measurements are avoided, lieber !!
  *
  *
- *  ! This reads all filtered values.
+ *  ! This requests for all filtered values.
  *  RDFCALL command  : 0 0 0 0 0 0 0 1 1 0 0
  *
- *  ! This reads all the AUX values (Temperature values).
+ *  ! This requests for all the AUX values (Temperature values).
  *  RDASALL: 0 0 0 0 0 1 1 0 1 0 1
  *
+ *  ! This tells the ADBMS to start measurement, (1ms to update filtered
+ * registers) ADCV :  0 1 1 1 1 1 1 0 1 0 0
+ *  // Discharge is interrupted during Measurement
+ *  // No open wire check during ADCV
+ *  // Continous measurements
+ *
+ *
+ *  ! This tells the ADBMS to start redundant measurements and open wire checks
+ * (8ms to update) ADSV : 0 0 1 1 1 1 1 1 0 1 1
+ *  // Diagnostic check measurement
  *
  */
 
