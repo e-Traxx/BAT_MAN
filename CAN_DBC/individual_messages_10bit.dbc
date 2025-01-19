@@ -1,0 +1,198 @@
+VERSION "1.0"
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+
+BS_:
+
+BU_: ECU
+
+BO_ 256 individual_messages: 8 ECU
+ SG_ Mux : 0|8@1+ (1,0) [0|34] "" Vector__XXX
+
+ SG_ cell_voltage_1 m1 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_2 m1 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_3 m1 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_4 m1 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_5 m1 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_6 m2 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_7 m2 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_8 m2 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_9 m2 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_10 m2 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_11 m3 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_12 m3 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_13 m3 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_14 m3 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_15 m3 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_16 m4 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_17 m4 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_18 m4 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_19 m4 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_20 m4 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_21 m5 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_22 m5 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_23 m5 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_24 m5 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_25 m5 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_26 m6 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_27 m6 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_28 m6 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_29 m6 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_30 m6 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_31 m7 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_32 m7 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_33 m7 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_34 m7 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_35 m7 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_36 m8 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_37 m8 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_38 m8 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_39 m8 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_40 m8 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_41 m9 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_42 m9 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_43 m9 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_44 m9 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_45 m9 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_46 m10 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_47 m10 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_48 m10 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_49 m10 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_50 m10 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_51 m11 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_52 m11 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_53 m11 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_54 m11 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_55 m11 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_56 m12 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_57 m12 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_58 m12 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_59 m12 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_60 m12 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_61 m13 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_62 m13 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_63 m13 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_64 m13 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_65 m13 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_66 m14 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_67 m14 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_68 m14 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_69 m14 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_70 m14 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_71 m15 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_72 m15 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_73 m15 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_74 m15 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_75 m15 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_76 m16 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_77 m16 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_78 m16 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_79 m16 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_80 m16 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_81 m17 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_82 m17 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_83 m17 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_84 m17 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_85 m17 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_86 m18 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_87 m18 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_88 m18 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_89 m18 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_90 m18 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_91 m19 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_92 m19 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_93 m19 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_94 m19 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_95 m19 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_96 m20 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_97 m20 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_98 m20 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_99 m20 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_100 m20 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_101 m21 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_102 m21 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_103 m21 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_104 m21 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_105 m21 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_106 m22 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_107 m22 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_108 m22 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_109 m22 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_110 m22 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_111 m23 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_112 m23 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_113 m23 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_114 m23 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_115 m23 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_116 m24 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_117 m24 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_118 m24 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_119 m24 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_120 m24 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_121 m25 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_122 m25 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_123 m25 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_124 m25 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_125 m25 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_126 m26 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_127 m26 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_128 m26 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_129 m26 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_130 m26 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_131 m27 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_132 m27 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_133 m27 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_134 m27 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_135 m27 : 48|10@1+ (1,0) [0|1024] "V" ECU
+
+ SG_ cell_voltage_136 m28 : 8|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_137 m28 : 18|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_138 m28 : 28|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_139 m28 : 38|10@1+ (1,0) [0|1024] "V" ECU
+ SG_ cell_voltage_140 m28 : 48|10@1+ (1,0) [0|1024] "V" ECU
+

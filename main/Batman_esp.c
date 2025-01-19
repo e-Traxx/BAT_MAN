@@ -1,4 +1,6 @@
 #include "Batman_esp.h"
+#include "OTA.h"
+#include "Wifi.h"
 #include "can_handler.h"
 #include "diagnostic_handler.h"
 #include "driver/twai.h" // TWAI is Espressif's CAN driver in ESP-IDF
@@ -17,7 +19,7 @@ void initialise_setups(void) {
 
   CAN_Setup();
   SPI_Setup();
-
+  WIFI_Setup();
   spi_add_device();
 
   // Setup Diagnostic system
@@ -39,7 +41,7 @@ void Start_schedule(void) {
   // Schedule a ADBMS query every 500ms (test case) // can be higher frequency
   //
   // Upon created, tasks are placed into ready state
-  // xTaskCreate(ADBMS_query, "Batman_signal", 2048, NULL, 2, NULL);
+  xTaskCreate(Ota_updater, "OTA_Update", 8192, NULL, 5, NULL);
   xTaskCreate(Diagnostic_check, "System_diag", 2048, NULL, 4, NULL);
   xTaskCreate(CAN_sendMessage, "Can_tx", 2048, NULL, 3, NULL);
   xTaskCreate(Robin_query, "ADBMS_query", 2048, NULL, 2, NULL);
