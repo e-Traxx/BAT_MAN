@@ -17,6 +17,7 @@
 /Users/akame/Documents/BAT-MAN/build/esp-idf/log/liblog.a
 /Users/akame/Documents/BAT-MAN/build/esp-idf/heap/libheap.a
 /Users/akame/Documents/BAT-MAN/build/esp-idf/soc/libsoc.a
+/Users/akame/Documents/BAT-MAN/build/esp-idf/esp_security/libesp_security.a
 /Users/akame/Documents/BAT-MAN/build/esp-idf/esp_hw_support/libesp_hw_support.a
 /Users/akame/Documents/BAT-MAN/build/esp-idf/freertos/libfreertos.a
 /Users/akame/Documents/BAT-MAN/build/esp-idf/newlib/libnewlib.a
@@ -77,6 +78,7 @@
 /Users/akame/Documents/BAT-MAN/build/esp-idf/mqtt/libmqtt.a
 /Users/akame/Documents/BAT-MAN/build/esp-idf/nvs_sec_provider/libnvs_sec_provider.a
 /Users/akame/Documents/BAT-MAN/build/esp-idf/perfmon/libperfmon.a
+/Users/akame/Documents/BAT-MAN/build/esp-idf/rt/librt.a
 /Users/akame/Documents/BAT-MAN/build/esp-idf/spiffs/libspiffs.a
 /Users/akame/Documents/BAT-MAN/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 /Users/akame/Documents/BAT-MAN/build/esp-idf/main/libmain.a

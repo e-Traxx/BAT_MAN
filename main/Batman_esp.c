@@ -20,7 +20,6 @@ void initialise_setups(void) {
   CAN_Setup();
   SPI_Setup();
   WIFI_Setup();
-  spi_add_device();
 
   // Setup Diagnostic system
   Diag_Setup();
@@ -41,7 +40,6 @@ void Start_schedule(void) {
   // Schedule a ADBMS query every 500ms (test case) // can be higher frequency
   //
   // Upon created, tasks are placed into ready state
-  xTaskCreate(Ota_updater, "OTA_Update", 8192, NULL, 5, NULL);
   xTaskCreate(Diagnostic_check, "System_diag", 2048, NULL, 4, NULL);
   xTaskCreate(CAN_sendMessage, "Can_tx", 2048, NULL, 3, NULL);
   xTaskCreate(Robin_query, "ADBMS_query", 2048, NULL, 2, NULL);

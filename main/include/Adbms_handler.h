@@ -3,10 +3,18 @@
 
 #include "freertos/idf_additions.h"
 #include "stdint.h"
+#include <stdint.h>
+
+#define NUM_STACKS 14
+#define CELLS_PER_STACK_ACTIVE 10
+#define CELLS_PER_STACK 18
+#define RESPONSE_SIZE 13 // BYTES
+#define TOTAL_CELLS (NUM_STACKS * CELLS_PER_STACK)
 
 void ADBMS_Setup(void);
 void Adbms_query_callback(TimerHandle_t timer);
 void Robin_query(void *args);
+uint8_t calculate_PEC(const uint8_t *data, size_t len);
 
 typedef struct {
   uint16_t individual_voltages[14][10];
@@ -48,6 +56,15 @@ typedef union {
   individual_temperatures_message_t fields;
   uint8_t bytes[8];
 } individual_temperatures_frame_t;
+
+// SPI Transmission
+typedef union {
+  // Each stack has 18 Cells
+  // and we have 14 Stacks in total which amount to NUM_STACKS * CELLS_PER_STACK
+  // 16-bit values to store
+  uint8_t raw[((NUM_STACKS * CELLS_PER_STACK) + 1) * 2];
+  uint16_t values[(NUM_STACKS * CELLS_PER_STACK) + 1];
+} SPI_responses_t;
 
 extern Robin_container_t *robin;
 extern SemaphoreHandle_t adbms_semaphore;

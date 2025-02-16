@@ -1,0 +1,41 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/cu.usbserial-0001 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081c3d: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:454
+0x4008a5c5: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40093279: __assert_func at /Users/akame/esp/esp-idf/components/newlib/assert.c:80
+0x4011c083: tcpip_send_msg_wait_sem at /Users/akame/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:454 (discriminator 1)
+0x40127bfe: netconn_apimsg at /Users/akame/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:134
+0x40127c92: netconn_new_with_proto_and_callback at /Users/akame/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:164
+0x4011bed1: lwip_socket at /Users/akame/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1759 (discriminator 4)
+0x400e2b7b: socket at /Users/akame/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) httpd_server_init at /Users/akame/esp/esp-idf/components/esp_http_server/src/httpd_main.c:357
+0x400e31cc: httpd_start at /Users/akame/esp/esp-idf/components/esp_http_server/src/httpd_main.c:524
+0x400d8714: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:65
+0x400d7de5: initialise_setups at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:22
+0x400d7e8f: app_main at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:50
+0x40155b97: main_task at /Users/akame/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008b0a5: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081c3d: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:454
+0x4008a5c5: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40093279: __assert_func at /Users/akame/esp/esp-idf/components/newlib/assert.c:80
+0x4011c083: tcpip_send_msg_wait_sem at /Users/akame/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:454 (discriminator 1)
+0x40127bfe: netconn_apimsg at /Users/akame/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:134
+0x40127c92: netconn_new_with_proto_and_callback at /Users/akame/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:164
+0x4011bed1: lwip_socket at /Users/akame/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1759 (discriminator 4)
+0x400e2b7b: socket at /Users/akame/esp/esp-idf/components/lwip/include/lwip/sockets.h:48
+ (inlined by) httpd_server_init at /Users/akame/esp/esp-idf/components/esp_http_server/src/httpd_main.c:357
+0x400e31cc: httpd_start at /Users/akame/esp/esp-idf/components/esp_http_server/src/httpd_main.c:524
+0x400d8714: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:65
+0x400d7de5: initialise_setups at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:22
+0x400d7e8f: app_main at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:50
+0x40155b97: main_task at /Users/akame/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008b0a5: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

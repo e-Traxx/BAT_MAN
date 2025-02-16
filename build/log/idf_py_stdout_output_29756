@@ -1,0 +1,2133 @@
+0) boot: Multicore bootloader
+[0;32mI (31) boot: chip revision: v1.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: S�early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15716
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Jan 21 2025 06:14:12[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v1.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (64) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (71) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  3 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot:  4 ota_0            OTA app          00 10 00110000 00100000[0m
+[0;32mI (90) boot:  5 ota_1            OTA app          00 11 00210000 00100000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (100) boot: Defaulting to factory image[0m
+[0;32mI (104) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e380h (123776) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=0002e3a8 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (154) esp_image: segment 2: paddr=0002e3cc vaddr=3ffb0000 size=01c4ch (  7244) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=9091ch (592156) map[0m
+[0;32mI (367) esp_image: segment 4: paddr=000c0944 vaddr=3ffb1c4c size=02484h (  9348) load[0m
+[0;32mI (371) esp_image: segment 5: paddr=000c2dd0 vaddr=40080000 size=19580h (103808) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (446) app_init: Project name:     Batman_esp[0m
+[0;32mI (451) app_init: App version:      ef0026a5-dirty[0m
+[0;32mI (456) app_init: Compile time:     Jan 21 2025 06:14:07[0m
+[0;32mI (462) app_init: ELF file SHA256:  8562a9287...[0m
+[0;32mI (467) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (472) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (477) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (482) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (487) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (494) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (500) heap_init: At 3FFB84C8 len 00027B38 (158 KiB): DRAM[0m
+[0;32mI (506) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (512) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (519) heap_init: At 40099580 len 00006A80 (26 KiB): IRAM[0m
+[0;32mI (527) spi_flash: detected chip: generic[0m
+[0;32mI (530) spi_flash: flash io: dio[0m
+[0;32mI (535) main_task: Started on CPU0[0m
+[0;32mI (545) main_task: Calling app_main()[0m
+[0;32mI (545) CAN_HANDLER: [+] TWAI Driver installed and started[0m
+[0;32mI (575) wifi:wifi driver task: 3ffc1870, prio:23, stack:6656, core=0[0m
+[0;32mI (585) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (585) wifi:wifi certification version: v7.0[0m
+[0;32mI (585) wifi:config NVS flash: enabled[0m
+[0;32mI (585) wifi:config nano formatting: disabled[0m
+[0;32mI (585) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (595) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (595) wifi:Init management short buffer num: 32[0m
+[0;32mI (595) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (605) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (605) wifi:Init static rx buffer num: 10[0m
+[0;32mI (615) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (615) wifi_init: rx ba win: 6[0m
+[0;32mI (615) wifi_init: accept mbox: 6[0m
+[0;32mI (625) wifi_init: tcpip mbox: 32[0m
+[0;32mI (625) wifi_init: udp mbox: 6[0m
+[0;32mI (625) wifi_init: tcp mbox: 32[0m
+[0;32mI (635) wifi_init: tcp tx win: 8192[0m
+[0;32mI (635) wifi_init: tcp rx win: 8192[0m
+[0;32mI (645) wifi_init: tcp mss: 1440[0m
+[0;32mI (645) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (655) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (655) WIFI: Static AP IP set to: 192.168.5.1[0m
+[0;32mI (665) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (745) wifi:mode : softAP (34:86:5d:39:b0:41)[0m
+[0;32mI (745) wifi:Total power save buffer number: 16[0m
+[0;32mI (745) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (745) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (745) WIFI: Wi-Fi AP started.[0m
+[0;32mI (755) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (765) Setup: [+] System Initialised
+[0m
+[0;32mI (765) main_task: Returned from app_main()[0m
+[0;33mW (1965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (2165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (2365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (2565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (2765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (2965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (3165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (3365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (3565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (3765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (3765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (3965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (4165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (4365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (4565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (4765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (4765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (4965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (5165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (5365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (5565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (5765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (5765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (5965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (6165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (6365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (6565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (6765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (6765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (6965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (7165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (7365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (7565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (7765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (7765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (7965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (8165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (8365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (8565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (8765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (8765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (8965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (9165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (9365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (9565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (9765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (9765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (9965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (10165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (10365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (10565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (10765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (10765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (10965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (11165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (11365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (11565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (11765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (11765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (11965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (12165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (12365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (12565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (12765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (12765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (12965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (13165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (13365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (13565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (13765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (13765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;32mI (13775) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (13775) wifi:station: 36:d3:cc:f9:84:cb join, AID=1, bgn, 20[0m
+[0;32mI (13805) wifi:<ba-add>idx:2 (ifx:1, 36:d3:cc:f9:84:cb), tid:0, ssn:0, winSize:64[0m
+[0;32mI (13835) wifi:<ba-add>idx:3 (ifx:1, 36:d3:cc:f9:84:cb), tid:6, ssn:0, winSize:64[0m
+[0;33mW (13965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;32mI (13975) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.5.2[0m
+[0;33mW (14165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (14365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (14565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (14765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (14765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (14965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (15165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (15365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (15565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (15765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (15765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (15965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (16165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (16365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (16565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (16765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (16765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (16965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (17165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (17365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (17565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (17765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (17765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (17965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (18165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (18365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (18565) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (18765) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (18765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (18965) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (19165) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (19365) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (19585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (19595) esp_ota_ops: OTA image has invalid magic byte (expected 0xE9, saw 0x2d)[0m
+[0;31mE (19595) OTA: esp_ota_write failed: ESP_ERR_OTA_VALIDATE_FAILED[0m
+[0;33mW (19605) httpd_txrx: httpd_resp_send_err: 500 Internal Server Error - OTA write error[0m
+[0;33mW (19615) httpd_uri: httpd_uri: uri handler execution failed[0m
+[0;31mE (19765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (19785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (19985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (20185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (20385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (20585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (20765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (20785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (20985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (21185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (21385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (21585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (21765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (21785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (21985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (22185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (22385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (22585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (22765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (22785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (22985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (23185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (23385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (23585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (23765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (23785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (23985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (24185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (24385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (24585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (24765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (24785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (24985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (25185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (25385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (25585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (25765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (25785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (25985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (26185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (26385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (26585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (26765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (26785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (26985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (27185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (27385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (27585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (27765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (27785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (27985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (28185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (28385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (28585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (28765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (28785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (28985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (29185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (29385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (29585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (29765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (29785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (29985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (30185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (30385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (30585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (30765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (30785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (30985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (31185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (31385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (31585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (31765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (31785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (31985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (32185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (32385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (32585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (32765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (32785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (32985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (33185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (33385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (33585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (33765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (33785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (33985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (34185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (34385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (34585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (34765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (34785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (34985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (35185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (35385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (35585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (35765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (35785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (35985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (36185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (36385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (36585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (36765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (36785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (36985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (37185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (37385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (37585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (37765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (37785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (37985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (38185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (38385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (38585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (38765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (38785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (38985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (39185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (39385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (39585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (39765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (39785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (39985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (40185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (40385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (40585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (40765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (40785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (40985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (41185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (41385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (41585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (41765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (41785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (41985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (42185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (42385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (42585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (42765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (42785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (42985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (43185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (43385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (43585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (43765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (43785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (43985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (44185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (44385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (44585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (44765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (44785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (44985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (45185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (45385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (45585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (45765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (45785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (45985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (46185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (46385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (46585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (46765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (46785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (46985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (47185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (47385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (47585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (47765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (47785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (47985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (48185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (48385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (48585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (48765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (48785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (48985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (49185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (49385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (49585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (49765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (49785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (49985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (50185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (50385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (50585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (50765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (50785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (50985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (51185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (51385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (51585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (51765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (51785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (51985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (52185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (52385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (52585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (52765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (52785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (52985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (53185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (53385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (53585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (53765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (53785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (53985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (54185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;32mI (54295) wifi:<ba-add>idx:4 (ifx:1, 36:d3:cc:f9:84:cb), tid:1, ssn:0, winSize:64[0m
+[0;33mW (54385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (54585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (54765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (54785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (54985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (55185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (55385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (55585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (55765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (55785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (55985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (56185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (56385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (56585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (56765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (56785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (56985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (57185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (57385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (57585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (57765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (57785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (57985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (58185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (58385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (58585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (58765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (58785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (58985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (59185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (59385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (59585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (59765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (59785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (59985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (60185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (60385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (60585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (60765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (60785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (60985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (61185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (61385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (61585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (61765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (61785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (61985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (62185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (62385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (62585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (62765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (62785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (62985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (63185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (63385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (63585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (63765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (63785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (63985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (64185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (64385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (64585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (64765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (64785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (64985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (65185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (65385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (65585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (65765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (65785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (65985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (66185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (66385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (66585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (66765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (66785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (66985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (67185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (67385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (67585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (67765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (67785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (67985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (68185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (68385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (68585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (68765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (68785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (68985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (69185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (69385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (69585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (69765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (69785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (69985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (70185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (70385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (70585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (70765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (70785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (70985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (71185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (71385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (71585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (71765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (71785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (71985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (72185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (72385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (72585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (72765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (72785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (72985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (73185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (73385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (73585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (73765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (73785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (73985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (74185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (74385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (74585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (74765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (74785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (74985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (75185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (75385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (75585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (75765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (75785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (75985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (76185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (76385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (76585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (76765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (76785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (76985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (77185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (77385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (77585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (77765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (77785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (77985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (78185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (78385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (78585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (78765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (78785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (78985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (79185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (79385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (79585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (79765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (79785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (79985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (80185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (80385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (80585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (80765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (80785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (80985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (81185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (81385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (81585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (81765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (81785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (81985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (82185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (82385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (82585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (82765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (82785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (82985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (83185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (83385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (83585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (83765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (83785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (83985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (84185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (84385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (84585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (84765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (84785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (84985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (85185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (85385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (85585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (85765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (85785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (85985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (86185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (86385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (86585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (86765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (86785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (86985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (87185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (87385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (87585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (87765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (87785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (87985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (88185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (88385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (88585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (88765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (88785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (88985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (89185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (89385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (89585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (89765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (89785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (89985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (90185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (90385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (90585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (90765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (90785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (90985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (91185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (91385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (91585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (91765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (91785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (91985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (92185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (92385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (92585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (92765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (92785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (92985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (93185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (93385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (93585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (93765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (93785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (93985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (94185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (94385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (94585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (94765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (94785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (94985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (95185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (95385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (95585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (95765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (95785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (95985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (96185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (96385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (96585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (96765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (96785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (96985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (97185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (97385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (97585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (97765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (97785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (97985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (98185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (98385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (98585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (98765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (98785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (98985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (99185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (99385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (99585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (99765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (99785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (99985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (100185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (100385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (100585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (100765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (100785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (100985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (101185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (101385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (101585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (101765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (101785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (101985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (102185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (102385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (102585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (102765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (102785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (102985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (103185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (103385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (103585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (103765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (103785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (103985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (104185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (104385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (104585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (104765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (104785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (104985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (105185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (105385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (105585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (105765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (105785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (105985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (106185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (106385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (106585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (106765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (106785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (106985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (107185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (107385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (107585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (107765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (107785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (107985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (108185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (108385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (108585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (108765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (108785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (108985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (109185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (109385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (109585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (109765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (109785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (109985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (110185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (110385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (110585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (110765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (110785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (110985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (111185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (111385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (111585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (111765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (111785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (111985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (112185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (112385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (112585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (112765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (112785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (112985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (113185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (113385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (113585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (113765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (113785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (113985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (114185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (114385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (114585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (114765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (114785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (114985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (115185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (115385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (115585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (115765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (115785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (115985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (116185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (116385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (116585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (116765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (116785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (116985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (117185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (117385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (117585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (117765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (117785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (117985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (118185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (118385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (118585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (118765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (118785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (118985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (119185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (119385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (119585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (119765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (119785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (119985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (120185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (120385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (120585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (120765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (120785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (120985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (121185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (121385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (121585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (121765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (121785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (121985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (122185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (122385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (122585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (122765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (122785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (122985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (123185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (123385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (123585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (123765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (123785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (123985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (124185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (124385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (124585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (124765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (124785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (124985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (125185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (125385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (125585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (125765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (125785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (125985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (126185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (126385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (126585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (126765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (126785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (126985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (127185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (127385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (127585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (127765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (127785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (127985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (128185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (128385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (128585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (128765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (128785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (128985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (129185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (129385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (129585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (129765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (129785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (129985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (130185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (130385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (130585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (130765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (130785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (130985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (131185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (131385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (131585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (131765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (131785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (131985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (132185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (132385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (132585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (132765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (132785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (132985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (133185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (133385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (133585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (133765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (133785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (133985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (134185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (134385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (134585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (134765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (134785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (134985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (135185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (135385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (135585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (135765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (135785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (135985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (136185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (136385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (136585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (136765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (136785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (136985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (137185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (137385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (137585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (137765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (137785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (137985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (138185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (138385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (138585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (138765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (138785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (138985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (139185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (139385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (139585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (139765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (139785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (139985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (140185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (140385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (140585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (140765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (140785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (140985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (141185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (141385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (141585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (141765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (141785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (141985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (142185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (142385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (142585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (142765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (142785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (142985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (143185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (143385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (143585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (143765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (143785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (143985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (144185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (144385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (144585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (144765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (144785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (144985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (145185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (145385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (145585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (145765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (145785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (145985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (146185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (146385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (146585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (146765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (146785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (146985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (147185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (147385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (147585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (147765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (147785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (147985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (148185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (148385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (148585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (148765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (148785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (148985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (149185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (149385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (149585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (149765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (149785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (149985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (150185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (150385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (150585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (150765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (150785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (150985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (151185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (151385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (151585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (151765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (151785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (151985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (152185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (152385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (152585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (152765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (152785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (152985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (153185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (153385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (153585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (153765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (153785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (153985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (154185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (154385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (154585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (154765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (154785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (154985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (155185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (155385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (155585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (155765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (155785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (155985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (156185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (156385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (156585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (156765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (156785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (156985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (157185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (157385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (157585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (157765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (157785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (157985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (158185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (158385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (158585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (158765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (158785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (158985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (159185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (159385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (159585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (159765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (159785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (159985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (160185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (160385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (160585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (160765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (160785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (160985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (161185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (161385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (161585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (161765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (161785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (161985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (162185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (162385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (162585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (162765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (162785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (162985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (163185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (163385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (163585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (163765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (163785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (163985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (164185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (164385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (164585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (164765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (164785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (164985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (165185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (165385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (165585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (165765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (165785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (165985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (166185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (166385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (166585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (166765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (166785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (166985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (167185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (167385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (167585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (167765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (167785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (167985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (168185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (168385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (168585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (168765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (168785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (168985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (169185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (169385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;32mI (169485) wifi:station: 36:d3:cc:f9:84:cb leave, AID = 1, reason = 8, bss_flags is 33721459, bss:0x3ffb9ac0[0m
+[0;32mI (169495) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (169495) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (169495) wifi:<ba-del>idx:4, tid:1[0m
+[0;32mI (169505) wifi:<ba-del>idx:3, tid:6[0m
+[0;33mW (169585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (169765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (169785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (169985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (170185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (170385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (170585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (170765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (170785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (170985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (171185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (171385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (171585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (171765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (171785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (171985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (172185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (172385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (172585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (172765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (172785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (172985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (173185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (173385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (173585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (173765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (173785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (173985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (174185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (174385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (174585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (174765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (174785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (174985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (175185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (175385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (175585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (175765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (175785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (175985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (176185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (176385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (176585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (176765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (176785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (176985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (177185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (177385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (177585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (177765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (177785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (177985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (178185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (178385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (178585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (178765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (178785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (178985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (179185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (179385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (179585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (179765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (179785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (179985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (180185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (180385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (180585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (180765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (180785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (180985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (181185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (181385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (181585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (181765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (181785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (181985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (182185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (182385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (182585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (182765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (182785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (182985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (183185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (183385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (183585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (183765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (183785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (183985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (184185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (184385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (184585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (184765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (184785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (184985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (185185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (185385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (185585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (185765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (185785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (185985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (186185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (186385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (186585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (186765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (186785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (186985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (187185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (187385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (187585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (187765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (187785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (187985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (188185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (188385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (188585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (188765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (188785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (188985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (189185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (189385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (189585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (189765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (189785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (189985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (190185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (190385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (190585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (190765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (190785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (190985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (191185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (191385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (191585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (191765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (191785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (191985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (192185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (192385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (192585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (192765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (192785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (192985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (193185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (193385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (193585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (193765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (193785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (193985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (194185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (194385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (194585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (194765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (194785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (194985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (195185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (195385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (195585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (195765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (195785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (195985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (196185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (196385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (196585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (196765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (196785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (196985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (197185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (197385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (197585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (197765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (197785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (197985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (198185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (198385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (198585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (198765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (198785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (198985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (199185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (199385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (199585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (199765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (199785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (199985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (200185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (200385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (200585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (200765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (200785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (200985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (201185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (201385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (201585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (201765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (201785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (201985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (202185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (202385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (202585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (202765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (202785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (202985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (203185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (203385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (203585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (203765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (203785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (203985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (204185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (204385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (204585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (204765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (204785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (204985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (205185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (205385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (205585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (205765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (205785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (205985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (206185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (206385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (206585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (206765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (206785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (206985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (207185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (207385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (207585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (207765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (207785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (207985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (208185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (208385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (208585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (208765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (208785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (208985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (209185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (209385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (209585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (209765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (209785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (209985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (210185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (210385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (210585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (210765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (210785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (210985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (211185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (211385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (211585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (211765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (211785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (211985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (212185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (212385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (212585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (212765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (212785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (212985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (213185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (213385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (213585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (213765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (213785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (213985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (214185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (214385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (214585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (214765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (214785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (214985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (215185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (215385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (215585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (215765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (215785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (215985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (216185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (216385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (216585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (216765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (216785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (216985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (217185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (217385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (217585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (217765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (217785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (217985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (218185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (218385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (218585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (218765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (218785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (218985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (219185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (219385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (219585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (219765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (219785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (219985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (220185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (220385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (220585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (220765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (220785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (220985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (221185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (221385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (221585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (221765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (221785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (221985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (222185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (222385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (222585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (222765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (222785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (222985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (223185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (223385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (223585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (223765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (223785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (223985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (224185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (224385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (224585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (224765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (224785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (224985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (225185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (225385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (225585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (225765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (225785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (225985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (226185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (226385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (226585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (226765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (226785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (226985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (227185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (227385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (227585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (227765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (227785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (227985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (228185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (228385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (228585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (228765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (228785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (228985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (229185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (229385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (229585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (229765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (229785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (229985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (230185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (230385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (230585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (230765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (230785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (230985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (231185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (231385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (231585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (231765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (231785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (231985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (232185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (232385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (232585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (232765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (232785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (232985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (233185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (233385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (233585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (233765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (233785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (233985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (234185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (234385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (234585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (234765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (234785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (234985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (235185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (235385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (235585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (235765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (235785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (235985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (236185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (236385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (236585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (236765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (236785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (236985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (237185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (237385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (237585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (237765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (237785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (237985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (238185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (238385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (238585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (238765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (238785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (238985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (239185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (239385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (239585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (239765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (239785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (239985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (240185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (240385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (240585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (240765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (240785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (240985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (241185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (241385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (241585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (241765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (241785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (241985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (242185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (242385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (242585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (242765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (242785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (242985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (243185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (243385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (243585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (243765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (243785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (243985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (244185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (244385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (244585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (244765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (244785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (244985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (245185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (245385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (245585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (245765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (245785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (245985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (246185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (246385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (246585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (246765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (246785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (246985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (247185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (247385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (247585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (247765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (247785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (247985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (248185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (248385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (248585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (248765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (248785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (248985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (249185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (249385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (249585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (249765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (249785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (249985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (250185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (250385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (250585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (250765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (250785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (250985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (251185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (251385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (251585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (251765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (251785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (251985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (252185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (252385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (252585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (252765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (252785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (252985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (253185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (253385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (253585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (253765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (253785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (253985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (254185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (254385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (254585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (254765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (254785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (254985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (255185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (255385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (255585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (255765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (255785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (255985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (256185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (256385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (256585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (256765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (256785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (256985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (257185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (257385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (257585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (257765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (257785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (257985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (258185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (258385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (258585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (258765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (258785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (258985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (259185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (259385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (259585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (259765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (259785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (259985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (260185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (260385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (260585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (260765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (260785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (260985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (261185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (261385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (261585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (261765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (261785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (261985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (262185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (262385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (262585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (262765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (262785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (262985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (263185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (263385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (263585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (263765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (263785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (263985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (264185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (264385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (264585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (264765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (264785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (264985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (265185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (265385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (265585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (265765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (265785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (265985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (266185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (266385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (266585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (266765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (266785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (266985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (267185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (267385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (267585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (267765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (267785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (267985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (268185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (268385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (268585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (268765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (268785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (268985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (269185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (269385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (269585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (269765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (269785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (269985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (270185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (270385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (270585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (270765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (270785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (270985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (271185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (271385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (271585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (271765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (271785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (271985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (272185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (272385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (272585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (272765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (272785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (272985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (273185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (273385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (273585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (273765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (273785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (273985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (274185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (274385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (274585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (274765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (274785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (274985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (275185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (275385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (275585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (275765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (275785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (275985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (276185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (276385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (276585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (276765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (276785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (276985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (277185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (277385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (277585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (277765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (277785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (277985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (278185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (278385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (278585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (278765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (278785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (278985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (279185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (279385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (279585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (279765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (279785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (279985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (280185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (280385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (280585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (280765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (280785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (280985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (281185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (281385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (281585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (281765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (281785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (281985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (282185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (282385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (282585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (282765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (282785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (282985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (283185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (283385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (283585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (283765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (283785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (283985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (284185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (284385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (284585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (284765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (284785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (284985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (285185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (285385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (285585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (285765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (285785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (285985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (286185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (286385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (286585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (286765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (286785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (286985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (287185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (287385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (287585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (287765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (287785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (287985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (288185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (288385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (288585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (288765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (288785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (288985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (289185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (289385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (289585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (289765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (289785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (289985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (290185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (290385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (290585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (290765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (290785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (290985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (291185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (291385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (291585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (291765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (291785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (291985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (292185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (292385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (292585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (292765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (292785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (292985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (293185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (293385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (293585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (293765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (293785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (293985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (294185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (294385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (294585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (294765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (294785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (294985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (295185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (295385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (295585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (295765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (295785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (295985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (296185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (296385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (296585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (296765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (296785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (296985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (297185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (297385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (297585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (297765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (297785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (297985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (298185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (298385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (298585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (298765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (298785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (298985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (299185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (299385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (299585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (299765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (299785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (299985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (300185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (300385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (300585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (300765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (300785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (300985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (301185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (301385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (301585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (301765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (301785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (301985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (302185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (302385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (302585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (302765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (302785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (302985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (303185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (303385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (303585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (303765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (303785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (303985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (304185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (304385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (304585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (304765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (304785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (304985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (305185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (305385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (305585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (305765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (305785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (305985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (306185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (306385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (306585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (306765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (306785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (306985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (307185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (307385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (307585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (307765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (307785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (307985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (308185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (308385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (308585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (308765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (308785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (308985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (309185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (309385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (309585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (309765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (309785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (309985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (310185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (310385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (310585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (310765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (310785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (310985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (311185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (311385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (311585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (311765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (311785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (311985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (312185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (312385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (312585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (312765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (312785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (312985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (313185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (313385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (313585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (313765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (313785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (313985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (314185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (314385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (314585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (314765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (314785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (314985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (315185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (315385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (315585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (315765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (315785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (315985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (316185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (316385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (316585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (316765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (316785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (316985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (317185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (317385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (317585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (317765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (317785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (317985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (318185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (318385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (318585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (318765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (318785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (318985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (319185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (319385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (319585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (319765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (319785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (319985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (320185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (320385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (320585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (320765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (320785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (320985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (321185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (321385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (321585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (321765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (321785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (321985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (322185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (322385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (322585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (322765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (322785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (322985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (323185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (323385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (323585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (323765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (323785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (323985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (324185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (324385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (324585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (324765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (324785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (324985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (325185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (325385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (325585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (325765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (325785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (325985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (326185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (326385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (326585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (326765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (326785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (326985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (327185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (327385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (327585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (327765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (327785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (327985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (328185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (328385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (328585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (328765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (328785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (328985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (329185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (329385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (329585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (329765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (329785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (329985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (330185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (330385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (330585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (330765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (330785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (330985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (331185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (331385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (331585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (331765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (331785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (331985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (332185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (332385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (332585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (332765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (332785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (332985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (333185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (333385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (333585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (333765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (333785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (333985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (334185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (334385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (334585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (334765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (334785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (334985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (335185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (335385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (335585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (335765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (335785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (335985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (336185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (336385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (336585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (336765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (336785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (336985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (337185) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (337385) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (337585) CAN_HANDLER: [-] Failed to send Message[0m
+[0;31mE (337765) ADBMS_Query: [-] ESP_OK Failed to give Semaphore to ADBMS query[0m
+[0;33mW (337785) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (337985) CAN_HANDLER: [-] Failed to send Message[0m
+[0;33mW (338185) CAN_HANDLER: [-] Failed to send Message[0m
