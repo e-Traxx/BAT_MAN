@@ -1,0 +1,197 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/cu.usbserial-0001 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+[0m
+[0;33m--- 0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40081c3d: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:454
+0x4008a5c5: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40093141: abort at /Users/akame/esp/esp-idf/components/newlib/abort.c:38
+0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+0x400d7ea5: initialise_setups at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:22
+0x400d7f4f: app_main at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:50
+0x401579a7: main_task at /Users/akame/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008b0a5: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+[0m
+[0;33m--- 0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40081c3d: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:454
+0x4008a5c5: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40093141: abort at /Users/akame/esp/esp-idf/components/newlib/abort.c:38
+0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+0x400d7ea5: initialise_setups at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:22
+0x400d7f4f: app_main at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:50
+0x401579a7: main_task at /Users/akame/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008b0a5: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+[0m
+[0;33m--- 0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40081c3d: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:454
+0x4008a5c5: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40093141: abort at /Users/akame/esp/esp-idf/components/newlib/abort.c:38
+0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+0x400d7ea5: initialise_setups at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:22
+0x400d7f4f: app_main at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:50
+0x401579a7: main_task at /Users/akame/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008b0a5: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+[0m
+[0;33m--- 0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40081c3d: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:454
+0x4008a5c5: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40093141: abort at /Users/akame/esp/esp-idf/components/newlib/abort.c:38
+0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+0x400d7ea5: initialise_setups at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:22
+0x400d7f4f: app_main at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:50
+0x401579a7: main_task at /Users/akame/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008b0a5: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+[0m
+[0;33m--- 0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40081c3d: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:454
+0x4008a5c5: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40093141: abort at /Users/akame/esp/esp-idf/components/newlib/abort.c:38
+0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+0x400d7ea5: initialise_setups at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:22
+0x400d7f4f: app_main at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:50
+0x401579a7: main_task at /Users/akame/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008b0a5: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+[0m
+[0;33m--- 0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40081c3d: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:454
+0x4008a5c5: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40093141: abort at /Users/akame/esp/esp-idf/components/newlib/abort.c:38
+0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+0x400d7ea5: initialise_setups at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:22
+0x400d7f4f: app_main at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:50
+0x401579a7: main_task at /Users/akame/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008b0a5: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+[0m
+[0;33m--- 0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40081c3d: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:454
+0x4008a5c5: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40093141: abort at /Users/akame/esp/esp-idf/components/newlib/abort.c:38
+0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+0x400d7ea5: initialise_setups at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:22
+0x400d7f4f: app_main at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:50
+0x401579a7: main_task at /Users/akame/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008b0a5: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+[0m
+[0;33m--- 0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40081c3d: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:454
+0x4008a5c5: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40093141: abort at /Users/akame/esp/esp-idf/components/newlib/abort.c:38
+0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+0x400d7ea5: initialise_setups at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:22
+0x400d7f4f: app_main at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:50
+0x401579a7: main_task at /Users/akame/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008b0a5: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+[0m
+[0;33m--- 0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40081c3d: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:454
+0x4008a5c5: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40093141: abort at /Users/akame/esp/esp-idf/components/newlib/abort.c:38
+0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+0x400d7ea5: initialise_setups at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:22
+0x400d7f4f: app_main at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:50
+0x401579a7: main_task at /Users/akame/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008b0a5: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+[0m
+[0;33m--- 0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40081c3d: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:454
+0x4008a5c5: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40093141: abort at /Users/akame/esp/esp-idf/components/newlib/abort.c:38
+0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+0x400d7ea5: initialise_setups at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:22
+0x400d7f4f: app_main at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:50
+0x401579a7: main_task at /Users/akame/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008b0a5: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+[0m
+[0;33m--- 0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40081c3d: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:454
+0x4008a5c5: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40093141: abort at /Users/akame/esp/esp-idf/components/newlib/abort.c:38
+0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+0x400d7ea5: initialise_setups at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:22
+0x400d7f4f: app_main at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:50
+0x401579a7: main_task at /Users/akame/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008b0a5: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+[0m
+[0;33m--- 0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40081c3d: panic_abort at /Users/akame/esp/esp-idf/components/esp_system/panic.c:454
+0x4008a5c5: esp_system_abort at /Users/akame/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40093141: abort at /Users/akame/esp/esp-idf/components/newlib/abort.c:38
+0x4008a5bb: _esp_error_check_failed at /Users/akame/esp/esp-idf/components/esp_system/esp_err.c:49
+0x400d8667: WIFI_Setup at /Users/akame/Documents/BAT-MAN/main/WIFI.c:22 (discriminator 1)
+0x400d7ea5: initialise_setups at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:22
+0x400d7f4f: app_main at /Users/akame/Documents/BAT-MAN/main/Batman_esp.c:50
+0x401579a7: main_task at /Users/akame/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008b0a5: vPortTaskWrapper at /Users/akame/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

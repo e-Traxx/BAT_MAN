@@ -1,1 +1,5 @@
-f44858634c23c1ba6578cf68462cd9fd70e15f58
+0000000000000000000000000000000000000000 bdbb846cd50f97ecd80630c87b9cdfe71b194cf6 Ashitosh Ubdhoot <akame@akame-mac.local> 1735290569 +0100	clone: from github.com:e-Traxx-CTO/BAT-MAN.git
+bdbb846cd50f97ecd80630c87b9cdfe71b194cf6 f44858634c23c1ba6578cf68462cd9fd70e15f58 Ashitosh Ubdhoot <akame@akame-mac.local> 1735290617 +0100	commit: CAN somewhat complete
+f44858634c23c1ba6578cf68462cd9fd70e15f58 80009b448e231861f9a8e0e8dad4ef30afae5c16 Ashitosh Ubdhoot <akame@akame-mac.local> 1735342613 +0100	commit: spi_start
+80009b448e231861f9a8e0e8dad4ef30afae5c16 61e2719f3e7cb5091739a41ea7bff78ed6e0bb57 Ashitosh Ubdhoot <akame@akame-mac.local> 1736633429 +0100	commit: Trial 1 SPI
+61e2719f3e7cb5091739a41ea7bff78ed6e0bb57 ef0026a5200327603303e1fba54bccb81efd3487 Ashitosh Ubdhoot <akame@akame-mac.fritz.box> 1737269839 +0100	commit: GUI and OTA
