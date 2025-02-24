@@ -66,6 +66,20 @@ typedef union {
   uint16_t values[(NUM_STACKS * CELLS_PER_STACK) + 1];
 } SPI_responses_t;
 
+// Command description Structure
+typedef struct {
+  // 5-bit Address
+  uint8_t address;
+  // Addressed command or broadcasted command
+  bool broadcast;
+  // 11 Bit command
+  uint16_t command;
+} spi_command_t;
+
+// Serial ID
+extern uint8_t ADBMS_ID[(6 * NUM_STACKS) + 2];
+
+// handlers
 extern Robin_container_t *robin;
 extern SemaphoreHandle_t adbms_semaphore;
 extern TimerHandle_t adbms_timer;

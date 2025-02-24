@@ -21,6 +21,8 @@
 #define ADAX2 0b1000000000
 // Start Open Wire Detection for all Cells
 #define OW_ALL 0b00101110000
+// Poll devices for serial_id
+#define RDSID 0b00000101100
 
 SemaphoreHandle_t adbms_semaphore;
 TimerHandle_t adbms_timer;
@@ -37,12 +39,18 @@ void individual_temperatures_formatter(individual_temperatures_frame_t *frame,
                                        uint16_t temps[5], uint8_t mux);
 uint8_t calculate_PEC(const uint8_t *data, size_t len);
 void Read_Voltage(uint8_t *responses_A, uint8_t *responses_B);
+void register_devices(uint8_t *ID_response);
+uint16_t extract_received_pec(uint16_t *rxbuffer);
+void adbms_send_command(uint8_t address, bool Broadcast, uint16_t cmdCode,
+                        const uint16_t *payload, size_t payloadLen);
 
 // Vlaue Container
 Robin_container_t *robin;
+// 6 Bytes (48 bits) per Module serial id.
+// 6 Bytes in total * Max num of modules (NUM_STACKS)
+uint8_t ADBMS_IDs[6 * NUM_STACKS];
 
 // post Query value updates
-void convert_to_16bit(uint8_t *bit_variant, uint16_t *newbit_variant);
 void parse_voltages(SPI_responses_t *responses);
 void parse_Temperature(SPI_responses_t *responses);
 
@@ -62,6 +70,13 @@ void ADBMS_Setup(void) {
     ESP_LOGE(TAG, "[-] Failed to initialise ADBMS Timer");
     return;
   }
+
+  // ID response
+  uint8_t ID_Poll_resp[(6 * NUM_STACKS) + 2];
+
+  // Poll All Devices and register their IDS
+  adbms_send_command(RDSID, spi_cs1);
+  adbms_fetch_data(ID_Poll_resp, sizeof(ID_Poll_resp), spi_cs2);
 
   // Start Measuring
   adbms_send_command(ADCV, spi_cs1);
@@ -199,8 +214,9 @@ void Robin_query(void *args) {
   }
 }
 
+// CAN TX
 /*
- *
+ * Report Values through CAN to the ECU and Laptop interface
  *
  */
 void System_report_to_user(Robin_container_t *robin) {
@@ -253,7 +269,6 @@ void System_report_to_user(Robin_container_t *robin) {
  *
  */
 
-// CAN TX
 void individual_voltages_formatter(individual_voltages_frame_t *frame,
                                    uint16_t voltages[5], uint8_t mux) {
   memset(frame->bytes, 0, sizeof(frame->bytes));
@@ -280,9 +295,7 @@ void individual_temperatures_formatter(individual_temperatures_frame_t *frame,
   frame->fields.Reserved = 0;
 }
 
-// SPI TX
-//
-//
+// SPI TX and RX
 
 // Procedure:
 //  1. Check the PEC of the response packet
@@ -290,14 +303,80 @@ void individual_temperatures_formatter(individual_temperatures_frame_t *frame,
 //  3. Update the values in Robin container
 //
 
-uint8_t extract_pec(uint16_t *data) {
+// SPI TX
+//
+// address: Address of the Module
+// Broadcast: addressed or Broadcasted command
+// cmdCode: Command itself
+// Payload: Value to send
+void adbms_send_command(uint8_t address, bool Broadcast, uint16_t cmdCode,
+                        const uint16_t *payload, size_t payloadLen) {
+  // Construct 16-bit Command Word
+  // Check if Addressed transmission or Broadcasted
+  uint16_t commmandWord = 0;
+  if (Broadcast) {
+    //[10] => ignore address
+    commmandWord = (1u << 10) | (cmdCode & 0x3FF); // 10 Bit
+  } else {
+    // [10]=0 => addressed, [9:0]=cmdCode
+    commmandWord = ((address & 0x1F) << 11 | (cmdCode & 0x3FF));
+  }
+
+  // Compute 15-Bit PEC
+  uint16_t PEC = calculate_PEC(commmandWord, sizeof(commmandWord));
+
+  // Pack the command + PEC using Big Endian
+  uint8_t txBUFFER[4];
+  txBUFFER[0] = (uint8_t)((commmandWord >> 8) & 0xFF);
+  txBUFFER[1] = (uint8_t)((commmandWord & 0xFF));
+
+  // The PEC Command is a 15-bit represented in 2 bytes as bits [4...7] and
+  // [6...0, plus 1 zero bit]. txBUffer[2] = MSB of PEC txBuffer[3] = LSB of PEC
+  // (7 lowest bit plus trailing 0) Table 41
+  txBUFFER[2] = (uint8_t)((PEC >> 7) & 0xFF);
+  txBUFFER[3] = (uint8_t)((PEC & 0x7F) << 1);
+
+  // Send Command
+  if (isoSPI_transmit(txBUFFER, 4)) {
+    ESP_LOGE(TAG, "Could not Transmit Command");
+  }
+
+  // If Theres a Payload for write Commands
+  // We send it next
+  if (payload && payloadLen > 0) {
+    // Append 10-bit PEC to Payload, Table 42
+    //
+  }
+}
+
+/// Poll the Devices for the serial_id and save the value in an array
+/// This allows the device to identify the individual modules and use addressed
+/// transmission
+///
+///
+void register_devices(uint8_t *ID_response) {
+  uint8_t received_pec = extract_pec(ID_response);
+}
+
+uint16_t extract_received_pec(uint16_t *rxbuffer) {
   // Pec is split into 2 Locations: Last Word and the extra one bit
   // Given NUM_STACKS * 16 bits = last_word index
-  uint16_t last_word = data[NUM_STACKS * 16];
-  uint16_t extra_bit = data[(NUM_STACKS * 16) + 1] & 0x0001;
+  /* uint16_t last_word = data[NUM_STACKS * 16]; */
+  /* uint16_t extra_bit = data[(NUM_STACKS * 16) + 1] & 0x0001; */
+  /**/
+  /* // combine to form the PEC */
+  /* return ((last_word << 1) & 0x7FFE) | extra_bit; */
+  size_t len = sizeof(rxbuffer) / sizeof(rxbuffer[0]);
+  uint16_t CMDandPEC =
+      (((uint16_t)rxbuffer[(len - 2) << 8 | rxbuffer[len - 1]]));
 
-  // combine to form the PEC
-  return ((last_word << 1) & 0x7FFE) | extra_bit;
+  // Command counter (upper 6 bits)
+  uint8_t cmdCounter = (CMDandPEC >> 10) & 0x3F;
+
+  // Lower 10 Bits
+  uint16_t dataPEC = CMDandPEC & 0x3FF;
+
+  return dataPEC;
 }
 
 void parse_voltages(SPI_responses_t *responses) {
