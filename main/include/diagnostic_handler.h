@@ -37,6 +37,15 @@ typedef union {
   uint8_t bytes[8];
 } diag_frame_t;
 
+// Diagnostic Flags and values
+typedef struct {
+  uint16_t overall_voltage;
+  uint16_t current;
+  uint16_t temp;
+  uint8_t soc;
+  uint8_t soh;
 
+  uint8_t flags[8];
+} Diagnostic_Container_t;
 
 #endif

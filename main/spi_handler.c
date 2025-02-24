@@ -18,9 +18,11 @@
 #define SPI_CS1 46
 #define SPI_CS2 11
 
+#define DATA_PEC_POLY 0x22D
+#define DATA_PEC_INIT 0x0008
+
 static const char *TAG = "SPI";
 spi_device_handle_t spi_cs1, spi_cs2;
-
 
 void SPI_Setup(void) {
   esp_err_t ret;
@@ -65,30 +67,79 @@ void SPI_Setup(void) {
  * How does PEC work??
  *
  * */
-uint8_t calculate_PEC(const uint8_t *data, size_t len) {
-  uint8_t crc = 0x41;
-  for (size_t i = 0; i < len; i++) {
-    // XOR each byte with current CRC
-    crc ^= data[i];
-    for (uint8_t bit = 0; bit < 8; bit++) {
-      if (crc & 0x80) {          // if MSB is 1
-        crc = (crc << 1) ^ 0x70; // shift and XOR with Polynomial
-      } else {
-        crc <<= 1; // shift
+/* uint16_t calculate_PEC(const uint16_t *data, size_t len) { */
+/*   uint8_t crc = 0x41; */
+/*   for (size_t i = 0; i < len; i++) { */
+/*     // XOR each byte with current CRC */
+/*     crc ^= data[i]; */
+/*     for (uint8_t bit = 0; bit < 8; bit++) { */
+/*       if (crc & 0x80) {          // if MSB is 1 */
+/*         crc = (crc << 1) ^ 0x70; // shift and XOR with Polynomial */
+/*       } else { */
+/*         crc <<= 1; // shift */
+/*       } */
+/*     } */
+/*   } */
+/**/
+/*   return crc; */
+/* } */
+
+uint16_t Compute_Data_Pec(const uint8_t *data, size_t response_len) {
+  // Remainder uses bits [9:0]. We will store it in a 16-bit variable
+  uint16_t remainder = DATA_PEC_INIT;
+
+  // Process all Bytes
+  for (size_t i = 0; i < response_len; i++) {
+    for (uint8_t bitPos = 0; bitPos < 8; bitPos++) {
+
+      // Next Data bit from data (LSB first)
+      uint8_t dataBit = (data[i] >> bitPos) & 0x01;
+
+      // Current LSB of Remainder
+      uint8_t crcBit = remainder & 0x01;
+
+      // shift remainder by 1
+      remainder >>= 1;
+
+      // Xor remain with the Polynomial if
+      if ((dataBit ^ crcBit) != 0) {
+        remainder ^= DATA_PEC_POLY;
       }
     }
   }
 
-  return crc;
+  // final Remainder is now in bits [9:0]
+  remainder &= 0x03FF;
+  return remainder;
 }
 
-void adbms_send_command(uint16_t command, spi_device_handle_t spi) {
-  uint8_t cmd_tx[3] = {(command >> 3) & 0xFF, command & 0xFF, 0xFF};
-  cmd_tx[2] = calculate_PEC(cmd_tx, 2); // Calculate PEC
+size_t Prepare_Data_write_buf(const uint8_t *userData, size_t dataLen,
+                              uint8_t *outBUF) {
+  // First Copy user data
+  memcpy(outBUF, userData, dataLen);
 
-  // (16-bit command + 8-bit PEC)
+  // Compute 10-Bit PEC
+  uint16_t remainder = Compute_Data_Pec(userData, dataLen);
+
+  // remainder has 10 bit [9...0]. We place them into [15...6] of two Bytes:
+  //   outBuf[dataLen]   = remainder[9..2]
+  //   outBuf[dataLen+1] = remainder[1..0] << 6
+  //
+  // (We keep bits [5..0] = 0 in the final byte.)
+
+  outBUF[dataLen] = (uint8_t)((remainder >> 2) & 0xFF); // bits [9..2]
+  outBUF[dataLen + 1] =
+      (uint8_t)((remainder & 0x3) << 6); // bits [1..0] in [7..6]
+
+  return (dataLen + 2);
+}
+}
+
+void isoSPI_transmit(uint16_t cmd_tx, spi_device_handle_t spi) {
+
+  // (16-bit command + 15-bit PEC)
   spi_transaction_t t_tx = {.length = 24, // Sending 3 Bytes
-                            .tx_buffer = cmd_tx,
+                            .tx_buffer = &cmd_tx,
                             .rxlength = 0,
                             .rx_buffer = NULL};
 
@@ -98,9 +149,8 @@ void adbms_send_command(uint16_t command, spi_device_handle_t spi) {
   }
 }
 
-void adbms_fetch_data(uint8_t *responses, size_t response_len,
-                      spi_device_handle_t spi) {
-
+void isoSPI_receive(uint8_t *responses, size_t response_len,
+                    spi_device_handle_t spi) {
   ESP_LOGI(TAG, "Reading Cell Voltages");
   spi_transaction_t t_rx = {.length = response_len * 8,
                             .tx_buffer = NULL,

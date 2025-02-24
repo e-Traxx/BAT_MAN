@@ -9,6 +9,7 @@
 #include "portmacro.h"
 #include "spi_handler.h"
 #include <stdint.h>
+#include <string.h>
 
 SemaphoreHandle_t diagnostic_semaphore;
 TimerHandle_t diagnostic_timer;
@@ -25,6 +26,9 @@ static const char *TAG = "Diag";
 // Commands
 #define STATC 0x790
 
+Diagnostic_Container_t diag;
+
+// Function Definitions
 void diagnostic_timer_callback(TimerHandle_t DiagTimer);
 void Diagnostic_check(void *arguments);
 void Diagnostic_packet_formatter(diag_frame_t *frame, uint16_t voltage,
@@ -32,6 +36,7 @@ void Diagnostic_packet_formatter(diag_frame_t *frame, uint16_t voltage,
                                  uint8_t soh, uint8_t flags[8]);
 void Check_connections_and_limits(uint8_t *flags);
 void Check_limits(uint8_t *flags);
+void Fault_management(uint8_t *Flags);
 
 void Diag_Setup(void) {
   // Semaphore Setup
@@ -48,6 +53,16 @@ void Diag_Setup(void) {
     printf("[-] Failed to create timer.\n");
     return;
   }
+
+  // System Initialised
+  diag.overall_voltage = 0;
+  diag.temp = 0;
+  diag.current = 0;
+  diag.soc = 0;
+  diag.soh = 0;
+
+  // Error Flags --- See Header File for Format
+  memset(diag.flags, 0, sizeof(diag.flags));
 }
 
 // Gives the Semaphore every 200ms
@@ -61,11 +76,11 @@ void diagnostic_timer_callback(TimerHandle_t DiagTimer) {
   }
 }
 
-// Procedure: 
-//  1. Poll the Status Register and check for Open Wire 
-//  2. Check the Current Sensor for Open Wire 
+// Procedure:
+//  1. Poll the Status Register and check for Open Wire
+//  2. Check the Current Sensor for Open Wire
 //  3. Check the Voltage Sense and Temperature Sensing for Open Wire
-//  4. Check that the Voltage and Temperature Values are within limits 
+//  4. Check that the Voltage and Temperature Values are within limits
 //  5. Determine SOC of Battery
 //  6. Check Power delivery of Battery
 void Diagnostic_check(void *arguments) {
@@ -75,20 +90,13 @@ void Diagnostic_check(void *arguments) {
       ESP_LOGV(TAG, "[*] Running diagnostic test...");
 
       diag_frame_t frame;
-      uint16_t overall_voltage = 0;
-      uint16_t current = 0;
-      uint16_t temp = 0;
-      uint8_t soc = 0;
-      uint8_t soh = 0;
-
-      // Error Flags --- See Header File for Format
-      uint8_t flags[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 
       // Check Sensors Loss and limits
-      Check_connections_and_limits(flags);
+      Check_connections_and_limits(diag.flags);
+      Fault_management(diag.flags);
 
-      Diagnostic_packet_formatter(&frame, overall_voltage, current, temp, soc,
-                                  soh, flags);
+      Diagnostic_packet_formatter(&frame, diag.overall_voltage, diag.current,
+                                  diag.temp, diag.soc, diag.soh, diag.flags);
 
       // enqueue data to CAN_TX send function
       CAN_TX_enqueue(0x199, 8, frame.bytes);
@@ -142,16 +150,17 @@ void Check_connections_and_limits(uint8_t *flags) {
       // Voltage
       // Undervoltage: as from 3.0V
       // Overvoltage: as from 4.15V
+      //
+      // To avoid rapid on and off, we check if normal Status is restored before
+      // resuming.
       if (robin->individual_voltages[Stack][Cell] > overvoltage_limit) {
         // Add Flag
-        ESP_LOGE(TAG, "Overvoltage Detected Stack: %d, Cell: %d", Stack,
-                 Cell);
+        ESP_LOGE(TAG, "Overvoltage Detected Stack: %d, Cell: %d", Stack, Cell);
       }
 
       if (robin->individual_voltages[Stack][Cell] < undervoltage_limit) {
         // Add Flag
-        ESP_LOGE(TAG, "Undervoltage Detected Stack: %d, Cell: %d", Stack,
-                 Cell);
+        ESP_LOGE(TAG, "Undervoltage Detected Stack: %d, Cell: %d", Stack, Cell);
       }
 
       // ---- LIMITS CHECK ----
@@ -173,6 +182,12 @@ void Check_connections_and_limits(uint8_t *flags) {
   }
 }
 
+// Manages Fault based on the Flags set
+// Using a Hysteresis System, the System is allowed to restore normal
+// Functioning Conditions before resuming functionalities
+void Fault_management(uint8_t *flags) {}
+
+// Coulomb Counting and OCV (for reset)
 void SOC() {}
 
 void Diagnostic_packet_formatter(diag_frame_t *frame, uint16_t voltage,
