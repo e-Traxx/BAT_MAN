@@ -4,7 +4,6 @@
 /Users/akame/Documents/BAT-MAN/build/bootloader/CMakeFiles/gen_project_binary.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/CMakeFiles/app.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/CMakeFiles/erase_flash.dir
-/Users/akame/Documents/BAT-MAN/build/bootloader/CMakeFiles/merge-bin.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/CMakeFiles/monitor.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/CMakeFiles/_project_elf_src.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/CMakeFiles/bootloader.elf.dir
@@ -52,8 +51,6 @@
 /Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/efuse/CMakeFiles/efuse_test_table.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/efuse/CMakeFiles/edit_cache.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/efuse/CMakeFiles/rebuild_cache.dir
-/Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_security/CMakeFiles/edit_cache.dir
-/Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_security/CMakeFiles/rebuild_cache.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_system/CMakeFiles/edit_cache.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_system/CMakeFiles/rebuild_cache.dir
@@ -62,8 +59,6 @@
 /Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_hw_support/CMakeFiles/rebuild_cache.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_hw_support/port/esp32/CMakeFiles/edit_cache.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_hw_support/port/esp32/CMakeFiles/rebuild_cache.dir
-/Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_hw_support/lowpower/CMakeFiles/edit_cache.dir
-/Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_hw_support/lowpower/CMakeFiles/rebuild_cache.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_common/CMakeFiles/edit_cache.dir
 /Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_common/CMakeFiles/rebuild_cache.dir

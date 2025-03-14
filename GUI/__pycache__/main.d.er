@@ -1,0 +1,27 @@
+##[pylyzer] failed /users/akame/documents/bat-man/gui/main.py 1740422763 6869
+.dash: Never
+
+.___v_desugar_1: Never
+.dcc: Never
+.html: Never
+.___v_desugar_2: Never
+.Input: Never
+.Output: Never
+.go: Never
+
+.requests: Never
+
+.API_URL: {"http:..127.0.0.1:5000.data"}
+.app: Never
+
+
+.fetch_data: () -> Never
+.update_graph1: (n: Obj) -> global::Dict!({{"layout"}: Never, {"data"}: global::List!(Never, 1)})
+.update_graph2: (n: Obj) -> global::Dict!({{"layout"}: Never, {"data"}: global::List!(Never, 1)})
+.update_current_output: (n: Obj) -> global::Dict!({{"layout"}: Never, {"data"}: global::List!(Never, 1)})
+.update_overall_voltage: (n: Obj) -> global::Dict!({{"layout"}: Never, {"data"}: global::List!(Never, 1)})
+.update_faults_system_table: (n: Obj) -> global::List!(Never, _: Nat + _: Nat)
+
+
+
+

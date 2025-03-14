@@ -20,6 +20,8 @@
 
 #define DATA_PEC_POLY 0x22D
 #define DATA_PEC_INIT 0x0008
+#define COMMAND_PEC_POLY 0b110001011001101
+#define COMMAND_PEC_INIT 0b0110001011001101;
 
 static const char *TAG = "SPI";
 spi_device_handle_t spi_cs1, spi_cs2;
@@ -43,7 +45,7 @@ void SPI_Setup(void) {
 
   // Add device to registry
   spi_device_interface_config_t devcf_sender_CS1 = {
-      .clock_speed_hz = 1 * 1000 * 1000, // 2MHz
+      .clock_speed_hz = 1 * 1000 * 1000, // 1MHz
       .mode = 0,
       .spics_io_num = SPI_CS1,
       .queue_size = 7,
@@ -51,7 +53,7 @@ void SPI_Setup(void) {
 
   // Add device to registry
   spi_device_interface_config_t devcf_receiver_CS2 = {
-      .clock_speed_hz = 1 * 1000 * 1000, // 2MHz
+      .clock_speed_hz = 1 * 1000 * 1000, // 1MHz
       .mode = 0,
       .spics_io_num = SPI_CS2,
       .queue_size = 7,
@@ -66,23 +68,8 @@ void SPI_Setup(void) {
 /*
  * How does PEC work??
  *
- * */
-/* uint16_t calculate_PEC(const uint16_t *data, size_t len) { */
-/*   uint8_t crc = 0x41; */
-/*   for (size_t i = 0; i < len; i++) { */
-/*     // XOR each byte with current CRC */
-/*     crc ^= data[i]; */
-/*     for (uint8_t bit = 0; bit < 8; bit++) { */
-/*       if (crc & 0x80) {          // if MSB is 1 */
-/*         crc = (crc << 1) ^ 0x70; // shift and XOR with Polynomial */
-/*       } else { */
-/*         crc <<= 1; // shift */
-/*       } */
-/*     } */
-/*   } */
-/**/
-/*   return crc; */
-/* } */
+ *
+ */
 
 uint16_t Compute_Data_Pec(const uint8_t *data, size_t response_len) {
   // Remainder uses bits [9:0]. We will store it in a 16-bit variable
@@ -107,11 +94,49 @@ uint16_t Compute_Data_Pec(const uint8_t *data, size_t response_len) {
       }
     }
   }
+}
 
-  // final Remainder is now in bits [9:0]
-  remainder &= 0x03FF;
+// The Command PEC is a 15 bit Polynomial Error Check placed after the CMD0 and
+// CMD1 in the data packet.
+uint16_t Compute_Command_PEC(uint8_t *data, size_t data_length) {
+  // Polynomial for X^15 + X^14 + X^10 + X^8 + X^7 + X^4 + X^3 + 1
+  // For example at Position 15, 14, 10, 8, 7, 4, 3 and 0, bit = 1
+  // 0110001011001101 or
+  // Stored in 16 Bits but masked to 15 Bits
+  const uint16_t Poly_15bit = COMMAND_PEC_POLY;
+
+  // Initial Remainder = Seed at the Start
+  // It shall be placed at the bottom of a 16 Bit value
+  uint16_t remainder = COMMAND_PEC_INIT;
+
+  // Process each byte
+  for (size_t i = 0; i < data_length; i++) {
+
+    // XOR the incoming byte into the 'top' of the remainder
+    // Beacause we use only 15 bits, we shift the bits up by one
+    remainder ^= (data[i] << 1);
+
+    // Now process
+    for (int bit = 0; bit < 8; bit++) {
+
+      // Test if top bit is set
+      if (remainder & 0x200) { // 0x200 = (1 << 9)
+
+        // Left Shift, then XOR with Polynomial
+        remainder ^= (uint16_t)(remainder << 1) ^ Poly_15bit;
+      } else {
+        remainder <<= 1;
+      }
+
+      // Always mask back to 15 bits so prevent overflow
+      remainder &= 0x7FFF; // 15 bits 0b0111111111111111
+    }
+  }
   return remainder;
 }
+
+// Extraction of PEC from the received data
+uint16_t extract_received_pec(uint16_t *rxbuffer) {}
 
 size_t Prepare_Data_write_buf(const uint8_t *userData, size_t dataLen,
                               uint8_t *outBUF) {
@@ -133,12 +158,13 @@ size_t Prepare_Data_write_buf(const uint8_t *userData, size_t dataLen,
 
   return (dataLen + 2);
 }
-}
 
-void isoSPI_transmit(uint16_t cmd_tx, spi_device_handle_t spi) {
+// Transmission of
+void isoSPI_transmit(uint8_t *cmd_tx, size_t cmd_length,
+                     spi_device_handle_t spi) {
 
   // (16-bit command + 15-bit PEC)
-  spi_transaction_t t_tx = {.length = 24, // Sending 3 Bytes
+  spi_transaction_t t_tx = {.length = cmd_length * 8,
                             .tx_buffer = &cmd_tx,
                             .rxlength = 0,
                             .rx_buffer = NULL};
@@ -149,9 +175,11 @@ void isoSPI_transmit(uint16_t cmd_tx, spi_device_handle_t spi) {
   }
 }
 
-void isoSPI_receive(uint8_t *responses, size_t response_len,
+void isoSPI_receive(uint8_t *responses, size_t response_len, size_t NUM_devices,
                     spi_device_handle_t spi) {
   ESP_LOGI(TAG, "Reading Cell Voltages");
+
+  // length should be size per module * Total_num of Module * 8 Bits
   spi_transaction_t t_rx = {.length = response_len * 8,
                             .tx_buffer = NULL,
                             .rxlength = response_len * 8,

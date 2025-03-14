@@ -14,38 +14,6 @@
 static const char *TAG = "WIFI";
 
 void WIFI_Setup() {
-  /*  esp_err_t ret = nvs_flash_init(); */
-  /*  if (ret == ESP_ERR_NVS_NO_FREE_PAGES || */
-  /*      ret == ESP_ERR_NVS_NEW_VERSION_FOUND) { */
-  /*    ESP_ERROR_CHECK(nvs_flash_erase()); */
-  /*    ESP_ERROR_CHECK(nvs_flash_init()); */
-  /*  } */
-  /*  // Making sure to Deinit */
-  /*  esp_wifi_stop(); */
-  /*  esp_wifi_deinit(); */
-  /**/
-  /*  // init WIFI */
-  /*  wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT(); */
-  /*  esp_wifi_init(&cfg); */
-  /**/
-  /*  wifi_config_t ap_config = {.ap = {.ssid = "BATMAN", */
-  /*                                    .ssid_len = strlen("BATMAN"), */
-  /*                                    .password = "IamBATmanExxe25", */
-  /*                                    .max_connection = 4, */
-  /*                                    .authmode = WIFI_AUTH_WPA2_PSK */
-  /**/
-  /*                             }}; */
-  /*  ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_AP)); */
-  /*  ESP_ERROR_CHECK(esp_wifi_set_config(ESP_IF_WIFI_AP, &ap_config)); */
-  /*  ESP_ERROR_CHECK(esp_wifi_start()); */
-  /**/
-  /*  ESP_LOGI("WIFI", "AP started. SSID: BATMAN, password: IamBATmanExxe25");
-   */
-  /**/
-  /*  */
-  /**/
-  /*  vTaskDelay(pdMS_TO_TICKS(1000)); */
-  /**/
   // 1. Initialize NVS (required by Wi-Fi)
   esp_err_t ret = nvs_flash_init();
   if (ret == ESP_ERR_NVS_NO_FREE_PAGES ||
