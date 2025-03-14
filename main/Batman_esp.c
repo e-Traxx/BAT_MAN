@@ -14,6 +14,39 @@
 
 static const char *TAG = "Setup";
 
+
+/*
+  * Startup Procedure 
+  *   CAN Setup()
+  * - Configure Network
+  * - Configure Semaphore for CAN Transmission 
+  *
+  *   SPI Setup()
+  * - Detect ADBMS6822 module
+  * - Setup connection to module and configure network.
+  *
+  *
+  *   ADBMS Setup()
+  * 1. Poll all cell modules for Serial IDs 
+  * 2. Store all Serial IDs in a 14 index array.
+  * 3. Send Command to start ADC Measurements on the Modules. 
+  *  
+  *   
+  *   DIAG Setup()
+  * 1. Create Semaphore and Timer.
+  * 2. Gives semaphore every 200ms
+  *
+  *   
+  *   WIFI Setup()
+  * 1. Setup Wifi Connection
+  * 2. Setup DHCP
+  * 3. Setup Static Connection
+  * 4. Start Wifi AP 
+  * 
+  *
+  *
+  */
+
 void initialise_setups(void) {
   // Setup
 

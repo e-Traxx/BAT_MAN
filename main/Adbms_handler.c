@@ -118,8 +118,8 @@ void Adbms_query_callback(TimerHandle_t timer) {
 //  3. Run Diagnostic checks on connections
 //  4. Run Diagnostic checks on the values
 //  5. Check Integrity of System
-//  6. Run OCV and Coulomb counting and potentially Kalman filter to determine
-//  SOC and SOH
+//  6. Run OCV and Coulomb counting to determine
+//  SOC
 //
 void Robin_query(void *args) {
 
@@ -305,79 +305,41 @@ void individual_temperatures_formatter(individual_temperatures_frame_t *frame,
 
 // SPI TX
 //
-// address: Address of the Module
-// Broadcast: addressed or Broadcasted command
 // cmdCode: Command itself
 // Payload: Value to send
-void adbms_send_command(uint8_t address, bool Broadcast, uint16_t cmdCode,
-                        const uint16_t *payload, size_t payloadLen) {
-  // Construct 16-bit Command Word
-  // Check if Addressed transmission or Broadcasted
-  uint16_t commmandWord = 0;
-  if (Broadcast) {
-    //[10] => ignore address
-    commmandWord = (1u << 10) | (cmdCode & 0x3FF); // 10 Bit
-  } else {
-    // [10]=0 => addressed, [9:0]=cmdCode
-    commmandWord = ((address & 0x1F) << 11 | (cmdCode & 0x3FF));
-  }
+//
+// Procedure: (BATMAN)
+// 1. Calculate the 15 Bit Command PEC to be added at the end of the Command
+// 2. Load the Command and the PEC into the Buffer using big Endian
+// 3. Transmit the data to the slaves
+//
+// Procedure: (ROBIN)
+// 1. The first Robin gets the Command and sends it forward to the next device
+// in the chain until the data reaches the Port B.
+// 2. In the meantime, the
+void adbms_broadcast_command(uint16_t *cmd) {
+  // Broadcasting (Poll Commands)
 
-  // Compute 15-Bit PEC
-  uint16_t PEC = calculate_PEC(commmandWord, sizeof(commmandWord));
+  // first load the Command into CM0 and CMD1
+  uint8_t cmdWord[2];
+  // The 16 Bit is split into 2 x 8 Bits
+  cmdWord[0] = (*cmd >> 8) & 0xFF; // High Byte [8 - 15]
+  cmdWord[1] = *cmd & 0xFF;        // Low Byte [0 - 7]
 
-  // Pack the command + PEC using Big Endian
-  uint8_t txBUFFER[4];
-  txBUFFER[0] = (uint8_t)((commmandWord >> 8) & 0xFF);
-  txBUFFER[1] = (uint8_t)((commmandWord & 0xFF));
+  // Calculate Command PEC
+  uint16_t PEC = Compute_Command_PEC(cmdWord, sizeof(cmdWord));
 
-  // The PEC Command is a 15-bit represented in 2 bytes as bits [4...7] and
-  // [6...0, plus 1 zero bit]. txBUffer[2] = MSB of PEC txBuffer[3] = LSB of PEC
-  // (7 lowest bit plus trailing 0) Table 41
-  txBUFFER[2] = (uint8_t)((PEC >> 7) & 0xFF);
-  txBUFFER[3] = (uint8_t)((PEC & 0x7F) << 1);
+  // Load the command Word (CMD0 and CMD1) and PEC into the transmission array
+  uint8_t transmission_data[4] = {cmdWord[0], cmdWord[1], ((PEC >> 8) & 0xFF),
+                                  (PEC & 0xFF)};
 
-  // Send Command
-  if (isoSPI_transmit(txBUFFER, 4)) {
-    ESP_LOGE(TAG, "Could not Transmit Command");
-  }
-
-  // If Theres a Payload for write Commands
-  // We send it next
-  if (payload && payloadLen > 0) {
-    // Append 10-bit PEC to Payload, Table 42
-    //
-  }
+  // Transmit using SPI 1
+  isoSPI_transmit(transmission_data, sizeof(transmission_data), spi_cs1);
 }
 
 /// Poll the Devices for the serial_id and save the value in an array
 /// This allows the device to identify the individual modules and use addressed
-/// transmission
 ///
-///
-void register_devices(uint8_t *ID_response) {
-  uint8_t received_pec = extract_pec(ID_response);
-}
-
-uint16_t extract_received_pec(uint16_t *rxbuffer) {
-  // Pec is split into 2 Locations: Last Word and the extra one bit
-  // Given NUM_STACKS * 16 bits = last_word index
-  /* uint16_t last_word = data[NUM_STACKS * 16]; */
-  /* uint16_t extra_bit = data[(NUM_STACKS * 16) + 1] & 0x0001; */
-  /**/
-  /* // combine to form the PEC */
-  /* return ((last_word << 1) & 0x7FFE) | extra_bit; */
-  size_t len = sizeof(rxbuffer) / sizeof(rxbuffer[0]);
-  uint16_t CMDandPEC =
-      (((uint16_t)rxbuffer[(len - 2) << 8 | rxbuffer[len - 1]]));
-
-  // Command counter (upper 6 bits)
-  uint8_t cmdCounter = (CMDandPEC >> 10) & 0x3F;
-
-  // Lower 10 Bits
-  uint16_t dataPEC = CMDandPEC & 0x3FF;
-
-  return dataPEC;
-}
 
 void parse_voltages(SPI_responses_t *responses) {
   // PEC is located at the end of the response packet

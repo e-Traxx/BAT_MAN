@@ -74,7 +74,7 @@ typedef struct {
   bool broadcast;
   // 11 Bit command
   uint16_t command;
-} spi_command_t;
+} spi_user_command_t;
 
 // Serial ID
 extern uint8_t ADBMS_ID[(6 * NUM_STACKS) + 2];
