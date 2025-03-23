@@ -58,23 +58,26 @@ typedef union {
 } individual_temperatures_frame_t;
 
 // SPI Transmission
-typedef union {
-  // Each stack has 18 Cells
-  // and we have 14 Stacks in total which amount to NUM_STACKS * CELLS_PER_STACK
-  // 16-bit values to store
-  uint8_t raw[((NUM_STACKS * CELLS_PER_STACK) + 1) * 2];
-  uint16_t values[(NUM_STACKS * CELLS_PER_STACK) + 1];
-} SPI_responses_t;
+//
+// Each stack has 18 Cells (16 Cells + 2 Dummy)
+// Each module has 6 Cell voltage register Group
+// Each Cell voltage register Group has 6 registers. (3 Cells)
+// Each Register has its own 10 bit PEC.
+// 1 Module = (6 registers x 1 Byte) + 2 Byte PEC
+// 1 Module = 8 Bytes x 6 register Groups
+// 1 Module = 48 Bytes
+//
+// 14 modules = 48 Bytes x 14 modules
+// 14 Modules = 672 Bytes
+#define PAYLOAD_LENGTH NUM_STACKS * ((8 * 6 * 6) * 8)
+// 14 Modules * (8 Bytes * 6 registers * 6 groups) * 8 bits
 
-// Command description Structure
-typedef struct {
-  // 5-bit Address
-  uint8_t address;
-  // Addressed command or broadcasted command
-  bool broadcast;
-  // 11 Bit command
-  uint16_t command;
-} spi_user_command_t;
+typedef union {
+  uint8_t raw[PAYLOAD_LENGTH * 2];
+  // 16 bit saved in 2 locations sequentially as 8 bits, therefore:
+  // PAYLOAD_LENGTH * 2
+  uint16_t values[PAYLOAD_LENGTH];
+} SPI_responses_t;
 
 // Serial ID
 extern uint8_t ADBMS_ID[(6 * NUM_STACKS) + 2];

@@ -70,7 +70,8 @@ void SPI_Setup(void) {
  *
  *
  */
-
+// The Data PEC is a 10 bit Polynomial Error Check placed after every register
+// data packet.
 uint16_t Compute_Data_Pec(const uint8_t *data, size_t response_len) {
   // Remainder uses bits [9:0]. We will store it in a 16-bit variable
   uint16_t remainder = DATA_PEC_INIT;
@@ -138,27 +139,6 @@ uint16_t Compute_Command_PEC(uint8_t *data, size_t data_length) {
 // Extraction of PEC from the received data
 uint16_t extract_received_pec(uint16_t *rxbuffer) {}
 
-size_t Prepare_Data_write_buf(const uint8_t *userData, size_t dataLen,
-                              uint8_t *outBUF) {
-  // First Copy user data
-  memcpy(outBUF, userData, dataLen);
-
-  // Compute 10-Bit PEC
-  uint16_t remainder = Compute_Data_Pec(userData, dataLen);
-
-  // remainder has 10 bit [9...0]. We place them into [15...6] of two Bytes:
-  //   outBuf[dataLen]   = remainder[9..2]
-  //   outBuf[dataLen+1] = remainder[1..0] << 6
-  //
-  // (We keep bits [5..0] = 0 in the final byte.)
-
-  outBUF[dataLen] = (uint8_t)((remainder >> 2) & 0xFF); // bits [9..2]
-  outBUF[dataLen + 1] =
-      (uint8_t)((remainder & 0x3) << 6); // bits [1..0] in [7..6]
-
-  return (dataLen + 2);
-}
-
 // Transmission of
 void isoSPI_transmit(uint8_t *cmd_tx, size_t cmd_length,
                      spi_device_handle_t spi) {
@@ -175,14 +155,14 @@ void isoSPI_transmit(uint8_t *cmd_tx, size_t cmd_length,
   }
 }
 
-void isoSPI_receive(uint8_t *responses, size_t response_len, size_t NUM_devices,
+void isoSPI_receive(uint8_t *responses, size_t response_len,
                     spi_device_handle_t spi) {
   ESP_LOGI(TAG, "Reading Cell Voltages");
 
   // length should be size per module * Total_num of Module * 8 Bits
-  spi_transaction_t t_rx = {.length = response_len * 8,
+  spi_transaction_t t_rx = {.length = response_len,
                             .tx_buffer = NULL,
-                            .rxlength = response_len * 8,
+                            .rxlength = response_len,
                             .rx_buffer = responses};
 
   esp_err_t err = spi_device_transmit(spi_cs2, &t_rx);
