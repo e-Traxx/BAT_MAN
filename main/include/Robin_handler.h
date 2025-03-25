@@ -19,6 +19,10 @@ uint8_t calculate_PEC(const uint8_t *data, size_t len);
 typedef struct {
   uint16_t individual_voltages[14][10];
   uint16_t individual_temperatures[14][10];
+  uint16_t overall_voltage;
+  uint16_t overall_temperature;
+  uint16_t overall_current;
+  uint16_t overall_SOC;
 } Robin_container_t;
 
 // CAN Message Template
