@@ -76,13 +76,13 @@ void parse_Temperature(SPI_responses_t *responses_Temp) {
         // ERROR Message
       }
 
-      robin->individual_voltages[stack][cell] = responses_Temp->values[0];
+      robin->individual_temperatures[stack][cell] = responses_Temp->values[0];
 
       // if on Group 4, then only take Cell 1 as it is the 10th Cell at
       // index 11.
       if (cell < 8) {
-        robin->individual_voltages[stack][cell + 1] = responses_Temp->values[1];
-        robin->individual_voltages[stack][cell + 2] = responses_Temp->values[2];
+        robin->individual_temperatures[stack][cell + 1] = responses_Temp->values[1];
+        robin->individual_temperatures[stack][cell + 2] = responses_Temp->values[2];
       }
       PEC = responses_Temp->values[3];
 
