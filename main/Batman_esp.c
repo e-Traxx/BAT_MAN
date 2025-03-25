@@ -12,6 +12,7 @@
 #include "include/Adbms_handler.h"
 #include "spi_handler.h"
 #include <stdio.h>
+#include "Albert_handler.h"
 
 static const char *TAG = "Setup";
 
@@ -42,8 +43,13 @@ static const char *TAG = "Setup";
  * 2. Setup DHCP
  * 3. Setup Static Connection
  * 4. Start Wifi AP
+ * 
  *
- *
+ *  Albert_Setup()
+ * 1. Setup ADC for Current Measurement
+ * 2. Check if Sensor is connected
+ * 3. Create Semaphore and Timer
+ * 
  *
  */
 
@@ -57,6 +63,7 @@ void initialise_setups(void) {
   // Setup Diagnostic system
   Diag_Setup();
   ADBMS_Setup();
+  Albert_Setup();
 }
 
 void Start_schedule(void) {
@@ -70,12 +77,17 @@ void Start_schedule(void) {
     ESP_LOGE(TAG, "[-] Failed to start adbms_timer");
   }
 
-  // Schedule a ADBMS query every 500ms (test case) // can be higher frequency
+  if (xTimerStart(albert_timer, 0) != pdPASS) {
+    ESP_LOGE(TAG, "[-] Failed to start albert_timer");
+  }
+
+  // Schedule a Robin query every 200ms (test case) // can be higher frequency
   //
   // Upon created, tasks are placed into ready state
-  xTaskCreate(Diagnostic_check, "System_diag", 2048, NULL, 4, NULL);
+  xTaskCreate(Diagnostic_check, "System_diag", 2048, NULL, 2, NULL);
   xTaskCreate(CAN_sendMessage, "Can_tx", 2048, NULL, 3, NULL);
-  xTaskCreate(Robin_query, "ADBMS_query", 2048, NULL, 2, NULL);
+  xTaskCreate(Robin_query, "Robin_query", 2048, NULL, 2, NULL);
+  xTaskCreate(Albert_Query, "Albert_query", 2048, NULL, 1, NULL);
 }
 
 void app_main(void) {

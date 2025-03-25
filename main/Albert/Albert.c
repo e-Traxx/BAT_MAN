@@ -9,6 +9,9 @@ static const char *TAG = "Albert";
 #define ADC_CHANNEL ADC1_CHANNEL1
 
 
+SemaphoreHandle_t albert_semaphore;
+TimerHandle_t albert_timer;
+
 // Measures Current flowing through the TSAC main HV Wires
 
 /*
@@ -28,7 +31,6 @@ void Albert_Setup() {
     adc1_config_width(ADC_WIDTH_BIT_12);
     // Set the attenuation to 11dB to allow for a full-scale voltage of 3.9V
     adc1_config_channel_atten(ADC_CHANNEL, ADC_ATTEN_DB_11);
-
     // Characterize ADC
     esp_adc_cal_characteristics_t adc_chars;
     // Default Vref is 1100mV
@@ -51,7 +53,7 @@ void Albert_Setup() {
     }
 
     // Create Timer
-    albert_timer = xTimerCreate("Albert_timer", pdMS_TO_TICKS(500), pdTRUE, (void *)0, albert_timer_callback);
+    albert_timer = xTimerCreate("Albert_timer", pdMS_TO_TICKS(200), pdTRUE, (void *)0, albert_timer_callback);
     if (albert_timer == NULL) {
         ESP_LOGE(TAG, "Failed to create timer.");
         return;
@@ -68,7 +70,7 @@ void Albert_timer_callback(TimerHandle_t AlbertTimer) {
     }
 }
 
-void Albert_task(void *args) {
+void Albert_Query(void *args) {
     while (1) {
         if (xSemaphoreTake(albert_semaphore, portMAX_DELAY) == pdTRUE) {
             // Perform the diagnostic test
@@ -89,17 +91,9 @@ void Albert_task(void *args) {
             // y = mx + c
             //V = 0.0094I + 1.25
             uint16_t current = (voltage - 1250) / 9.4;
-            
             robin->overall_current = current;
-            
-            // for now
-            ESP_LOGV(TAG, "[+] Current Measurement: %d.\n", );
+
+            ESP_LOGV(TAG, "[+] Current Measurement: %d.\n", current);
         }
     }
-}
-
-
-void Albert_read_current() {
-
-    
 }
