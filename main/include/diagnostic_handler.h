@@ -11,6 +11,8 @@ void Diagnostic_check(void *argumensts);
 extern SemaphoreHandle_t diagnostic_semaphore;
 extern TimerHandle_t diagnostic_timer;
 
+
+// TODO: REMOVE SOH AND FIX BIT ALLOCATIONS
 typedef struct {
   uint32_t Overall_voltage : 13; // 0-12 Bits
   uint32_t Highest_temp : 14;    // 13-26 Bits
