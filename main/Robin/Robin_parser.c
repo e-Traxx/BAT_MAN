@@ -1,5 +1,6 @@
 #include "Robin_handler.h"
 #include "esp_log.h"
+#include "spi_handler.h"
 #include "string.h"
 #include <stdint.h>
 
@@ -30,7 +31,7 @@ void parse_voltages(SPI_responses_t *responses) {
           responses->values[1],
           responses->values[2],
       };
-      if (calculate_PEC(Data, sizeof(Data)) != PEC) {
+      if (Compute_Data_PEC(Data, sizeof(Data)) != PEC) {
         // ERROR Message
       }
 
@@ -72,7 +73,7 @@ void parse_Temperature(SPI_responses_t *responses_Temp) {
           responses_Temp->values[1],
           responses_Temp->values[2],
       };
-      if (calculate_PEC(Data, sizeof(Data)) != PEC) {
+      if (Compute_Data_PEC(Data, sizeof(Data)) != PEC) {
         // ERROR Message
       }
 
@@ -81,8 +82,10 @@ void parse_Temperature(SPI_responses_t *responses_Temp) {
       // if on Group 4, then only take Cell 1 as it is the 10th Cell at
       // index 11.
       if (cell < 8) {
-        robin->individual_temperatures[stack][cell + 1] = responses_Temp->values[1];
-        robin->individual_temperatures[stack][cell + 2] = responses_Temp->values[2];
+        robin->individual_temperatures[stack][cell + 1] =
+            responses_Temp->values[1];
+        robin->individual_temperatures[stack][cell + 2] =
+            responses_Temp->values[2];
       }
       PEC = responses_Temp->values[3];
 

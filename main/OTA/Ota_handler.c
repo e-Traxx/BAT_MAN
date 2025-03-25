@@ -1,11 +1,9 @@
 #include "OTA.h"
 #include "esp_err.h"
 #include "esp_event.h"
-#include "esp_https_server.h"
 #include "esp_log.h"
 #include "esp_ota_ops.h"
 #include "esp_wifi.h"
-#include "esp_wifi_types_generic.h"
 #include "nvs_flash.h"
 #include <string.h>
 
