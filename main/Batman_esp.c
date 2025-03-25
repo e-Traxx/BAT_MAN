@@ -1,4 +1,5 @@
 #include "Batman_esp.h"
+#include "Albert_handler.h"
 #include "OTA.h"
 #include "Robin_handler.h"
 #include "Wifi.h"
@@ -9,10 +10,8 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/idf_additions.h"
 #include "freertos/task.h"
-#include "include/Adbms_handler.h"
 #include "spi_handler.h"
 #include <stdio.h>
-#include "Albert_handler.h"
 
 static const char *TAG = "Setup";
 
@@ -43,13 +42,13 @@ static const char *TAG = "Setup";
  * 2. Setup DHCP
  * 3. Setup Static Connection
  * 4. Start Wifi AP
- * 
+ *
  *
  *  Albert_Setup()
  * 1. Setup ADC for Current Measurement
  * 2. Check if Sensor is connected
  * 3. Create Semaphore and Timer
- * 
+ *
  *
  */
 

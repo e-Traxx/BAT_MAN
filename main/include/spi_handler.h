@@ -1,7 +1,6 @@
 #ifndef SPIH_H
 #define SPIH_H
 
-#include "Adbms_handler.h"
 #include "driver/spi_master.h"
 #include <stddef.h>
 #include <stdint.h>

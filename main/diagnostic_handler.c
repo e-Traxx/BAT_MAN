@@ -1,6 +1,6 @@
 #include "diagnostic_handler.h"
-#include "Adbms_handler.h"
 #include "Batman_esp.h"
+#include "Robin_handler.h"
 #include "can_handler.h"
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
@@ -121,31 +121,11 @@ void Check_connections_and_limits(uint8_t *flags) {
   // Current Sensor = Voltage Measured = 0V
 
   // Using Open Wire Sensing (Which is set up in the Start Measurement Command
-  // in spi_handler.c ) we can poll the Status Register responsible for Open
-  // Wire and get check.
-  uint8_t status_register[(NUM_STACKS * 2) * 2];
-  adbms_send_command(STATC, spi_cs1);
-  adbms_fetch_data(status_register, sizeof(status_register), spi_cs2);
-
+  // in spi_handler.c )
+  // if the Voltage Measured is 0V then we have an OPEN WIRE.
   uint8_t cell_index = 0;
   for (int Stack = 0; Stack < NUM_STACKS; Stack++) {
     for (int Cell = 0; Cell < CELLS_PER_STACK_ACTIVE; Cell++) {
-      // ---- OPEN WIRE CHECK ----
-      // Cell Voltage Sensing Test
-      if (status_register[cell_index] & 0x1) {
-        flags[1] = 1;
-        ESP_LOGE(TAG, "Open Wire Detected: Stack: %d, Cell: %d", Stack, Cell);
-      }
-
-      // If voltage measured is less than 0.5V (85°C) or greater than 4.0V (Temp
-      // < 0°C)
-      if (robin->individual_temperatures[Stack][Cell] < 50 ||
-          robin->individual_temperatures[Stack][Cell] > 850) {
-        flags[4] = 1;
-        ESP_LOGE(TAG, "AUX Open Wire Detected Stack: %d, Cell: %d", Stack,
-                 Cell);
-      }
-
       // ---- LIMITS CHECK ----
       // Voltage
       // Undervoltage: as from 3.0V

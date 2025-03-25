@@ -1,5 +1,5 @@
 #include "include/spi_handler.h"
-#include "Adbms_handler.h"
+#include "Robin_handler.h"
 #include "driver/gpio.h"
 #include "driver/spi_master.h"
 #include "esp_err.h"
@@ -11,7 +11,7 @@
 #include <stdint.h>
 #include <string.h>
 
-#define SPI_HOST SPI2_HOST
+#define SPI_HOST_D SPI2_HOST
 #define MISO_NUM 12
 #define MOSI_NUM 13
 #define CLK_NUM 14
@@ -59,8 +59,9 @@ void SPI_Setup(void) {
       .queue_size = 7,
       .flags = SPI_DEVICE_HALFDUPLEX};
 
-  ESP_ERROR_CHECK(spi_bus_add_device(SPI_HOST, &devcf_sender_CS1, &spi_cs1));
-  ESP_ERROR_CHECK(spi_bus_add_device(SPI_HOST, &devcf_receiver_CS2, &spi_cs2));
+  ESP_ERROR_CHECK(spi_bus_add_device(SPI_HOST_D, &devcf_sender_CS1, &spi_cs1));
+  ESP_ERROR_CHECK(
+      spi_bus_add_device(SPI_HOST_D, &devcf_receiver_CS2, &spi_cs2));
 
   ESP_LOGI(TAG, "SPI Sender and Receiver are Initilialised");
 }
@@ -72,7 +73,7 @@ void SPI_Setup(void) {
  */
 // The Data PEC is a 10 bit Polynomial Error Check placed after every register
 // data packet.
-uint16_t Compute_Data_Pec(const uint8_t *data, size_t response_len) {
+uint16_t Compute_Data_PEC(const uint8_t *data, size_t response_len) {
   // Remainder uses bits [9:0]. We will store it in a 16-bit variable
   uint16_t remainder = DATA_PEC_INIT;
 
@@ -95,6 +96,8 @@ uint16_t Compute_Data_Pec(const uint8_t *data, size_t response_len) {
       }
     }
   }
+
+  return remainder;
 }
 
 // The Command PEC is a 15 bit Polynomial Error Check placed after the CMD0 and
@@ -137,7 +140,7 @@ uint16_t Compute_Command_PEC(uint8_t *data, size_t data_length) {
 }
 
 // Extraction of PEC from the received data
-uint16_t extract_received_pec(uint16_t *rxbuffer) {}
+/* uint16_t extract_received_pec(uint16_t *rxbuffer) {} */
 
 // Transmission of
 void isoSPI_transmit(uint8_t *cmd_tx, size_t cmd_length,
