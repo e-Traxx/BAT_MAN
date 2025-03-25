@@ -1,5 +1,7 @@
 #include "Robin_handler.h"
+#include "esp_log.h"
 #include "string.h"
+#include <stdint.h>
 
 // This is just a collection of bad code used to parse the received data into
 // proper structure and load it into the memory
@@ -12,65 +14,85 @@
 
 // The whole structure is just 8 Bits and 8 bits and 8 bits
 void parse_voltages(SPI_responses_t *responses) {
-  /* // PEC is located at the end of the response packet */
-  /* uint8_t PEC_calculated = */
-  /*     calculate_PEC(responses->raw, sizeof(responses->raw)); */
-  /* uint8_t received_pec = extract_pec(responses->values); */
-  /**/
-  /* // Check if the PEC is Valid */
-  /* if (PEC_calculated != received_pec) { */
-  /* } */
-  /**/
-  /* size_t active_cell_index = 0; */
-  /* // Dependent on number of Stacks available */
-  /* // */
-  /* // for every stack available */
-  /* // */
-  /* // Z.B */
-  /* // index 0 -9 -> Module 1 */
-  /* // index 10 - 17 -> Not used */
-  /* // index 18 - 27 -> Module 2 */
-  /* // index 28 - 35 -> Not used */
-  /* for (size_t Stack = 0; Stack < NUM_STACKS; Stack++) { */
-  /**/
-  /*   // increment the index 10 times representing the 10 active cells */
-  /*   for (size_t Cell = 0; Cell < CELLS_PER_STACK_ACTIVE; Cell++) { */
-  /*     robin->individual_voltages[Stack][Cell] = */
-  /*         responses->values[active_cell_index + 1]; */
-  /*   } */
-  /*   // skip cell 11 to 18 by incrementing with 7. */
-  /*   active_cell_index = active_cell_index + 7; */
-  /* } */
-
   // PEC is located at the end of every 6 registers or otherwise 6 x 8 bits
   // oooooooooor we have 3 x 16 bits in a groups register for Cell voltage
   // values and then 1 x 16 Bit for Data PEC
-  size_t index = 0;
   size_t cell = 0; // Robin_container
-                   // for every Module present
+  size_t group = 0;
+  uint16_t PEC = 0;
+  // for every Module present
   for (size_t stack = 0; stack < NUM_STACKS; stack++) {
     // for every 4 Register Groups (1 - 12)
-    for (size_t group = 0; group < 5; group++) {
-      // Every 4 x 16-bits
-      if (cell < 10) {
-        robin->individual_voltages[cell][stack] = responses->values[0];
-        robin->individual_voltages[cell + 1][stack] = responses->values[2];
-        robin->individual_voltages[cell + 2][stack] = responses->values[3];
-      } else {
-        robin->individual_voltages[cell][stack] = responses->values[0];
+    while (group < 5 && cell < 10) {
+      // Check PEC
+      uint8_t Data[3] = {
+          responses->values[0],
+          responses->values[1],
+          responses->values[2],
+      };
+      if (calculate_PEC(Data, sizeof(Data)) != PEC) {
+        // ERROR Message
       }
+
+      robin->individual_voltages[stack][cell] = responses->values[0];
+
+      // if on Group 4, then only take Cell 1 as it is the 10th Cell at
+      // index 11.
+      if (cell < 8) {
+        robin->individual_voltages[stack][cell + 1] = responses->values[1];
+        robin->individual_voltages[stack][cell + 2] = responses->values[2];
+      }
+      PEC = responses->values[3];
+
+      // increment to next Register group
+      group += 1;
+
+      // Increment the Cell Counter to access the next cells on the next loop
       cell += 3;
     }
-
-    cell = 0;
   }
 }
 
+/// Is just a Template, so i need to check up on it later.
+
 void parse_Temperature(SPI_responses_t *responses_Temp) {
-  // PEC is located at the end of the response packet
-  uint8_t PEC_calculated =
-      calculate_PEC(responses_Temp->raw, sizeof(responses_Temp->raw));
-  uint8_t received_pec = extract_pec(responses_Temp->values);
+  // PEC is located at the end of every 6 registers or otherwise 6 x 8 bits
+  // oooooooooor we have 3 x 16 bits in a groups register for Cell voltage
+  // values and then 1 x 16 Bit for Data PEC
+  size_t cell = 0; // Robin_container
+  size_t group = 0;
+  uint16_t PEC = 0;
+  // for every Module present
+  for (size_t stack = 0; stack < NUM_STACKS; stack++) {
+    // for every 4 Register Groups (1 - 12)
+    while (group < 5 && cell < 10) {
+      // Check PEC
+      uint8_t Data[3] = {
+          responses_Temp->values[0],
+          responses_Temp->values[1],
+          responses_Temp->values[2],
+      };
+      if (calculate_PEC(Data, sizeof(Data)) != PEC) {
+        // ERROR Message
+      }
+
+      robin->individual_voltages[stack][cell] = responses_Temp->values[0];
+
+      // if on Group 4, then only take Cell 1 as it is the 10th Cell at
+      // index 11.
+      if (cell < 8) {
+        robin->individual_voltages[stack][cell + 1] = responses_Temp->values[1];
+        robin->individual_voltages[stack][cell + 2] = responses_Temp->values[2];
+      }
+      PEC = responses_Temp->values[3];
+
+      // increment to next Register group
+      group += 1;
+
+      // Increment the Cell Counter to access the next cells on the next loop
+      cell += 3;
+    }
+  }
 }
 
 // CAN DATA FORMATTER
