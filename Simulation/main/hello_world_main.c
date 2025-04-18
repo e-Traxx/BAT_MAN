@@ -4,12 +4,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "driver/gpio.h"
 
-#define SPI_HOST SPI2_HOST
-#define SPI_MOSI 10
-#define SPI_MISO 9
-#define SPI_CLK 8
-#define SPI_CS 7
+#define SPI_HOST SPI3_HOST
+// ESP32-S3 GPIO pins for SPI
+#define SPI_MOSI 11  // Changed to valid ESP32-S3 GPIO
+#define SPI_MISO 13  // Changed to valid ESP32-S3 GPIO
+#define SPI_CLK 12   // Changed to valid ESP32-S3 GPIO
+#define SPI_CS 10    // Changed to valid ESP32-S3 GPIO
 
 #define TOTAL_MODULES 14
 #define CELL_COUNT 10
@@ -123,28 +125,60 @@ void spi_slave_task(void *arg) {
     if (spi_slave_transmit(SPI_HOST, &trans, portMAX_DELAY) == ESP_OK) {
       handle_spi_command(recv_buffer, send_buffer, sizeof(send_buffer));
     }
+    vTaskDelay(pdMS_TO_TICKS(1)); // Add small delay to prevent watchdog reset
   }
 }
 
 // Initialize SPI slave
 void init_spi_slave() {
-  spi_bus_config_t buscfg = {.mosi_io_num = SPI_MOSI,
-                             .miso_io_num = SPI_MISO,
-                             .sclk_io_num = SPI_CLK,
-                             .quadwp_io_num = -1,
-                             .quadhd_io_num = -1};
+  // Configure GPIO pins
+  gpio_config_t io_conf = {
+    .pin_bit_mask = (1ULL << SPI_MOSI) | (1ULL << SPI_MISO) | 
+                    (1ULL << SPI_CLK) | (1ULL << SPI_CS),
+    .mode = GPIO_MODE_INPUT_OUTPUT,
+    .pull_up_en = GPIO_PULLUP_ENABLE,
+    .pull_down_en = GPIO_PULLDOWN_DISABLE,
+    .intr_type = GPIO_INTR_DISABLE
+  };
+  gpio_config(&io_conf);
+
+  spi_bus_config_t buscfg = {
+    .mosi_io_num = SPI_MOSI,
+    .miso_io_num = SPI_MISO,
+    .sclk_io_num = SPI_CLK,
+    .quadwp_io_num = -1,
+    .quadhd_io_num = -1,
+    .max_transfer_sz = 4096,
+    .flags = 0,
+    .intr_flags = 0
+  };
 
   spi_slave_interface_config_t slvcfg = {
-      .mode = 0, .spics_io_num = SPI_CS, .queue_size = 1, .flags = 0};
+    .mode = 0,
+    .spics_io_num = SPI_CS,
+    .queue_size = 1,
+    .flags = 0,
+    .post_setup_cb = NULL,
+    .post_trans_cb = NULL
+  };
 
+  // Initialize the SPI bus
   ESP_ERROR_CHECK(spi_bus_initialize(SPI_HOST, &buscfg, SPI_DMA_CH_AUTO));
-  ESP_ERROR_CHECK(
-      spi_slave_initialize(SPI_HOST, &buscfg, &slvcfg, SPI_DMA_CH_AUTO));
+  
+  // Initialize the SPI slave interface
+  ESP_ERROR_CHECK(spi_slave_initialize(SPI_HOST, &buscfg, &slvcfg, SPI_DMA_CH_AUTO));
 }
 
 void app_main() {
   ESP_LOGI(TAG, "Starting ADBMS6830 Simulator...");
   generate_mock_data();
   init_spi_slave();
-  xTaskCreate(spi_slave_task, "spi_slave_task", 4096, NULL, 5, NULL);
+  
+  // Create task with higher priority and larger stack size
+  xTaskCreate(spi_slave_task, "spi_slave_task", 4096, NULL, 10, NULL);
+  
+  // Keep main task alive
+  while (1) {
+    vTaskDelay(pdMS_TO_TICKS(1000));
+  }
 }

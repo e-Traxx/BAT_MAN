@@ -1,0 +1,72 @@
+[1/5] cd /Users/akame/Documents/BAT-MAN/build/esp-idf/esptool_py && /Users/akame/.espressif/python_env/idf5.4_py3.9_env/bin/python /Users/akame/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/akame/Documents/BAT-MAN/build/partition_table/partition-table.bin /Users/akame/Documents/BAT-MAN/build/Batman_esp.bin
+Batman_esp.bin binary size 0xcf320 bytes. Smallest app partition is 0x100000 bytes. 0x30ce0 bytes (19%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esptool_py && /Users/akame/.espressif/python_env/idf5.4_py3.9_env/bin/python /Users/akame/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/akame/Documents/BAT-MAN/build/bootloader/bootloader.bin
+Bootloader binary size 0x5220 bytes. 0x2de0 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /Users/akame/esp/esp-idf/components/esptool_py && /opt/homebrew/bin/cmake -D IDF_PATH=/Users/akame/esp/esp-idf -D "SERIAL_TOOL=/Users/akame/.espressif/python_env/idf5.4_py3.9_env/bin/python;;/Users/akame/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/akame/Documents/BAT-MAN/build -P /Users/akame/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbmodem1101 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 Batman_esp.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/cu.usbmodem1101
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: e8:06:90:a1:2c:d0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000dffff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21024 bytes to 13384...
+Writing at 0x00000000... (100 %)
+Wrote 21024 bytes (13384 compressed) at 0x00000000 in 0.6 seconds (effective 266.1 kbit/s)...
+Hash of data verified.
+Compressed 848672 bytes to 521481...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001de38... (6 %)
+Writing at 0x00028294... (9 %)
+Writing at 0x00034335... (12 %)
+Writing at 0x0003a755... (15 %)
+Writing at 0x00040521... (18 %)
+Writing at 0x00046936... (21 %)
+Writing at 0x0004cf22... (25 %)
+Writing at 0x0005325f... (28 %)
+Writing at 0x000591fc... (31 %)
+Writing at 0x0005f15f... (34 %)
+Writing at 0x00064e80... (37 %)
+Writing at 0x0006a98f... (40 %)
+Writing at 0x0006f873... (43 %)
+Writing at 0x00074a3b... (46 %)
+Writing at 0x00079edd... (50 %)
+Writing at 0x0007f06d... (53 %)
+Writing at 0x000842a4... (56 %)
+Writing at 0x000896a1... (59 %)
+Writing at 0x0008f9e8... (62 %)
+Writing at 0x0009518b... (65 %)
+Writing at 0x0009aee9... (68 %)
+Writing at 0x000a0cd0... (71 %)
+Writing at 0x000a6535... (75 %)
+Writing at 0x000ac206... (78 %)
+Writing at 0x000b1f88... (81 %)
+Writing at 0x000b7e3b... (84 %)
+Writing at 0x000bd4d4... (87 %)
+Writing at 0x000c7458... (90 %)
+Writing at 0x000ce142... (93 %)
+Writing at 0x000d4693... (96 %)
+Writing at 0x000da791... (100 %)
+Wrote 848672 bytes (521481 compressed) at 0x00010000 in 6.6 seconds (effective 1023.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 227.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

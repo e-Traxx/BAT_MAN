@@ -15,6 +15,13 @@
 
 static const char *TAG = "Setup";
 
+// Overall System Start Status
+bool SystemInitialised;
+
+// Flags to check functionality of System and avoid Stackoverflow due to too
+// many errors
+System_health_Flags flags;
+
 /*
  * Startup Procedure
  *   CAN Setup()
@@ -63,6 +70,12 @@ void initialise_setups(void) {
   Diag_Setup();
   ADBMS_Setup();
   Albert_Setup();
+
+  unsigned int system_health = *(unsigned int *)&flags;
+  if (system_health) {
+    // If at least one flag is set, then
+    SystemInitialised = false;
+  }
 }
 
 void Start_schedule(void) {
@@ -83,15 +96,21 @@ void Start_schedule(void) {
   // Schedule a Robin query every 200ms (test case) // can be higher frequency
   //
   // Upon created, tasks are placed into ready state
-  xTaskCreate(Diagnostic_check, "System_diag", 2048, NULL, 2, NULL);
+  xTaskCreate(Diagnostic_check, "System_diag", 4096, NULL, 2, NULL);
   xTaskCreate(CAN_sendMessage, "Can_tx", 2048, NULL, 3, NULL);
-  xTaskCreate(Robin_query, "Robin_query", 2048, NULL, 2, NULL);
+  xTaskCreate(Robin_query, "Robin_query", 8192, NULL, 2, NULL);
   xTaskCreate(Albert_Query, "Albert_query", 2048, NULL, 1, NULL);
 }
 
 void app_main(void) {
 
   initialise_setups();
-  ESP_LOGI(TAG, "[+] System Initialised\n");
+  if (SystemInitialised) {
+    ESP_LOGI(TAG, "[+] Startup Process Completed\n");
+  } else {
+    ESP_LOGW(TAG, "[@] Startup Process Completed with Errors\n");
+  }
   Start_schedule();
+
+  uxTaskGetStackHighWaterMark(NULL);
 }

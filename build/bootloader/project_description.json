@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "bootloader",
-    "project_version":    "v5.2.4",
+    "project_version":    "v5.4.1",
     "project_path":       "/Users/akame/esp/esp-idf/components/bootloader/subproject",
     "idf_path":           "/Users/akame/esp/esp-idf",
     "build_dir":          "/Users/akame/Documents/BAT-MAN/build/bootloader",
@@ -11,22 +11,22 @@
     "app_elf":            "bootloader.elf",
     "app_bin":            "bootloader.bin",
     "build_type":         "flash_app",
-    "git_revision":       "v5.2.4",
-    "target":             "esp32",
-    "rev":                "0",
+    "git_revision":       "v5.4.1",
+    "target":             "esp32s3",
+    "rev":                "",
     "min_rev":            "0",
-    "max_rev":            "399",
+    "max_rev":            "99",
     "phy_data_partition": "",
     "monitor_baud" :      "115200",
-    "monitor_toolprefix": "xtensa-esp32-elf-",
-    "c_compiler":         "/Users/akame/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc",
+    "monitor_toolprefix": "xtensa-esp32s3-elf-",
+    "c_compiler":         "/Users/akame/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc",
     "config_environment" : {
-        "COMPONENT_KCONFIGS" : "/Users/akame/esp/esp-idf/components/efuse/Kconfig;/Users/akame/esp/esp-idf/components/esp_common/Kconfig;/Users/akame/esp/esp-idf/components/esp_hw_support/Kconfig;/Users/akame/esp/esp-idf/components/esp_system/Kconfig;/Users/akame/esp/esp-idf/components/freertos/Kconfig;/Users/akame/esp/esp-idf/components/hal/Kconfig;/Users/akame/esp/esp-idf/components/log/Kconfig;/Users/akame/esp/esp-idf/components/newlib/Kconfig;/Users/akame/esp/esp-idf/components/soc/Kconfig;/Users/akame/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS" : "/Users/akame/esp/esp-idf/components/efuse/Kconfig;/Users/akame/esp/esp-idf/components/esp_common/Kconfig;/Users/akame/esp/esp-idf/components/esp_hw_support/Kconfig;/Users/akame/esp/esp-idf/components/esp_security/Kconfig;/Users/akame/esp/esp-idf/components/esp_system/Kconfig;/Users/akame/esp/esp-idf/components/freertos/Kconfig;/Users/akame/esp/esp-idf/components/hal/Kconfig;/Users/akame/esp/esp-idf/components/log/Kconfig;/Users/akame/esp/esp-idf/components/newlib/Kconfig;/Users/akame/esp/esp-idf/components/soc/Kconfig;/Users/akame/esp/esp-idf/components/spi_flash/Kconfig",
         "COMPONENT_KCONFIGS_PROJBUILD" : "/Users/akame/esp/esp-idf/components/bootloader/Kconfig.projbuild;/Users/akame/esp/esp-idf/components/esp_app_format/Kconfig.projbuild;/Users/akame/esp/esp-idf/components/esp_rom/Kconfig.projbuild;/Users/akame/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/Users/akame/esp/esp-idf/components/partition_table/Kconfig.projbuild"
     },
     "common_component_reqs": [ "log", "esp_rom", "esp_common", "esp_hw_support", "newlib", "xtensa" ],
-    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp_app_format", "esp_bootloader_format", "esp_common", "esp_hw_support", "esp_rom", "esp_system", "esptool_py", "freertos", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "soc", "spi_flash", "xtensa", "" ],
-    "build_component_paths" : [ "/Users/akame/esp/esp-idf/components/bootloader", "/Users/akame/esp/esp-idf/components/bootloader_support", "/Users/akame/esp/esp-idf/components/efuse", "/Users/akame/esp/esp-idf/components/esp_app_format", "/Users/akame/esp/esp-idf/components/esp_bootloader_format", "/Users/akame/esp/esp-idf/components/esp_common", "/Users/akame/esp/esp-idf/components/esp_hw_support", "/Users/akame/esp/esp-idf/components/esp_rom", "/Users/akame/esp/esp-idf/components/esp_system", "/Users/akame/esp/esp-idf/components/esptool_py", "/Users/akame/esp/esp-idf/components/freertos", "/Users/akame/esp/esp-idf/components/hal", "/Users/akame/esp/esp-idf/components/log", "/Users/akame/esp/esp-idf/components/bootloader/subproject/main", "/Users/akame/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "/Users/akame/esp/esp-idf/components/newlib", "/Users/akame/esp/esp-idf/components/partition_table", "/Users/akame/esp/esp-idf/components/soc", "/Users/akame/esp/esp-idf/components/spi_flash", "/Users/akame/esp/esp-idf/components/xtensa", "" ],
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp_app_format", "esp_bootloader_format", "esp_common", "esp_hw_support", "esp_rom", "esp_security", "esp_system", "esptool_py", "freertos", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "/Users/akame/esp/esp-idf/components/bootloader", "/Users/akame/esp/esp-idf/components/bootloader_support", "/Users/akame/esp/esp-idf/components/efuse", "/Users/akame/esp/esp-idf/components/esp_app_format", "/Users/akame/esp/esp-idf/components/esp_bootloader_format", "/Users/akame/esp/esp-idf/components/esp_common", "/Users/akame/esp/esp-idf/components/esp_hw_support", "/Users/akame/esp/esp-idf/components/esp_rom", "/Users/akame/esp/esp-idf/components/esp_security", "/Users/akame/esp/esp-idf/components/esp_system", "/Users/akame/esp/esp-idf/components/esptool_py", "/Users/akame/esp/esp-idf/components/freertos", "/Users/akame/esp/esp-idf/components/hal", "/Users/akame/esp/esp-idf/components/log", "/Users/akame/esp/esp-idf/components/bootloader/subproject/main", "/Users/akame/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "/Users/akame/esp/esp-idf/components/newlib", "/Users/akame/esp/esp-idf/components/partition_table", "/Users/akame/esp/esp-idf/components/soc", "/Users/akame/esp/esp-idf/components/spi_flash", "/Users/akame/esp/esp-idf/components/xtensa", "" ],
     "build_component_info" : {
         "bootloader": {
             "alias": "idf::bootloader",
@@ -55,7 +55,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/bootloader_support/libbootloader_support.a",
-            "sources": [ "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_common.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_common_loader.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_clock_init.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_mem.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_random.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_efuse.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/flash_encrypt.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/secure_boot.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_random_esp32.c", "/Users/akame/esp/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash.c", "/Users/akame/esp/esp-idf/components/bootloader_support/bootloader_flash/src/flash_qio_mode.c", "/Users/akame/esp/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash_config_esp32.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/flash_partitions.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/esp_image_format.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_init.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_clock_loader.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_console.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_console_loader.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/esp32/bootloader_sha.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/esp32/bootloader_soc.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/esp32/bootloader_esp32.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_panic.c" ],
+            "sources": [ "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_common.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_common_loader.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_clock_init.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_mem.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_random.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_efuse.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/flash_encrypt.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/secure_boot.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_random_esp32s3.c", "/Users/akame/esp/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash.c", "/Users/akame/esp/esp-idf/components/bootloader_support/bootloader_flash/src/flash_qio_mode.c", "/Users/akame/esp/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash_config_esp32s3.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/flash_partitions.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/esp_image_format.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_init.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_clock_loader.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_console.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_console_loader.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/esp32s3/bootloader_sha.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/esp32s3/bootloader_soc.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/esp32s3/bootloader_esp32s3.c", "/Users/akame/esp/esp-idf/components/bootloader_support/src/bootloader_panic.c" ],
             "include_dirs": [ "include", "bootloader_flash/include", "private_include" ]
         },
         "efuse": {
@@ -70,8 +70,8 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/efuse/libefuse.a",
-            "sources": [ "/Users/akame/esp/esp-idf/components/efuse/esp32/esp_efuse_table.c", "/Users/akame/esp/esp-idf/components/efuse/esp32/esp_efuse_fields.c", "/Users/akame/esp/esp-idf/components/efuse/esp32/esp_efuse_utility.c", "/Users/akame/esp/esp-idf/components/efuse/src/esp_efuse_api.c", "/Users/akame/esp/esp-idf/components/efuse/src/esp_efuse_fields.c", "/Users/akame/esp/esp-idf/components/efuse/src/esp_efuse_utility.c", "/Users/akame/esp/esp-idf/components/efuse/src/efuse_controller/keys/without_key_purposes/three_key_blocks/esp_efuse_api_key.c" ],
-            "include_dirs": [ "include", "esp32/include" ]
+            "sources": [ "/Users/akame/esp/esp-idf/components/efuse/esp32s3/esp_efuse_table.c", "/Users/akame/esp/esp-idf/components/efuse/esp32s3/esp_efuse_fields.c", "/Users/akame/esp/esp-idf/components/efuse/esp32s3/esp_efuse_rtc_calib.c", "/Users/akame/esp/esp-idf/components/efuse/esp32s3/esp_efuse_utility.c", "/Users/akame/esp/esp-idf/components/efuse/src/esp_efuse_api.c", "/Users/akame/esp/esp-idf/components/efuse/src/esp_efuse_fields.c", "/Users/akame/esp/esp-idf/components/efuse/src/esp_efuse_utility.c", "/Users/akame/esp/esp-idf/components/efuse/src/efuse_controller/keys/with_key_purposes/esp_efuse_api_key.c" ],
+            "include_dirs": [ "include", "esp32s3/include" ]
         },
         "esp_app_format": {
             "alias": "idf::esp_app_format",
@@ -126,12 +126,12 @@
             "type": "LIBRARY",
             "lib": "__idf_esp_hw_support",
             "reqs": [ "soc" ],
-            "priv_reqs": [ "efuse", "spi_flash", "bootloader_support", "esp_system" ],
+            "priv_reqs": [ "efuse", "spi_flash", "bootloader_support", "esp_security", "esp_system" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a",
-            "sources": [ "/Users/akame/esp/esp-idf/components/esp_hw_support/cpu.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32/esp_cpu_intr.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/esp_memory_utils.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32/cpu_region_protect.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk_init.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_init.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_sleep.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_time.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32/chip_info.c" ],
-            "include_dirs": [ "include", "include/soc", "include/soc/esp32" ]
+            "sources": [ "/Users/akame/esp/esp-idf/components/esp_hw_support/cpu.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32s3/esp_cpu_intr.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/esp_memory_utils.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32s3/cpu_region_protect.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32s3/rtc_clk.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32s3/rtc_clk_init.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32s3/rtc_init.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32s3/rtc_sleep.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32s3/rtc_time.c", "/Users/akame/esp/esp-idf/components/esp_hw_support/port/esp32s3/chip_info.c" ],
+            "include_dirs": [ "include", "include/soc", "include/soc/esp32s3", "dma/include", "ldo/include", "debug_probe/include" ]
         },
         "esp_rom": {
             "alias": "idf::esp_rom",
@@ -145,8 +145,23 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/esp_rom/libesp_rom.a",
-            "sources": [ "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_crc.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_sys.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_uart.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_efuse.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_gpio.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_longjmp.S" ],
-            "include_dirs": [ "include", "include/esp32", "esp32" ]
+            "sources": [ "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_sys.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_print.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_crc.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_uart.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_efuse.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_gpio.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_longjmp.S", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_systimer.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_wdt.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_cache_esp32s2_esp32s3.c", "/Users/akame/esp/esp-idf/components/esp_rom/patches/esp_rom_cache_writeback_esp32s3.S" ],
+            "include_dirs": [ "include", "esp32s3/include", "esp32s3/include/esp32s3", "esp32s3" ]
+        },
+        "esp_security": {
+            "alias": "idf::esp_security",
+            "target": "___idf_esp_security",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_security",
+            "type": "CONFIG_ONLY",
+            "lib": "__idf_esp_security",
+            "reqs": [],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "",
+            "sources": [],
+            "include_dirs": [ "include" ]
         },
         "esp_system": {
             "alias": "idf::esp_system",
@@ -205,8 +220,8 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/hal/libhal.a",
-            "sources": [ "/Users/akame/esp/esp-idf/components/hal/hal_utils.c", "/Users/akame/esp/esp-idf/components/hal/mpu_hal.c", "/Users/akame/esp/esp-idf/components/hal/efuse_hal.c", "/Users/akame/esp/esp-idf/components/hal/esp32/efuse_hal.c", "/Users/akame/esp/esp-idf/components/hal/wdt_hal_iram.c", "/Users/akame/esp/esp-idf/components/hal/mmu_hal.c", "/Users/akame/esp/esp-idf/components/hal/esp32/cache_hal_esp32.c" ],
-            "include_dirs": [ "platform_port/include", "esp32/include", "include" ]
+            "sources": [ "/Users/akame/esp/esp-idf/components/hal/hal_utils.c", "/Users/akame/esp/esp-idf/components/hal/mpu_hal.c", "/Users/akame/esp/esp-idf/components/hal/efuse_hal.c", "/Users/akame/esp/esp-idf/components/hal/esp32s3/efuse_hal.c", "/Users/akame/esp/esp-idf/components/hal/mmu_hal.c", "/Users/akame/esp/esp-idf/components/hal/cache_hal.c" ],
+            "include_dirs": [ "platform_port/include", "esp32s3/include", "include" ]
         },
         "log": {
             "alias": "idf::log",
@@ -216,11 +231,11 @@
             "type": "LIBRARY",
             "lib": "__idf_log",
             "reqs": [],
-            "priv_reqs": [ "soc", "hal", "esp_hw_support" ],
+            "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/log/liblog.a",
-            "sources": [ "/Users/akame/esp/esp-idf/components/log/log.c", "/Users/akame/esp/esp-idf/components/log/log_buffers.c", "/Users/akame/esp/esp-idf/components/log/log_noos.c" ],
+            "sources": [ "/Users/akame/esp/esp-idf/components/log/src/noos/log_timestamp.c", "/Users/akame/esp/esp-idf/components/log/src/log_timestamp_common.c", "/Users/akame/esp/esp-idf/components/log/src/noos/log_lock.c" ],
             "include_dirs": [ "include" ]
         },
         "main": {
@@ -295,8 +310,8 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/soc/libsoc.a",
-            "sources": [ "/Users/akame/esp/esp-idf/components/soc/lldesc.c", "/Users/akame/esp/esp-idf/components/soc/dport_access_common.c", "/Users/akame/esp/esp-idf/components/soc/esp32/interrupts.c", "/Users/akame/esp/esp-idf/components/soc/esp32/gpio_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/uart_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/dport_access.c", "/Users/akame/esp/esp-idf/components/soc/esp32/adc_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/spi_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/ledc_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/pcnt_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/rmt_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/sdm_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/i2s_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/i2c_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/timer_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/lcd_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/mcpwm_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/mpi_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/sdmmc_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/touch_sensor_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/twai_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/dac_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/rtc_io_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32/sdio_slave_periph.c" ],
-            "include_dirs": [ "include", "esp32", "esp32/include" ]
+            "sources": [ "/Users/akame/esp/esp-idf/components/soc/lldesc.c", "/Users/akame/esp/esp-idf/components/soc/dport_access_common.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/interrupts.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/gpio_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/uart_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/adc_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/dedic_gpio_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/gdma_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/spi_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/ledc_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/pcnt_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/rmt_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/sdm_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/i2s_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/i2c_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/temperature_sensor_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/timer_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/lcd_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/mcpwm_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/mpi_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/sdmmc_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/touch_sensor_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/twai_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/wdt_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/usb_dwc_periph.c", "/Users/akame/esp/esp-idf/components/soc/esp32s3/rtc_io_periph.c" ],
+            "include_dirs": [ "include", "esp32s3", "esp32s3/include", "esp32s3/register" ]
         },
         "spi_flash": {
             "alias": "idf::spi_flash",
@@ -326,7 +341,7 @@
             "managed_priv_reqs": [],
             "file": "/Users/akame/Documents/BAT-MAN/build/bootloader/esp-idf/xtensa/libxtensa.a",
             "sources": [ "/Users/akame/esp/esp-idf/components/xtensa/eri.c", "/Users/akame/esp/esp-idf/components/xtensa/xt_trax.c" ],
-            "include_dirs": [ "esp32/include", "include", "deprecated_include" ]
+            "include_dirs": [ "esp32s3/include", "include", "deprecated_include" ]
         }
     },
     "all_component_info" : {
@@ -337,7 +352,7 @@
             "dir": "/Users/akame/esp/esp-idf/components/app_trace",
             "lib": "__idf_app_trace",
             "reqs": [ "esp_timer" ],
-            "priv_reqs": [ "soc", "driver" ],
+            "priv_reqs": [ "esp_driver_gptimer", "esp_driver_gpio", "esp_driver_uart" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
@@ -385,7 +400,7 @@
             "dir": "/Users/akame/esp/esp-idf/components/bt",
             "lib": "__idf_bt",
             "reqs": [ "esp_timer", "esp_wifi" ],
-            "priv_reqs": [ "nvs_flash", "soc", "esp_pm", "esp_phy", "esp_coex", "mbedtls", "driver", "vfs" ],
+            "priv_reqs": [ "nvs_flash", "soc", "esp_pm", "esp_phy", "esp_coex", "mbedtls", "esp_driver_uart", "vfs", "esp_ringbuf", "esp_driver_spi", "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": []
@@ -408,8 +423,8 @@
             "prefix": "idf",
             "dir": "/Users/akame/esp/esp-idf/components/console",
             "lib": "__idf_console",
-            "reqs": [ "vfs" ],
-            "priv_reqs": [ "driver" ],
+            "reqs": [ "vfs", "esp_vfs_console" ],
+            "priv_reqs": [ "esp_driver_uart", "esp_driver_usb_serial_jtag" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "/Users/akame/Documents/BAT-MAN/build/bootloader" ]
@@ -421,7 +436,7 @@
             "dir": "/Users/akame/esp/esp-idf/components/cxx",
             "lib": "__idf_cxx",
             "reqs": [],
-            "priv_reqs": [ "pthread" ],
+            "priv_reqs": [ "pthread", "esp_system" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": []
@@ -448,7 +463,7 @@
             "priv_reqs": [ "bootloader_support", "soc", "spi_flash" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "include", "esp32/include" ]
+            "include_dirs": [ "include", "esp32s3/include" ]
         },
         "esp-tls": {
             "alias": "idf::esp-tls",
@@ -469,10 +484,10 @@
             "dir": "/Users/akame/esp/esp-idf/components/esp_adc",
             "lib": "__idf_esp_adc",
             "reqs": [],
-            "priv_reqs": [ "driver", "efuse" ],
+            "priv_reqs": [ "driver", "esp_driver_gpio", "efuse", "esp_pm", "esp_ringbuf", "esp_mm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "include", "interface", "esp32/include", "deprecated/include" ]
+            "include_dirs": [ "include", "interface", "esp32s3/include", "deprecated/include" ]
         },
         "esp_app_format": {
             "alias": "idf::esp_app_format",
@@ -522,6 +537,294 @@
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
         },
+        "esp_driver_ana_cmpr": {
+            "alias": "idf::esp_driver_ana_cmpr",
+            "target": "___idf_esp_driver_ana_cmpr",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_ana_cmpr",
+            "lib": "__idf_esp_driver_ana_cmpr",
+            "reqs": [],
+            "priv_reqs": [ "esp_pm", "esp_driver_gpio" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_cam": {
+            "alias": "idf::esp_driver_cam",
+            "target": "___idf_esp_driver_cam",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_cam",
+            "lib": "__idf_esp_driver_cam",
+            "reqs": [ "esp_driver_isp", "esp_mm" ],
+            "priv_reqs": [ "esp_driver_gpio" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include", "interface" ]
+        },
+        "esp_driver_dac": {
+            "alias": "idf::esp_driver_dac",
+            "target": "___idf_esp_driver_dac",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_dac",
+            "lib": "__idf_esp_driver_dac",
+            "reqs": [],
+            "priv_reqs": [ "esp_pm", "esp_driver_gpio" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "./include" ]
+        },
+        "esp_driver_gpio": {
+            "alias": "idf::esp_driver_gpio",
+            "target": "___idf_esp_driver_gpio",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_gpio",
+            "lib": "__idf_esp_driver_gpio",
+            "reqs": [],
+            "priv_reqs": [ "esp_pm" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_gptimer": {
+            "alias": "idf::esp_driver_gptimer",
+            "target": "___idf_esp_driver_gptimer",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_gptimer",
+            "lib": "__idf_esp_driver_gptimer",
+            "reqs": [ "esp_pm" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_i2c": {
+            "alias": "idf::esp_driver_i2c",
+            "target": "___idf_esp_driver_i2c",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_i2c",
+            "lib": "__idf_esp_driver_i2c",
+            "reqs": [],
+            "priv_reqs": [ "esp_driver_gpio", "esp_pm", "esp_ringbuf" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_i2s": {
+            "alias": "idf::esp_driver_i2s",
+            "target": "___idf_esp_driver_i2s",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_i2s",
+            "lib": "__idf_esp_driver_i2s",
+            "reqs": [],
+            "priv_reqs": [ "esp_driver_gpio", "esp_pm", "esp_mm" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_isp": {
+            "alias": "idf::esp_driver_isp",
+            "target": "___idf_esp_driver_isp",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_isp",
+            "lib": "__idf_esp_driver_isp",
+            "reqs": [ "esp_mm" ],
+            "priv_reqs": [ "esp_driver_gpio" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_jpeg": {
+            "alias": "idf::esp_driver_jpeg",
+            "target": "___idf_esp_driver_jpeg",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_jpeg",
+            "lib": "__idf_esp_driver_jpeg",
+            "reqs": [],
+            "priv_reqs": [ "esp_mm", "esp_pm" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_ledc": {
+            "alias": "idf::esp_driver_ledc",
+            "target": "___idf_esp_driver_ledc",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_ledc",
+            "lib": "__idf_esp_driver_ledc",
+            "reqs": [],
+            "priv_reqs": [ "esp_pm", "esp_driver_gpio" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_mcpwm": {
+            "alias": "idf::esp_driver_mcpwm",
+            "target": "___idf_esp_driver_mcpwm",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_mcpwm",
+            "lib": "__idf_esp_driver_mcpwm",
+            "reqs": [],
+            "priv_reqs": [ "esp_pm", "esp_driver_gpio" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_parlio": {
+            "alias": "idf::esp_driver_parlio",
+            "target": "___idf_esp_driver_parlio",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_parlio",
+            "lib": "__idf_esp_driver_parlio",
+            "reqs": [],
+            "priv_reqs": [ "esp_pm", "esp_driver_gpio", "esp_mm" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_pcnt": {
+            "alias": "idf::esp_driver_pcnt",
+            "target": "___idf_esp_driver_pcnt",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_pcnt",
+            "lib": "__idf_esp_driver_pcnt",
+            "reqs": [],
+            "priv_reqs": [ "esp_pm", "esp_driver_gpio" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_ppa": {
+            "alias": "idf::esp_driver_ppa",
+            "target": "___idf_esp_driver_ppa",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_ppa",
+            "lib": "__idf_esp_driver_ppa",
+            "reqs": [],
+            "priv_reqs": [ "esp_mm", "esp_pm" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_rmt": {
+            "alias": "idf::esp_driver_rmt",
+            "target": "___idf_esp_driver_rmt",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_rmt",
+            "lib": "__idf_esp_driver_rmt",
+            "reqs": [],
+            "priv_reqs": [ "esp_pm", "esp_driver_gpio", "esp_mm" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_sdio": {
+            "alias": "idf::esp_driver_sdio",
+            "target": "___idf_esp_driver_sdio",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_sdio",
+            "lib": "__idf_esp_driver_sdio",
+            "reqs": [],
+            "priv_reqs": [ "esp_driver_gpio", "esp_ringbuf" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_sdm": {
+            "alias": "idf::esp_driver_sdm",
+            "target": "___idf_esp_driver_sdm",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_sdm",
+            "lib": "__idf_esp_driver_sdm",
+            "reqs": [],
+            "priv_reqs": [ "esp_pm", "esp_driver_gpio" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_sdmmc": {
+            "alias": "idf::esp_driver_sdmmc",
+            "target": "___idf_esp_driver_sdmmc",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_sdmmc",
+            "lib": "__idf_esp_driver_sdmmc",
+            "reqs": [ "sdmmc", "esp_driver_gpio" ],
+            "priv_reqs": [ "esp_timer", "esp_pm", "esp_mm" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_sdspi": {
+            "alias": "idf::esp_driver_sdspi",
+            "target": "___idf_esp_driver_sdspi",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_sdspi",
+            "lib": "__idf_esp_driver_sdspi",
+            "reqs": [ "sdmmc", "esp_driver_spi", "esp_driver_gpio" ],
+            "priv_reqs": [ "esp_timer" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_spi": {
+            "alias": "idf::esp_driver_spi",
+            "target": "___idf_esp_driver_spi",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_spi",
+            "lib": "__idf_esp_driver_spi",
+            "reqs": [ "esp_pm" ],
+            "priv_reqs": [ "esp_timer", "esp_mm", "esp_driver_gpio", "esp_ringbuf" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_touch_sens": {
+            "alias": "idf::esp_driver_touch_sens",
+            "target": "___idf_esp_driver_touch_sens",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_touch_sens",
+            "lib": "__idf_esp_driver_touch_sens",
+            "reqs": [],
+            "priv_reqs": [ "esp_driver_gpio" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": []
+        },
+        "esp_driver_tsens": {
+            "alias": "idf::esp_driver_tsens",
+            "target": "___idf_esp_driver_tsens",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_tsens",
+            "lib": "__idf_esp_driver_tsens",
+            "reqs": [],
+            "priv_reqs": [ "efuse" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_uart": {
+            "alias": "idf::esp_driver_uart",
+            "target": "___idf_esp_driver_uart",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_uart",
+            "lib": "__idf_esp_driver_uart",
+            "reqs": [],
+            "priv_reqs": [ "esp_pm", "esp_driver_gpio", "esp_ringbuf" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_usb_serial_jtag": {
+            "alias": "idf::esp_driver_usb_serial_jtag",
+            "target": "___idf_esp_driver_usb_serial_jtag",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_driver_usb_serial_jtag",
+            "lib": "__idf_esp_driver_usb_serial_jtag",
+            "reqs": [],
+            "priv_reqs": [ "esp_driver_gpio", "esp_ringbuf", "esp_pm", "esp_timer" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
         "esp_eth": {
             "alias": "idf::esp_eth",
             "target": "___idf_esp_eth",
@@ -529,7 +832,7 @@
             "dir": "/Users/akame/esp/esp-idf/components/esp_eth",
             "lib": "__idf_esp_eth",
             "reqs": [ "esp_event" ],
-            "priv_reqs": [ "driver", "log", "esp_timer" ],
+            "priv_reqs": [ "log", "esp_timer", "esp_driver_spi", "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": []
@@ -612,11 +915,11 @@
             "prefix": "idf",
             "dir": "/Users/akame/esp/esp-idf/components/esp_https_server",
             "lib": "__idf_esp_https_server",
-            "reqs": [ "esp_http_server", "esp-tls" ],
+            "reqs": [ "esp_http_server", "esp-tls", "esp_event" ],
             "priv_reqs": [ "lwip" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": []
+            "include_dirs": [ "include" ]
         },
         "esp_hw_support": {
             "alias": "idf::esp_hw_support",
@@ -625,10 +928,10 @@
             "dir": "/Users/akame/esp/esp-idf/components/esp_hw_support",
             "lib": "__idf_esp_hw_support",
             "reqs": [ "soc" ],
-            "priv_reqs": [ "efuse", "spi_flash", "bootloader_support", "esp_system" ],
+            "priv_reqs": [ "efuse", "spi_flash", "bootloader_support", "esp_security", "esp_system" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "include", "include/soc", "include/soc/esp32" ]
+            "include_dirs": [ "include", "include/soc", "include/soc/esp32s3", "dma/include", "ldo/include", "debug_probe/include" ]
         },
         "esp_lcd": {
             "alias": "idf::esp_lcd",
@@ -636,8 +939,8 @@
             "prefix": "idf",
             "dir": "/Users/akame/esp/esp-idf/components/esp_lcd",
             "lib": "__idf_esp_lcd",
-            "reqs": [ "driver" ],
-            "priv_reqs": [ "esp_mm", "esp_psram" ],
+            "reqs": [ "driver", "esp_driver_gpio", "esp_driver_i2c", "esp_driver_spi" ],
+            "priv_reqs": [ "esp_mm", "esp_psram", "esp_pm", "esp_driver_i2s" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "include", "interface" ]
@@ -696,8 +999,8 @@
             "prefix": "idf",
             "dir": "/Users/akame/esp/esp-idf/components/esp_partition",
             "lib": "__idf_esp_partition",
-            "reqs": [],
-            "priv_reqs": [ "esp_system", "bootloader_support", "spi_flash", "app_update", "partition_table" ],
+            "reqs": [ "spi_flash" ],
+            "priv_reqs": [ "bootloader_support" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
@@ -712,7 +1015,7 @@
             "priv_reqs": [ "nvs_flash", "driver", "efuse", "esp_timer", "esp_wifi" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "include", "esp32/include" ]
+            "include_dirs": [ "include", "esp32s3/include" ]
         },
         "esp_pm": {
             "alias": "idf::esp_pm",
@@ -721,7 +1024,7 @@
             "dir": "/Users/akame/esp/esp-idf/components/esp_pm",
             "lib": "__idf_esp_pm",
             "reqs": [],
-            "priv_reqs": [ "esp_system", "driver", "esp_timer" ],
+            "priv_reqs": [ "esp_system", "esp_driver_gpio", "esp_timer" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
@@ -733,7 +1036,7 @@
             "dir": "/Users/akame/esp/esp-idf/components/esp_psram",
             "lib": "__idf_esp_psram",
             "reqs": [],
-            "priv_reqs": [ "heap", "spi_flash", "esp_mm", "bootloader_support", "driver" ],
+            "priv_reqs": [ "heap", "spi_flash", "esp_mm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
@@ -760,7 +1063,19 @@
             "priv_reqs": [ "soc", "hal" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "include", "include/esp32", "esp32" ]
+            "include_dirs": [ "include", "esp32s3/include", "esp32s3/include/esp32s3", "esp32s3" ]
+        },
+        "esp_security": {
+            "alias": "idf::esp_security",
+            "target": "___idf_esp_security",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_security",
+            "lib": "__idf_esp_security",
+            "reqs": [],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
         },
         "esp_system": {
             "alias": "idf::esp_system",
@@ -780,8 +1095,20 @@
             "prefix": "idf",
             "dir": "/Users/akame/esp/esp-idf/components/esp_timer",
             "lib": "__idf_esp_timer",
-            "reqs": [ "esp_common" ],
-            "priv_reqs": [ "soc", "driver" ],
+            "reqs": [],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_vfs_console": {
+            "alias": "idf::esp_vfs_console",
+            "target": "___idf_esp_vfs_console",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/esp_vfs_console",
+            "lib": "__idf_esp_vfs_console",
+            "reqs": [],
+            "priv_reqs": [ "vfs", "esp_driver_uart", "esp_driver_usb_serial_jtag" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
@@ -796,7 +1123,7 @@
             "priv_reqs": [ "driver", "esptool_py", "esp_pm", "esp_timer", "nvs_flash", "wpa_supplicant", "hal", "lwip", "esp_coex" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "include", "wifi_apps/include" ]
+            "include_dirs": [ "include", "include/local", "wifi_apps/include", "wifi_apps/nan_app/include" ]
         },
         "espcoredump": {
             "alias": "idf::espcoredump",
@@ -805,7 +1132,7 @@
             "dir": "/Users/akame/esp/esp-idf/components/espcoredump",
             "lib": "__idf_espcoredump",
             "reqs": [],
-            "priv_reqs": [ "esp_partition", "spi_flash", "bootloader_support", "mbedtls", "esp_rom", "soc", "esp_system", "driver" ],
+            "priv_reqs": [ "esp_partition", "spi_flash", "bootloader_support", "mbedtls", "esp_rom", "soc", "esp_system", "esp_driver_gpio", "driver" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
@@ -828,8 +1155,8 @@
             "prefix": "idf",
             "dir": "/Users/akame/esp/esp-idf/components/fatfs",
             "lib": "__idf_fatfs",
-            "reqs": [ "wear_levelling", "sdmmc" ],
-            "priv_reqs": [ "vfs" ],
+            "reqs": [ "wear_levelling", "sdmmc", "esp_driver_sdmmc", "esp_driver_sdspi" ],
+            "priv_reqs": [ "vfs", "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "diskio", "src", "vfs" ]
@@ -856,7 +1183,7 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "platform_port/include", "esp32/include", "include" ]
+            "include_dirs": [ "platform_port/include", "esp32s3/include", "include" ]
         },
         "heap": {
             "alias": "idf::heap",
@@ -868,7 +1195,7 @@
             "priv_reqs": [ "soc" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "include" ]
+            "include_dirs": [ "include", "tlsf" ]
         },
         "http_parser": {
             "alias": "idf::http_parser",
@@ -892,7 +1219,7 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "include", "include/esp32" ]
+            "include_dirs": [ "include", "include/esp32s3" ]
         },
         "ieee802154": {
             "alias": "idf::ieee802154",
@@ -937,7 +1264,7 @@
             "dir": "/Users/akame/esp/esp-idf/components/log",
             "lib": "__idf_log",
             "reqs": [],
-            "priv_reqs": [ "soc", "hal", "esp_hw_support" ],
+            "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
@@ -997,10 +1324,10 @@
             "dir": "/Users/akame/esp/esp-idf/components/nvs_flash",
             "lib": "__idf_nvs_flash",
             "reqs": [ "esp_partition" ],
-            "priv_reqs": [ "spi_flash", "newlib" ],
+            "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "include", "../spi_flash/include" ]
+            "include_dirs": [ "include" ]
         },
         "nvs_sec_provider": {
             "alias": "idf::nvs_sec_provider",
@@ -1020,7 +1347,7 @@
             "prefix": "idf",
             "dir": "/Users/akame/esp/esp-idf/components/openthread",
             "lib": "__idf_openthread",
-            "reqs": [ "esp_netif", "lwip", "driver" ],
+            "reqs": [ "esp_netif", "lwip", "esp_driver_uart", "driver" ],
             "priv_reqs": [ "console", "esp_coex", "esp_event", "esp_partition", "esp_timer", "ieee802154", "mbedtls", "nvs_flash" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
@@ -1098,14 +1425,26 @@
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
         },
+        "rt": {
+            "alias": "idf::rt",
+            "target": "___idf_rt",
+            "prefix": "idf",
+            "dir": "/Users/akame/esp/esp-idf/components/rt",
+            "lib": "__idf_rt",
+            "reqs": [],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
         "sdmmc": {
             "alias": "idf::sdmmc",
             "target": "___idf_sdmmc",
             "prefix": "idf",
             "dir": "/Users/akame/esp/esp-idf/components/sdmmc",
             "lib": "__idf_sdmmc",
-            "reqs": [ "driver" ],
-            "priv_reqs": [ "soc", "esp_timer" ],
+            "reqs": [],
+            "priv_reqs": [ "soc", "esp_timer", "esp_mm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
@@ -1120,7 +1459,7 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "include", "esp32", "esp32/include" ]
+            "include_dirs": [ "include", "esp32s3", "esp32s3/include", "esp32s3/register" ]
         },
         "spi_flash": {
             "alias": "idf::spi_flash",
@@ -1141,7 +1480,7 @@
             "dir": "/Users/akame/esp/esp-idf/components/spiffs",
             "lib": "__idf_spiffs",
             "reqs": [ "esp_partition" ],
-            "priv_reqs": [ "bootloader_support", "esptool_py", "vfs", "spi_flash" ],
+            "priv_reqs": [ "bootloader_support", "esptool_py", "vfs" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
@@ -1164,8 +1503,8 @@
             "prefix": "idf",
             "dir": "/Users/akame/esp/esp-idf/components/touch_element",
             "lib": "__idf_touch_element",
-            "reqs": [],
-            "priv_reqs": [],
+            "reqs": [ "driver" ],
+            "priv_reqs": [ "esp_timer" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
@@ -1201,7 +1540,7 @@
             "dir": "/Users/akame/esp/esp-idf/components/usb",
             "lib": "__idf_usb",
             "reqs": [],
-            "priv_reqs": [ "driver" ],
+            "priv_reqs": [ "esp_driver_gpio", "esp_mm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": []
@@ -1213,7 +1552,7 @@
             "dir": "/Users/akame/esp/esp-idf/components/vfs",
             "lib": "__idf_vfs",
             "reqs": [],
-            "priv_reqs": [ "driver", "esp_timer" ],
+            "priv_reqs": [ "esp_timer", "esp_driver_uart", "esp_driver_usb_serial_jtag", "esp_vfs_console" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
@@ -1264,7 +1603,7 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "esp32/include", "include", "deprecated_include" ]
+            "include_dirs": [ "esp32s3/include", "include", "deprecated_include" ]
         },
         "main": {
             "alias": "idf::main",
@@ -1298,5 +1637,5 @@
         "03_py_extensions": "/Users/akame/Documents/BAT-MAN/build/bootloader/gdbinit/py_extensions",
         "04_connect": "/Users/akame/Documents/BAT-MAN/build/bootloader/gdbinit/connect"
     },
-    "debug_arguments_openocd": "-f board/esp32-wrover-kit-3.3v.cfg"
+    "debug_arguments_openocd": "-f board/esp32s3-builtin.cfg"
 }
