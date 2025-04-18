@@ -218,4 +218,4 @@ def update_faults_system_table(n):
     return table_header + table_body
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run(debug=True)

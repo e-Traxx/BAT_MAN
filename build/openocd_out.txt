@@ -1,0 +1,46 @@
+Open On-Chip Debugger v0.12.0-esp32-20241016 (2024-10-16-14:27)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : only one transport option; autoselecting 'jtag'
+Info : esp_usb_jtag: VID set to 0x303a and PID to 0x1001
+Info : esp_usb_jtag: capabilities descriptor set to 0x2000
+Info : Listening on port 6666 for tcl connections
+Info : Listening on port 4444 for telnet connections
+Info : esp_usb_jtag: serial (E8:06:90:A1:2C:D0)
+Info : esp_usb_jtag: Device found. Base speed 40000KHz, div range 1 to 255
+Info : clock speed 40000 kHz
+Info : JTAG tap: esp32s3.tap0 tap/device found: 0x120034e5 (mfg: 0x272 (Tensilica), part: 0x2003, ver: 0x1)
+Info : JTAG tap: esp32s3.tap1 tap/device found: 0x120034e5 (mfg: 0x272 (Tensilica), part: 0x2003, ver: 0x1)
+Info : [esp32s3.cpu0] Examination succeed
+Info : [esp32s3.cpu1] Examination succeed
+Info : [esp32s3.cpu0] starting gdb server on 3333
+Info : Listening on port 3333 for gdb connections
+Info : [esp32s3.cpu0] Debug controller was reset.
+Info : [esp32s3.cpu0] Core was reset.
+Info : [esp32s3.cpu1] Debug controller was reset.
+Info : [esp32s3.cpu1] Core was reset.
+Info : [esp32s3.cpu0] Target halted, PC=0x4037BBDA, debug_reason=00000000
+Info : [esp32s3.cpu0] Reset cause (12) - (Software CPU0 reset)
+Info : [esp32s3.cpu1] Target halted, PC=0x4037BBDA, debug_reason=00000000
+Info : [esp32s3.cpu1] Reset cause (12) - (Software CPU1 reset)
+Info : [esp32s3.cpu0] Debug controller was reset.
+Info : [esp32s3.cpu0] Core was reset.
+Info : [esp32s3.cpu1] Debug controller was reset.
+Info : [esp32s3.cpu1] Core was reset.
+Info : [esp32s3.cpu0] Target halted, PC=0x40041A76, debug_reason=00000000
+Info : [esp32s3.cpu0] Reset cause (21) - (USB UART reset)
+Info : [esp32s3.cpu0] Debug controller was reset.
+Info : [esp32s3.cpu0] Core was reset.
+Info : [esp32s3.cpu0] Target halted, PC=0x40056F5C, debug_reason=00000000
+Info : [esp32s3.cpu0] Reset cause (21) - (USB UART reset)
+Info : [esp32s3.cpu1] Target halted, PC=0x4037BBDA, debug_reason=00000000
+Info : [esp32s3.cpu1] Reset cause (21) - (USB UART reset)
+Info : [esp32s3.cpu0] Target halted, PC=0x4037BAE4, debug_reason=00000000
+Info : Set GDB target to 'esp32s3.cpu0'
+Info : [esp32s3.cpu1] Target halted, PC=0x420030A5, debug_reason=00000001
+Info : [esp32s3.cpu1] Target halted, PC=0x40375D48, debug_reason=00000001
+Info : Set GDB target to 'esp32s3.cpu1'
+Info : [esp32s3.cpu0] Target halted, PC=0x4037BAE7, debug_reason=00000000
+Info : [esp32s3.cpu1] Halt cause (***ERROR*** A stack overflow in task System_diag has been detected.)
+shutdown command invoked

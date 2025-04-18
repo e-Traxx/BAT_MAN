@@ -9,13 +9,12 @@
 #include "freertos/projdefs.h"
 #include "freertos/task.h"
 #include "hal/twai_types.h"
-#include "portmacro.h"
 #include <inttypes.h>
 #include <stdint.h>
 #include <string.h>
 
 #define TX_NUM GPIO_NUM_21
-#define RX_NUM GPIO_NUM_22
+#define RX_NUM GPIO_NUM_42
 
 static const char *TAG = "CAN_HANDLER";
 
@@ -85,7 +84,7 @@ void CAN_sendMessage(void *arguments) {
       // send Can Message
       esp_err_t res = twai_transmit(&msg, pdMS_TO_TICKS(200));
       if (res != ESP_OK) {
-        ESP_LOGW(TAG, "[-] Failed to send Message");
+        /* ESP_LOGW(TAG, "[-] Failed to send Message"); */
       }
     } else {
       ESP_LOGW(TAG, "[-] Did not receive Msg from Queue");

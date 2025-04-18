@@ -6,7 +6,6 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/idf_additions.h"
 #include "freertos/projdefs.h"
-#include "portmacro.h"
 #include "spi_handler.h"
 #include <stdint.h>
 #include <string.h>
@@ -27,6 +26,7 @@ static const char *TAG = "Diag";
 #define STATC 0x790
 
 Diagnostic_Container_t diag;
+static diag_frame_t frame;
 
 // Function Definitions
 void diagnostic_timer_callback(TimerHandle_t DiagTimer);
@@ -84,19 +84,25 @@ void diagnostic_timer_callback(TimerHandle_t DiagTimer) {
 //  5. Determine SOC of Battery
 //  6. Check Power delivery of Battery
 void Diagnostic_check(void *arguments) {
+  UBaseType_t uxHighWaterMark;
+  
   while (1) {
     if (xSemaphoreTake(diagnostic_semaphore, portMAX_DELAY) == pdTRUE) {
+      // Get stack high water mark - shows minimum free stack space during task execution
+      uxHighWaterMark = uxTaskGetStackHighWaterMark(NULL);
+      ESP_LOGI(TAG, "Stack high water mark: %u", uxHighWaterMark);
+      
       // Perform the diagnostic test
       ESP_LOGV(TAG, "[*] Running diagnostic test...");
 
-      diag_frame_t frame;
-
       // Check Sensors Loss and limits
+      ESP_LOGV(TAG, "[*]  Checking Limits");
       Check_connections_and_limits(diag.flags);
+      ESP_LOGV(TAG, "[*] Fault_management");
       Fault_management(diag.flags);
-
+      ESP_LOGV(TAG, "[*] Packet Formatter");
       Diagnostic_packet_formatter(&frame, diag.overall_voltage, diag.current,
-                                  diag.temp, diag.soc, diag.soh, diag.flags);
+                                diag.temp, diag.soc, diag.soh, diag.flags);
 
       // enqueue data to CAN_TX send function
       CAN_TX_enqueue(0x199, 8, frame.bytes);
@@ -118,12 +124,16 @@ void Diagnostic_check(void *arguments) {
 
 // Diagnostic Checks
 void Check_connections_and_limits(uint8_t *flags) {
+  if (!SystemInitialised) {
+    ESP_LOGW(TAG, "Skipping Diagnostic Checks........");
+    return;
+  }
   // Current Sensor = Voltage Measured = 0V
 
   // Using Open Wire Sensing (Which is set up in the Start Measurement Command
   // in spi_handler.c )
   // if the Voltage Measured is 0V then we have an OPEN WIRE.
-  uint8_t cell_index = 0;
+  /* uint8_t cell_index = 0; */
   for (int Stack = 0; Stack < NUM_STACKS; Stack++) {
     for (int Cell = 0; Cell < CELLS_PER_STACK_ACTIVE; Cell++) {
       // ---- LIMITS CHECK ----

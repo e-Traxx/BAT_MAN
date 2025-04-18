@@ -22,7 +22,7 @@
 
 // Commands
 // Reads all the Filtered Cell Voltage values
-#define RDFLT 0xA800
+#define RDFLT 0b0000001111110110
 // Start continous Cell voltage conversion
 #define ADCV 0b0000001111110110
 // Start Continous Redundant Voltage Conversion
@@ -34,6 +34,8 @@
 // Poll devices for serial_id
 #define RDSID 0b0000000000101100
 
+// Command Container
+uint16_t CMD;
 SemaphoreHandle_t adbms_semaphore;
 TimerHandle_t adbms_timer;
 
@@ -54,7 +56,8 @@ void adbms_broadcast_command(uint16_t *cmd, spi_device_handle_t sender);
 void adbms_addressed_command(uint16_t *cmd, uint8_t *payload);
 
 // Vlaue Container
-Robin_container_t *robin;
+Robin_container_t robin_ptr;
+Robin_container_t *robin = &robin_ptr;
 // 6 Bytes (48 bits) per Module serial id.
 // 6 Bytes in total * Max num of modules (NUM_STACKS)
 uint8_t ADBMS_IDs[6 * NUM_STACKS];
@@ -72,8 +75,8 @@ void ADBMS_Setup(void) {
     return;
   }
 
-  // Create Timer
-  adbms_timer = xTimerCreate("ADBMS_Query_timer", pdMS_TO_TICKS(1000), pdTRUE,
+  // Create Timer - Changed from 200ms to 500ms
+  adbms_timer = xTimerCreate("ADBMS_Query_timer", pdMS_TO_TICKS(500), pdTRUE,
                              (void *)0, Adbms_query_callback);
   if (adbms_timer == NULL) {
     ESP_LOGE(TAG, "[-] Failed to initialise ADBMS Timer");
@@ -82,26 +85,28 @@ void ADBMS_Setup(void) {
 
   // ID response
   uint8_t ID_Poll_resp[(6 * NUM_STACKS) + 2];
+  CMD = RDFLT;
 
   // Poll All Devices and register their IDS
-  adbms_broadcast_command((uint16_t *)RDSID, spi_cs1);
+  adbms_broadcast_command(&CMD, spi_cs1);
   isoSPI_receive(ID_Poll_resp, sizeof(ID_Poll_resp), spi_cs2);
 
   // Start Measuring
-  adbms_broadcast_command((uint16_t *)ADCV, spi_cs1);
-  adbms_broadcast_command((uint16_t *)OW_ALL, spi_cs1);
+  CMD = ADCV;
+  adbms_broadcast_command(&CMD, spi_cs1);
+  adbms_broadcast_command(&CMD, spi_cs1);
 }
 
 // Gives semaphore to query task every 200ms
 void Adbms_query_callback(TimerHandle_t timer) {
   BaseType_t HighPriorityTaskWoken = pdFALSE;
-  esp_err_t ret;
-
-  // Give Semaphore to Query task
-  ret = xSemaphoreGiveFromISR(adbms_semaphore, &HighPriorityTaskWoken);
-  if (ret != pdPASS) {
-    ESP_LOGE(TAG, "[-] %s Failed to give Semaphore to ADBMS query",
-             esp_err_to_name(ret));
+  
+  // Give Semaphore to Query task - simplified version
+  xSemaphoreGiveFromISR(adbms_semaphore, &HighPriorityTaskWoken);
+  
+  // If a task was woken, we should yield
+  if (HighPriorityTaskWoken) {
+    portYIELD_FROM_ISR();
   }
 }
 
@@ -131,46 +136,45 @@ void Adbms_query_callback(TimerHandle_t timer) {
 //  SOC
 //
 void Robin_query(void *args) {
-
+  UBaseType_t uxHighWaterMark;
+  
   while (1) {
-    if (xSemaphoreTake(adbms_semaphore, portMAX_DELAY) == pdTRUE) {
-      robin = malloc(sizeof(Robin_container_t));
+    // Wait for semaphore with a timeout
+    if (xSemaphoreTake(adbms_semaphore, pdMS_TO_TICKS(1000)) == pdTRUE) {
+      // Get stack high water mark
+      uxHighWaterMark = uxTaskGetStackHighWaterMark(NULL);
+      ESP_LOGI(TAG, "Stack high water mark: %u", uxHighWaterMark);
+      
+      // Allocate memory for this iteration
+      Robin_container_t *local_robin = malloc(sizeof(Robin_container_t));
+      if (local_robin == NULL) {
+        ESP_LOGE(TAG, "Failed to allocate memory for Robin container");
+        continue;
+      }
 
       ESP_LOGV(TAG, "[+] Querying... \n");
-      // First query the Cells
-      //
-      // 16-Bit values are stored in the uint8_t array
-      // Therefore the number of elements is to be doubled
-      // Where 16-Bits take up 2 spaces
-
-      SPI_responses_t *responses_Volt =
-          (SPI_responses_t *)malloc(sizeof(SPI_responses_t));
-      SPI_responses_t *responses_Temp =
-          (SPI_responses_t *)malloc(sizeof(SPI_responses_t));
-      /* SPI_responses_t *redundant_responses_Volt = */
-      /*     (SPI_responses_t *)malloc(sizeof(SPI_responses_t)); */
-      /* SPI_responses_t *redundant_responses_Temp = */
-      /*     (SPI_responses_t *)malloc(sizeof(SPI_responses_t)); */
+      
+      // Allocate memory for responses
+      SPI_responses_t *responses_Volt = malloc(sizeof(SPI_responses_t));
+      SPI_responses_t *responses_Temp = malloc(sizeof(SPI_responses_t));
+      
+      if (responses_Volt == NULL || responses_Temp == NULL) {
+        ESP_LOGE(TAG, "Failed to allocate memory for responses");
+        free(local_robin);
+        if (responses_Volt) free(responses_Volt);
+        if (responses_Temp) free(responses_Temp);
+        continue;
+      }
 
       // Read all voltages
-      adbms_broadcast_command((uint16_t *)RDFLT, spi_cs1);
+      CMD = RDFLT;
+      adbms_broadcast_command(&CMD, spi_cs1);
       isoSPI_receive(responses_Volt->raw, sizeof(responses_Volt->raw), spi_cs2);
 
       // Read Temperature
-      adbms_broadcast_command((uint16_t *)ADAX2, spi_cs1);
+      CMD = ADAX2;
+      adbms_broadcast_command(&CMD, spi_cs1);
       isoSPI_receive(responses_Temp->raw, sizeof(responses_Temp->raw), spi_cs2);
-
-      /* //---- Redundant Calls ----- */
-      /* // Read all voltages */
-      /* adbms_send_command(RDFLT, spi_cs1); */
-      /* adbms_fetch_data(redundant_responses_Volt->raw, */
-      /*                  sizeof(redundant_responses_Volt->raw), spi_cs2); */
-      /**/
-      /* // Read Temperature */
-      /* adbms_send_command(ADAX2, spi_cs1); */
-      /* adbms_fetch_data(redundant_responses_Temp->raw, */
-      /*                  sizeof(redundant_responses_Temp->raw), spi_cs2); */
-      /**/
 
       // ---- Parse and evaluate ----
       // Parse Cell voltages
@@ -179,21 +183,13 @@ void Robin_query(void *args) {
       // Parse Temperature
       parse_Temperature(responses_Temp);
 
-      // // ---- DUMMY CODE ----
-      // /* // Then query the temperature (DUMMY) */
-      // /* uint16_t voltage = 370; */
-      // /* uint16_t temp = 750; */
-      // /* // For now, we use a dumb algo */
-      // /* for (int i = 0; i < 14; i++) { */
-      // /*   for (int j = 0; j < 10; j++) { */
-      // /*     robin->individual_voltages[i][j] = */
-      // /*         voltage; // with factor 0.01 = 3.64V */
-      // /*     robin->individual_temperatures[i][j] = temp; // with factor 0.1
-      // /* = 75.0 */
-      // /*   } */
-      // /* } */
+      // Report to user
+      System_report_to_user(local_robin);
 
-      System_report_to_user(robin);
+      // Free allocated memory
+      free(responses_Volt);
+      free(responses_Temp);
+      free(local_robin);
     }
   }
 }
@@ -270,17 +266,37 @@ void System_report_to_user(Robin_container_t *robin) {
 // 2. In the meantime, the master is clocking dummy data, onto which the modules
 // load their data on.
 
-void adbms_broadcast_command(uint16_t *cmd, spi_device_handle_t sender) {
-  // Broadcasting (Poll Commands)
+void preprocess_cmd(uint16_t *cmd, uint8_t *cmdWord, uint16_t *PEC) {
+  // Defensive Programming
+  if (cmd == NULL) {
+    ESP_LOGE(TAG, "[-] Pointer is NULL");
+    return;
+  }
 
   // first load the Command into CM0 and CMD1
-  uint8_t cmdWord[2];
   // The 16 Bit is split into 2 x 8 Bits
   cmdWord[0] = (*cmd >> 8) & 0xFF; // High Byte [8 - 15]
   cmdWord[1] = *cmd & 0xFF;        // Low Byte [0 - 7]
 
   // Calculate Command PEC
-  uint16_t PEC = Compute_Command_PEC(cmdWord, sizeof(cmdWord));
+  *PEC = Compute_Command_PEC(cmdWord, sizeof(cmdWord));
+}
+
+void adbms_broadcast_command(uint16_t *cmd, spi_device_handle_t sender) {
+  // Broadcasting (Poll Commands)
+
+  // Defensive Programming
+  if (cmd == NULL) {
+    ESP_LOGE(TAG, "[-] Pointer is NULL");
+    return;
+  }
+
+  // first load the Command into CM0 and CMD1
+  uint8_t cmdWord[2];
+  // Command PEC
+  uint16_t PEC;
+
+  preprocess_cmd(cmd, cmdWord, &PEC);
 
   // Load the command Word (CMD0 and CMD1) and PEC into the transmission array
   uint8_t transmission_data[4] = {cmdWord[0], cmdWord[1], ((PEC >> 8) & 0xFF),
@@ -304,11 +320,21 @@ void adbms_broadcast_command(uint16_t *cmd, spi_device_handle_t sender) {
 // 2. In the meantime, the master is clocking dummy data, onto which the modules
 // load their data on.
 
-void adbms_addressed_command(uint16_t *cmd, uint8_t *payload) {}
+void adbms_addressed_command(uint16_t *cmd, uint8_t *payload) {
+  // Send serialised data prepended with a Command
+  // The Serialised Data contains the payload or bit order which is going to be
+  // used by the ADBMS6830 to determine which cells are going to be balanced or
+  // not.
 
-/// Poll the Devices for the serial_id and save the value in an array
-/// This allows the device to identify the individual modules and use addressed
-///
-//
-//
-//
+  if (cmd == NULL) {
+    ESP_LOGE(TAG, "[-] CMD Pointer is NULL");
+    return;
+  }
+
+  // first load the Command into CM0 and CMD1
+  uint8_t cmdWord[2];
+  // Command PEC
+  uint16_t PEC;
+
+  preprocess_cmd(cmd, cmdWord, &PEC);
+}

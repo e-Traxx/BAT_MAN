@@ -11,7 +11,7 @@
 #include <stdint.h>
 #include <string.h>
 
-#define SPI_HOST_D SPI2_HOST
+#define SPI_HOST_D SPI3_HOST
 #define MISO_NUM 12
 #define MOSI_NUM 13
 #define CLK_NUM 14
@@ -38,7 +38,7 @@ void SPI_Setup(void) {
                                    4096}; // for 2 rounds of 10 Modules
 
   // Initilialise SPI bus
-  ret = spi_bus_initialize(HSPI_HOST, &bus_conf, SPI_DMA_CH_AUTO);
+  ret = spi_bus_initialize(SPI_HOST_D, &bus_conf, SPI_DMA_CH_AUTO);
   if (ret != ESP_OK) {
     ESP_LOGE(TAG, "[-] Failed to Initilialise SPI\n");
   }
@@ -49,7 +49,7 @@ void SPI_Setup(void) {
       .mode = 0,
       .spics_io_num = SPI_CS1,
       .queue_size = 7,
-      .flags = SPI_DEVICE_HALFDUPLEX};
+      };
 
   // Add device to registry
   spi_device_interface_config_t devcf_receiver_CS2 = {
@@ -57,7 +57,7 @@ void SPI_Setup(void) {
       .mode = 0,
       .spics_io_num = SPI_CS2,
       .queue_size = 7,
-      .flags = SPI_DEVICE_HALFDUPLEX};
+      };
 
   ESP_ERROR_CHECK(spi_bus_add_device(SPI_HOST_D, &devcf_sender_CS1, &spi_cs1));
   ESP_ERROR_CHECK(
@@ -154,7 +154,7 @@ void isoSPI_transmit(uint8_t *cmd_tx, size_t cmd_length,
 
   esp_err_t err = spi_device_transmit(spi_cs1, &t_tx);
   if (err != ESP_OK) {
-    ESP_LOGE(TAG, "Failed to Transfer Command");
+    ESP_LOGE(TAG, "[-] Failed to Transfer Command: %d", err);
   }
 }
 
@@ -170,6 +170,6 @@ void isoSPI_receive(uint8_t *responses, size_t response_len,
 
   esp_err_t err = spi_device_transmit(spi_cs2, &t_rx);
   if (err != ESP_OK) {
-    ESP_LOGE(TAG, "Failed to Transfer Command");
+    ESP_LOGE(TAG, "[-] Failed to Transfer Command: %d", err);
   }
 }
