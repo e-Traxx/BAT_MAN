@@ -14,10 +14,33 @@ import threading
 import webbrowser
 from flask import Flask
 import time
+import json
 
 # Initialize Dash app
 dash_app = dash.Dash(__name__)
 dash_app.title = "BAT-MAN"
+
+# Constants for ESP32 server
+ESP32_IP = "192.168.4.1"  # Default ESP32 AP IP
+ESP32_PORT = 80
+
+def fetch_diagnostic_data():
+    try:
+        response = requests.get(f"http://{ESP32_IP}:{ESP32_PORT}/api/diagnostic")
+        if response.status_code == 200:
+            return response.json()
+    except Exception as e:
+        print(f"Error fetching diagnostic data: {e}")
+    return None
+
+def fetch_cell_data():
+    try:
+        response = requests.get(f"http://{ESP32_IP}:{ESP32_PORT}/api/cell_data")
+        if response.status_code == 200:
+            return response.json()
+    except Exception as e:
+        print(f"Error fetching cell data: {e}")
+    return None
 
 # App layout from main.py
 dash_app.layout = html.Div(
@@ -76,7 +99,29 @@ dash_app.layout = html.Div(
     Input('interval-component', 'n_intervals')
 )
 def update_graph1(n):
-    # Simulated data for testing
+    cell_data = fetch_cell_data()
+    if cell_data and 'cell_voltages' in cell_data:
+        # Flatten the nested array structure
+        voltages = []
+        for stack in cell_data['cell_voltages']:
+            voltages.extend(stack)
+        x = list(range(len(voltages)))
+        figure = {
+            'data': [go.Bar(x=x, y=voltages, marker_color='cyan')],
+            'layout': go.Layout(
+                title='Voltage',
+                title_font_color='white',
+                xaxis={'title': 'Cell', 'color': 'white'},
+                yaxis={'title': 'Voltage in V', 'color': 'white'},
+                yaxis_range=[0, 4.3],
+                paper_bgcolor='black',
+                plot_bgcolor='black',
+                font_color='white'
+            )
+        }
+        return figure
+    
+    # Fallback to simulated data if fetch fails
     data = {'graph1': [2 + (i % 5) * 0.1 for i in range(140)]}
     x = list(range(140))
     y1 = data.get('graph1', [0] * 140)
@@ -100,7 +145,29 @@ def update_graph1(n):
     Input('interval-component', 'n_intervals')
 )
 def update_graph2(n):
-    # Simulated data for testing
+    cell_data = fetch_cell_data()
+    if cell_data and 'cell_temperatures' in cell_data:
+        # Flatten the nested array structure
+        temperatures = []
+        for stack in cell_data['cell_temperatures']:
+            temperatures.extend(stack)
+        x = list(range(len(temperatures)))
+        figure = {
+            'data': [go.Bar(x=x, y=temperatures, marker_color='lime')],
+            'layout': go.Layout(
+                title='Temperature',
+                title_font_color='white',
+                xaxis={'title': 'Cell', 'color': 'white'},
+                yaxis={'title': 'Temperature in °C', 'color': 'white'},
+                yaxis_range=[0, 80],
+                paper_bgcolor='black',
+                plot_bgcolor='black',
+                font_color='white'
+            )
+        }
+        return figure
+    
+    # Fallback to simulated data if fetch fails
     data = {'graph2': [25 + (i % 10) for i in range(140)]}
     x = list(range(140))
     y2 = data.get('graph2', [0] * 140)
@@ -124,7 +191,27 @@ def update_graph2(n):
     Input('interval-component', 'n_intervals')
 )
 def update_current_output(n):
-    # Simulated data for testing
+    diag_data = fetch_diagnostic_data()
+    if diag_data and 'current' in diag_data:
+        current = diag_data['current']
+        figure = {
+            'data': [go.Indicator(
+                mode="gauge+number",
+                value=current,
+                title={'text': "Current (A)"},
+                gauge={
+                    'axis': {'range': [0, 150]},
+                    'bar': {'color': 'cyan'},
+                }
+            )],
+            'layout': go.Layout(
+                paper_bgcolor='black',
+                font_color='white'
+            )
+        }
+        return figure
+    
+    # Fallback to simulated data if fetch fails
     data = {'current_output': 75 + (n % 20)}
     current = data.get('current_output', 0)
     figure = {
@@ -149,7 +236,27 @@ def update_current_output(n):
     Input('interval-component', 'n_intervals')
 )
 def update_overall_voltage(n):
-    # Simulated data for testing
+    diag_data = fetch_diagnostic_data()
+    if diag_data and 'overall_voltage' in diag_data:
+        voltage = diag_data['overall_voltage']
+        figure = {
+            'data': [go.Indicator(
+                mode="gauge+number",
+                value=voltage,
+                title={'text': "Voltage (V)"},
+                gauge={
+                    'axis': {'range': [0, 4.3]},
+                    'bar': {'color': 'lime'},
+                }
+            )],
+            'layout': go.Layout(
+                paper_bgcolor='black',
+                font_color='white'
+            )
+        }
+        return figure
+    
+    # Fallback to simulated data if fetch fails
     data = {'overall_voltage': 3.6 + (n % 5) * 0.1}
     voltage = data.get('overall_voltage', 0)
     figure = {
@@ -174,7 +281,46 @@ def update_overall_voltage(n):
     Input('interval-component', 'n_intervals')
 )
 def update_faults_system_table(n):
-    # Simulated data for testing
+    diag_data = fetch_diagnostic_data()
+    if diag_data and 'flags' in diag_data:
+        flags = diag_data['flags']
+        table_header = [
+            html.Tr([
+                html.Th("Fault Type", style={'border': '1px solid white'}),
+                html.Th("Status", style={'border': '1px solid white'})
+            ])
+        ]
+
+        table_body = [
+            html.Tr([
+                html.Td("Sensor Loss", style={'border': '1px solid white'}),
+                html.Td("Detected" if flags.get('lost_comm') or flags.get('voltage_sense_error') or flags.get('temp_sensor_loss') or flags.get('current_sensor_loss') else "None", style={'border': '1px solid white'})
+            ]),
+            html.Tr([
+                html.Td("Over Voltage", style={'border': '1px solid white'}),
+                html.Td("Detected" if flags.get('overall_overvoltage') else "None", style={'border': '1px solid white'})
+            ]),
+            html.Tr([
+                html.Td("Under Voltage", style={'border': '1px solid white'}),
+                html.Td("Detected" if flags.get('pack_undervoltage') else "None", style={'border': '1px solid white'})
+            ]),
+            html.Tr([
+                html.Td("Over Current", style={'border': '1px solid white'}),
+                html.Td("Detected" if flags.get('current_sensor_loss') else "None", style={'border': '1px solid white'})
+            ]),
+            html.Tr([
+                html.Td("Over Temperature", style={'border': '1px solid white'}),
+                html.Td("Detected" if flags.get('high_temp') else "None", style={'border': '1px solid white'})
+            ]),
+            html.Tr([
+                html.Td("System Health", style={'border': '1px solid white'}),
+                html.Td("Healthy" if not any(flags.values()) else "Faulty", style={'border': '1px solid white'})
+            ]),
+        ]
+
+        return table_header + table_body
+    
+    # Fallback to simulated data if fetch fails
     data = {
         'faults': {
             'sensor_loss': False,
