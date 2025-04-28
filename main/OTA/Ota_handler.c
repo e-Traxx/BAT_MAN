@@ -9,6 +9,7 @@
 #include "esp_partition.h"
 #include "esp_flash.h"
 #include <string.h>
+#include <inttypes.h>
 
 static const char *TAG = "OTA";
 #define MIN(x, y) ((x) < (y) ? (x) : (y))
@@ -35,7 +36,7 @@ esp_err_t Ota_updater(httpd_req_t *req) {
 
   // 3. Verify partition size
   if (ota_partition->size < req->content_len) {
-    ESP_LOGE(TAG, "OTA partition too small: %d < %d", ota_partition->size, req->content_len);
+    ESP_LOGE(TAG, "OTA partition too small");
     httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR,
                         "OTA partition too small");
     return ESP_FAIL;

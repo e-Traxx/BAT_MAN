@@ -42,6 +42,23 @@ static void wifi_cleanup(void) {
     nvs_flash_deinit();
 }
 
+// Reset endpoint handler
+static esp_err_t reset_handler(httpd_req_t *req) {
+    ESP_LOGI(TAG, "Received system reset request");
+    
+    // Send response before resetting
+    const char *response = "{\"status\":\"restarting\"}";
+    httpd_resp_send(req, response, strlen(response));
+    
+    // Give some time for the response to be sent
+    vTaskDelay(pdMS_TO_TICKS(100));
+    
+    // Perform full system restart
+    esp_restart();
+    
+    return ESP_OK;
+}
+
 esp_err_t WIFI_Setup() {
     esp_err_t ret = ESP_OK;
 
@@ -174,9 +191,39 @@ esp_err_t WIFI_Setup() {
         return ret;
     }
 
+    // Register reset endpoint
+    httpd_uri_t reset_uri = {
+        .uri = "/reset",
+        .method = HTTP_POST,
+        .handler = reset_handler,
+        .user_ctx = NULL
+    };
+    
+    ret = httpd_register_uri_handler(server, &reset_uri);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to register reset URI handler: %s", esp_err_to_name(ret));
+        wifi_cleanup();
+        return ret;
+    }
+
     return ESP_OK;
 }
 
 void WIFI_Cleanup(void) {
     wifi_cleanup();
+}
+
+void WIFI_Reset(void) {
+    ESP_LOGI(TAG, "Resetting WiFi and HTTP server...");
+    
+    // Clean up existing WiFi and HTTP server
+    wifi_cleanup();
+    
+    // Reinitialize WiFi with same configuration
+    esp_err_t ret = WIFI_Setup();
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to reset WiFi: %s", esp_err_to_name(ret));
+    } else {
+        ESP_LOGI(TAG, "WiFi reset successful");
+    }
 }

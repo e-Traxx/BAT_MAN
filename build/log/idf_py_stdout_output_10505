@@ -1,0 +1,7 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32s3
+NOTICE: Processing 1 dependencies:
+NOTICE: [1/1] idf (5.4.1)
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+/opt/homebrew/bin/cmake --regenerate-during-build -S/Users/akame/Documents/BAT-MAN -B/Users/akame/Documents/BAT-MAN/build

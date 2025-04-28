@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "Batman_esp",
-    "project_version":    "381ace95-dirty",
+    "project_version":    "63ff26b9-dirty",
     "project_path":       "/Users/akame/Documents/BAT-MAN",
     "idf_path":           "/Users/akame/esp/esp-idf",
     "build_dir":          "/Users/akame/Documents/BAT-MAN/build",
@@ -1190,12 +1190,12 @@
             "dir": "/Users/akame/Documents/BAT-MAN/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [],
+            "reqs": [ "driver", "esp_netif", "esp_wifi", "nvs_flash", "esp_http_server", "json", "esp_http_client", "app_update", "esp_adc", "esp_driver_gpio", "esp_driver_spi", "spi_flash" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/Users/akame/Documents/BAT-MAN/build/esp-idf/main/libmain.a",
-            "sources": [ "/Users/akame/Documents/BAT-MAN/main/Batman_esp.c", "/Users/akame/Documents/BAT-MAN/main/can_handler.c", "/Users/akame/Documents/BAT-MAN/main/diagnostic_handler.c", "/Users/akame/Documents/BAT-MAN/main/spi_handler.c", "/Users/akame/Documents/BAT-MAN/main/WIFI.c", "/Users/akame/Documents/BAT-MAN/main/Albert/Albert.c", "/Users/akame/Documents/BAT-MAN/main/Robin/Robin_balancing.c", "/Users/akame/Documents/BAT-MAN/main/Robin/Robin_handler.c", "/Users/akame/Documents/BAT-MAN/main/Robin/Robin_parser.c", "/Users/akame/Documents/BAT-MAN/main/OTA/Ota_handler.c" ],
+            "sources": [ "/Users/akame/Documents/BAT-MAN/main/Batman_esp.c", "/Users/akame/Documents/BAT-MAN/main/Oracle/Oracle.c", "/Users/akame/Documents/BAT-MAN/main/Robin/Robin_parser.c", "/Users/akame/Documents/BAT-MAN/main/Robin/Robin_handler.c", "/Users/akame/Documents/BAT-MAN/main/Albert/Albert.c", "/Users/akame/Documents/BAT-MAN/main/OTA/Ota_handler.c", "/Users/akame/Documents/BAT-MAN/main/WIFI.c", "/Users/akame/Documents/BAT-MAN/main/can_handler.c", "/Users/akame/Documents/BAT-MAN/main/spi_handler.c", "/Users/akame/Documents/BAT-MAN/main/diagnostic_handler.c" ],
             "include_dirs": [ "include" ]
         },
         "mbedtls": {
@@ -2856,7 +2856,7 @@
             "prefix": "idf",
             "dir": "/Users/akame/Documents/BAT-MAN/main",
             "lib": "__idf_main",
-            "reqs": [],
+            "reqs": [ "driver", "esp_netif", "esp_wifi", "nvs_flash", "esp_http_server", "json", "esp_http_client", "app_update", "esp_adc", "esp_driver_gpio", "esp_driver_spi", "spi_flash" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
