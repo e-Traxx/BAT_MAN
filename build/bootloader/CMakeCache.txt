@@ -257,7 +257,7 @@ IGNORE_EXTRA_COMPONENT:UNINITIALIZED=
 PROJECT_SOURCE_DIR:UNINITIALIZED=/Users/akame/Documents/BAT-MAN
 
 //No help, variable specified on the command line.
-PYTHON:UNINITIALIZED=/Users/akame/.espressif/python_env/idf5.4_py3.9_env/bin/python
+PYTHON:UNINITIALIZED=/Users/akame/.espressif/python_env/idf5.4_py3.13_env/bin/python
 
 //No help, variable specified on the command line.
 PYTHON_DEPS_CHECKED:UNINITIALIZED=1

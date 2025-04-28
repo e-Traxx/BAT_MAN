@@ -7,6 +7,7 @@
 #include "freertos/idf_additions.h"
 #include "spi_handler.h"
 #include "string.h"
+#include "Robin_types.h"
 #include <stddef.h>
 #include <stdint.h>
 
@@ -63,8 +64,8 @@ Robin_container_t *robin = &robin_ptr;
 uint8_t ADBMS_IDs[6 * NUM_STACKS];
 
 // post Query value updates
-void parse_voltages(SPI_responses_t *responses);
-void parse_Temperature(SPI_responses_t *responses);
+parser_error_t parse_voltages(SPI_responses_t *responses);
+parser_error_t parse_Temperature(SPI_responses_t *responses);
 
 // ---- Setup ----
 void ADBMS_Setup(void) {

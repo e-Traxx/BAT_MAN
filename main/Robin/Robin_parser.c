@@ -3,6 +3,7 @@
 #include "spi_handler.h"
 #include "string.h"
 #include <stdint.h>
+#include "Robin_types.h"
 
 #define TAG "Robin_parser"
 
@@ -12,13 +13,6 @@
 #define MAX_CELLS_PER_STACK 12
 #define PEC_SIZE 2  // PEC is 16 bits
 
-// Error codes
-typedef enum {
-    PARSER_OK = 0,
-    PARSER_ERROR_PEC_MISMATCH,
-    PARSER_ERROR_NULL_POINTER,
-    PARSER_ERROR_BOUNDS_EXCEEDED
-} parser_error_t;
 
 // This is just a collection of bad code used to parse the received data into
 // proper structure and load it into the memory
@@ -30,10 +24,10 @@ typedef enum {
 // template
 
 // The whole structure is just 8 Bits and 8 bits and 8 bits
-void parse_voltages(SPI_responses_t *responses) {
+parser_error_t parse_voltages(SPI_responses_t *responses) {
     if (!responses || !robin) {
         ESP_LOGE(TAG, "Invalid pointer in parse_voltages");
-        return;
+        return PARSER_ERROR_NULL_POINTER;
     }
 
     // PEC is located at the end of every 6 registers or otherwise 6 x 8 bits
@@ -54,7 +48,7 @@ void parse_voltages(SPI_responses_t *responses) {
             };
             if (Compute_Data_PEC(Data, sizeof(Data)) != PEC) {
                 ESP_LOGE(TAG, "PEC mismatch in stack %zu, group %zu", stack, group);
-                return;
+                return PARSER_ERROR_PEC_MISMATCH;
             }
 
             robin->individual_voltages[stack][cell] = responses->values[0];
@@ -77,13 +71,14 @@ void parse_voltages(SPI_responses_t *responses) {
         cell = 0;
         group = 0;
     }
+    return PARSER_OK;
 }
 
 /// Is just a Template, so i need to check up on it later.
-void parse_Temperature(SPI_responses_t *responses_Temp) {
+parser_error_t parse_Temperature(SPI_responses_t *responses_Temp) {
     if (!responses_Temp || !robin) {
         ESP_LOGE(TAG, "Invalid pointer in parse_Temperature");
-        return;
+        return PARSER_ERROR_NULL_POINTER;
     }
 
     // PEC is located at the end of every 6 registers or otherwise 6 x 8 bits
@@ -104,7 +99,7 @@ void parse_Temperature(SPI_responses_t *responses_Temp) {
             };
             if (Compute_Data_PEC(Data, sizeof(Data)) != PEC) {
                 ESP_LOGE(TAG, "PEC mismatch in stack %zu, group %zu", stack, group);
-                return;
+                return PARSER_ERROR_PEC_MISMATCH;
             }
 
             robin->individual_temperatures[stack][cell] = responses_Temp->values[0];
@@ -127,6 +122,7 @@ void parse_Temperature(SPI_responses_t *responses_Temp) {
         cell = 0;
         group = 0;
     }
+    return PARSER_OK;
 }
 
 // CAN DATA FORMATTER
@@ -211,42 +207,6 @@ static parser_error_t parse_cell_data(SPI_responses_t *responses,
         PEC = responses->values[3];
         group++;
         cell += CELLS_PER_GROUP;
-    }
-
-    return PARSER_OK;
-}
-
-parser_error_t parse_voltages(SPI_responses_t *responses) {
-    if (!robin) {
-        ESP_LOGE(TAG, "Robin container is NULL");
-        return PARSER_ERROR_NULL_POINTER;
-    }
-
-    for (size_t stack = 0; stack < NUM_STACKS; stack++) {
-        parser_error_t error = parse_cell_data(responses, 
-                                             robin->individual_voltages, 
-                                             stack);
-        if (error != PARSER_OK) {
-            return error;
-        }
-    }
-
-    return PARSER_OK;
-}
-
-parser_error_t parse_Temperature(SPI_responses_t *responses_Temp) {
-    if (!robin) {
-        ESP_LOGE(TAG, "Robin container is NULL");
-        return PARSER_ERROR_NULL_POINTER;
-    }
-
-    for (size_t stack = 0; stack < NUM_STACKS; stack++) {
-        parser_error_t error = parse_cell_data(responses_Temp, 
-                                             robin->individual_temperatures, 
-                                             stack);
-        if (error != PARSER_OK) {
-            return error;
-        }
     }
 
     return PARSER_OK;
