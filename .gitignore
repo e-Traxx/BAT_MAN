@@ -71,6 +71,7 @@ venv/
 .ORACLE/__pycache__
 .ORACLE/gui
 .ORACLE/.vscode
+.ORACLE/gui/lib/
 # ── IDE & tooling ------------------------------------------------
 .vscode/
 .idea/
