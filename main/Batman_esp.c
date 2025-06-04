@@ -62,14 +62,14 @@ System_health_Flags flags;
 void initialise_setups(void) {
   // Setup
 
-  CAN_Setup();
+  // CAN_Setup();
   SPI_Setup();
-  WIFI_Setup();
+  // WIFI_Setup();
 
   // Setup Diagnostic system
-  Diag_Setup();
+  // Diag_Setup();
   ADBMS_Setup();
-  Albert_Setup();
+  // Albert_Setup();
 
   unsigned int system_health = *(unsigned int *)&flags;
   if (system_health) {
@@ -80,29 +80,37 @@ void initialise_setups(void) {
 
 void Start_schedule(void) {
 
-  // Start Timer scheduling
-  if (xTimerStart(diagnostic_timer, 0) != pdPASS) {
-    ESP_LOGE(TAG, "[-] Failed to start diagnostic_timer\n");
-  }
+  // // Start Timer scheduling
+  // if (xTimerStart(diagnostic_timer, 0) != pdPASS) {
+  //   ESP_LOGE(TAG, "DIAG Timer create failed – heap %u",
+  //            esp_get_free_heap_size());
+  //   ESP_LOGE(TAG, "[-] Failed to start diagnostic_timer\n");
+  // }
 
   if (xTimerStart(adbms_timer, 0) != pdPASS) {
+    ESP_LOGE(TAG, "ROBIN Timer create failed – heap %" PRIu32,
+             esp_get_free_heap_size());
     ESP_LOGE(TAG, "[-] Failed to start adbms_timer");
   }
-
-  if (xTimerStart(albert_timer, 0) != pdPASS) {
-    ESP_LOGE(TAG, "[-] Failed to start albert_timer");
-  }
+  //
+  // if (xTimerStart(albert_timer, 0) != pdPASS) {
+  //   ESP_LOGE(TAG, "ALBERT Timer create failed – heap %u",
+  //            esp_get_free_heap_size());
+  //   ESP_LOGE(TAG, "[-] Failed to start albert_timer");
+  // }
 
   // Schedule a Robin query every 200ms (test case) // can be higher frequency
   //
   // Upon created, tasks are placed into ready state
-  xTaskCreate(Diagnostic_check, "System_diag", 4096, NULL, 2, NULL);
-  xTaskCreate(CAN_sendMessage, "Can_tx", 2048, NULL, 3, NULL);
+  // xTaskCreate(Diagnostic_check, "System_diag", 4096, NULL, 2, NULL);
+  // xTaskCreate(CAN_sendMessage, "Can_tx", 2048, NULL, 3, NULL);
   xTaskCreate(Robin_query, "Robin_query", 8192, NULL, 2, NULL);
-  xTaskCreate(Albert_Query, "Albert_query", 2048, NULL, 1, NULL);
+  // xTaskCreate(Albert_Query, "Albert_query", 2048, NULL, 1, NULL);
 }
 
 void app_main(void) {
+
+  ESP_LOGI(TAG, "heap before timers: %" PRIu32, esp_get_free_heap_size());
 
   initialise_setups();
   if (SystemInitialised) {

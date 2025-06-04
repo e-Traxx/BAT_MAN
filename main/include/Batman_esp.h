@@ -8,13 +8,14 @@
 
 // Shows which section is working and not working
 typedef struct {
-  unsigned CAN_Error;
-  unsigned SPI_Error;
-  unsigned WIFI_Error;
-  unsigned ADBMS_Error;
-  unsigned ALBERT_Error;
-  unsigned DIAG_Error;
-  unsigned RTOS_Error;
+  bool CAN_Error;
+  bool SPI_Error;
+  bool WIFI_Error;
+  bool ADBMS_Error;
+  bool ALBERT_Error;
+  bool DIAG_Error;
+  bool RTOS_Error;
+  bool Charging;
 } System_health_Flags;
 
 extern System_health_Flags flags;

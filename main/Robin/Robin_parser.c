@@ -1,128 +1,129 @@
+#include "Batman_esp.h"
 #include "Robin_handler.h"
+#include "Robin_types.h"
 #include "esp_log.h"
 #include "spi_handler.h"
 #include "string.h"
 #include <stdint.h>
-#include "Robin_types.h"
 
 #define TAG "Robin_parser"
 
-// Constants matching LTC6813 datasheet
-#define CELLS_PER_GROUP 3
-#define MAX_GROUPS 5
-#define MAX_CELLS_PER_STACK 12
-#define PEC_SIZE 2  // PEC is 16 bits
+typedef struct __attribute__((packed)) {
+  uint8_t data[DATA_BYTES_PER_GROUP];
+  uint16_t PEC_be;
+} reg_group_t;
 
+extern uint16_t Compute_Data_PEC(const uint8_t *data, size_t data_length);
 
-// This is just a collection of bad code used to parse the received data into
-// proper structure and load it into the memory
+//
+//  Overall Goal:
+//
+//  Take values from the raw data and place it into global robin
+//  which has arrays of size [14][10]
+//  for 14 Modules and 10 Cells
+//
+//  example: robin->individual_temperatures is an [14][10] array
+//
+//
+//
+//
+int copy_group_word(const uint8_t *grp_bytes, uint16_t *dest, int destidx,
+                    int dest_max) {
+  if (!grp_bytes || !dest) {
+    ESP_LOGE(TAG, "Invalid pointer in parse_voltages");
+    return -1;
+  }
 
-// Parsing Data
-// 1. the response is iteratively deserialised and processed.
-// 2. the PEC for each data is extracted and checked.
-// 3. the data is then placed in its corresponding index in the Robin_container
-// template
+  // Verify PEC
 
-// The whole structure is just 8 Bits and 8 bits and 8 bits
-parser_error_t parse_voltages(SPI_responses_t *responses) {
-    if (!responses || !robin) {
-        ESP_LOGE(TAG, "Invalid pointer in parse_voltages");
-        return PARSER_ERROR_NULL_POINTER;
-    }
+  // PEC is located at the end of every 6 registers or otherwise 6 x 8 bits
+  // oooooooooor we have 3 x 16 bits in a groups register for Cell voltage
+  // values and then 1 x 16 Bit for Data PEC
 
-    // PEC is located at the end of every 6 registers or otherwise 6 x 8 bits
-    // oooooooooor we have 3 x 16 bits in a groups register for Cell voltage
-    // values and then 1 x 16 Bit for Data PEC
-    size_t cell = 0; // Robin_container
-    size_t group = 0;
-    uint16_t PEC = 0;
-    // for every Module present
-    for (size_t stack = 0; stack < NUM_STACKS; stack++) {
-        // for every 4 Register Groups (1 - 12)
-        while (group < MAX_GROUPS && cell < MAX_CELLS_PER_STACK) {
-            // Check PEC
-            uint8_t Data[CELLS_PER_GROUP] = {
-                responses->values[0],
-                responses->values[1],
-                responses->values[2],
-            };
-            if (Compute_Data_PEC(Data, sizeof(Data)) != PEC) {
-                ESP_LOGE(TAG, "PEC mismatch in stack %zu, group %zu", stack, group);
-                return PARSER_ERROR_PEC_MISMATCH;
-            }
+  const reg_group_t *grp = (const reg_group_t *)grp_bytes;
 
-            robin->individual_voltages[stack][cell] = responses->values[0];
+  // CRC 15 Check (big endian -> host order)
+  uint16_t rx_pec = (grp->PEC_be >> 8) | (grp->PEC_be << 8);
+  if (Compute_Data_PEC(grp->data, DATA_BYTES_PER_GROUP) != rx_pec) {
+    return -1;
+  }
 
-            // if on Group 4, then only take Cell 1 as it is the 10th Cell at
-            // index 11.
-            if (cell < MAX_CELLS_PER_STACK - 2) {
-                robin->individual_voltages[stack][cell + 1] = responses->values[1];
-                robin->individual_voltages[stack][cell + 2] = responses->values[2];
-            }
-            PEC = responses->values[3];
+  // Store 3 Words = 3 x 16-Bit Words
+  for (int w = 0; w < 3 && destidx < dest_max; ++w, ++destidx) {
+    dest[destidx] = (grp->data[2 * w] << 8) | grp->data[2 * w + 1];
+  }
 
-            // increment to next Register group
-            group += 1;
-
-            // Increment the Cell Counter to access the next cells on the next loop
-            cell += CELLS_PER_GROUP;
-        }
-        // Reset counters for next stack
-        cell = 0;
-        group = 0;
-    }
-    return PARSER_OK;
+  return destidx;
 }
 
-/// Is just a Template, so i need to check up on it later.
-parser_error_t parse_Temperature(SPI_responses_t *responses_Temp) {
-    if (!responses_Temp || !robin) {
-        ESP_LOGE(TAG, "Invalid pointer in parse_Temperature");
-        return PARSER_ERROR_NULL_POINTER;
+// Parses the Cell voltage values
+//
+// rx :  Raw data received from the ISOSPI
+// dest : 1D array from robin->individual_voltages[Module][10]
+int parse_rdcvall(const uint8_t *rx, uint16_t *dest) {
+  int idx = 0;
+
+  //
+  for (int g = 0; g < REG_GROUPS && idx >= 0 && idx < MAX_CELLS; g++) {
+    idx = copy_group_word(&rx[g * BYTES_PER_GROUP], dest, idx, MAX_CELLS);
+    if (idx < 0)
+      return -1;
+  }
+  return (idx < 0) ? -1 : 0;
+}
+
+// Parses Temperature Values
+//
+// rx :  Raw data received from the ISOSPI
+// dest : 1D array from robin->individual_voltages[Module][10]
+int parse_rdauxall(const uint8_t *rx, uint16_t *dest) {
+  int idx = 0;
+  for (int g = 0; g < REG_GROUPS && idx >= 0 && idx < MAX_AUX_WORDS; ++g) {
+    idx = copy_group_word(&rx[g * BYTES_PER_GROUP], dest, idx, MAX_AUX_WORDS);
+  }
+  return (idx < 0) ? -1 : 0;
+}
+
+// Public API
+//
+// Using offset m * BYTES_PER_DEVICE
+// where 48 Bytes are skipped to reach the next module
+//
+//
+bool parse_voltages(const uint8_t *chain_rawdata) {
+
+  size_t chainbytes = MODULE_COUNT * BYTES_PER_DEVICE;
+  if (!chain_rawdata)
+    return false;
+
+  // for each Module
+  for (int m = 0; m < MODULE_COUNT; ++m) {
+    // create a Frame using offset
+    const uint8_t *frame = &chain_rawdata[m * BYTES_PER_DEVICE];
+    if (parse_rdcvall(frame, robin->individual_voltages[m]) < 0) {
+      return false;
     }
+  }
 
-    // PEC is located at the end of every 6 registers or otherwise 6 x 8 bits
-    // oooooooooor we have 3 x 16 bits in a groups register for Cell voltage
-    // values and then 1 x 16 Bit for Data PEC
-    size_t cell = 0; // Robin_container
-    size_t group = 0;
-    uint16_t PEC = 0;
-    // for every Module present
-    for (size_t stack = 0; stack < NUM_STACKS; stack++) {
-        // for every 4 Register Groups (1 - 12)
-        while (group < MAX_GROUPS && cell < MAX_CELLS_PER_STACK) {
-            // Check PEC
-            uint8_t Data[CELLS_PER_GROUP] = {
-                responses_Temp->values[0],
-                responses_Temp->values[1],
-                responses_Temp->values[2],
-            };
-            if (Compute_Data_PEC(Data, sizeof(Data)) != PEC) {
-                ESP_LOGE(TAG, "PEC mismatch in stack %zu, group %zu", stack, group);
-                return PARSER_ERROR_PEC_MISMATCH;
-            }
+  return true;
+}
 
-            robin->individual_temperatures[stack][cell] = responses_Temp->values[0];
+bool parse_temperatures(const uint8_t *chain_rawdata) {
 
-            // if on Group 4, then only take Cell 1 as it is the 10th Cell at
-            // index 11.
-            if (cell < MAX_CELLS_PER_STACK - 2) {
-                robin->individual_temperatures[stack][cell + 1] = responses_Temp->values[1];
-                robin->individual_temperatures[stack][cell + 2] = responses_Temp->values[2];
-            }
-            PEC = responses_Temp->values[3];
+  size_t chainbytes = MODULE_COUNT * BYTES_PER_DEVICE;
+  if (!chain_rawdata)
+    return false;
 
-            // increment to next Register group
-            group += 1;
-
-            // Increment the Cell Counter to access the next cells on the next loop
-            cell += CELLS_PER_GROUP;
-        }
-        // Reset counters for next stack
-        cell = 0;
-        group = 0;
+  // for each Module
+  for (int m = 0; m < MODULE_COUNT; ++m) {
+    // create a Frame using offset
+    const uint8_t *frame = &chain_rawdata[m * BYTES_PER_DEVICE];
+    if (parse_rdcvall(frame, robin->individual_voltages[m]) < 0) {
+      return false;
     }
-    return PARSER_OK;
+  }
+
+  return true;
 }
 
 // CAN DATA FORMATTER
@@ -135,79 +136,36 @@ parser_error_t parse_Temperature(SPI_responses_t *responses_Temp) {
 
 void individual_voltages_formatter(individual_voltages_frame_t *frame,
                                    uint16_t voltages[5], uint8_t mux) {
-    if (!frame || !voltages) {
-        ESP_LOGE(TAG, "Invalid pointer in individual_voltages_formatter");
-        return;
-    }
+  if (!frame || !voltages) {
+    ESP_LOGE(TAG, "Invalid pointer in individual_voltages_formatter");
+    return;
+  }
 
-    memset(frame->bytes, 0, sizeof(frame->bytes));
+  memset(frame->bytes, 0, sizeof(frame->bytes));
 
-    frame->fields.mux = mux;
-    frame->fields.voltage_1 = voltages[0] & 0x3FF;
-    frame->fields.voltage_2 = voltages[1] & 0x3FF;
-    frame->fields.voltage_3 = voltages[2] & 0x3FF;
-    frame->fields.voltage_4 = voltages[3] & 0x3FF;
-    frame->fields.voltage_5 = voltages[4] & 0x3FF;
+  frame->fields.mux = mux;
+  frame->fields.voltage_1 = voltages[0] & 0x3FF;
+  frame->fields.voltage_2 = voltages[1] & 0x3FF;
+  frame->fields.voltage_3 = voltages[2] & 0x3FF;
+  frame->fields.voltage_4 = voltages[3] & 0x3FF;
+  frame->fields.voltage_5 = voltages[4] & 0x3FF;
 
-    frame->fields.Reserved = 0;
+  frame->fields.Reserved = 0;
 }
 
 void individual_temperatures_formatter(individual_temperatures_frame_t *frame,
                                        uint16_t temps[5], uint8_t mux) {
-    if (!frame || !temps) {
-        ESP_LOGE(TAG, "Invalid pointer in individual_temperatures_formatter");
-        return;
-    }
+  if (!frame || !temps) {
+    ESP_LOGE(TAG, "Invalid pointer in individual_temperatures_formatter");
+    return;
+  }
 
-    frame->fields.mux = mux;
-    frame->fields.temp_1 = temps[0] & 0x3FF;
-    frame->fields.temp_2 = temps[1] & 0x3FF;
-    frame->fields.temp_3 = temps[2] & 0x3FF;
-    frame->fields.temp_4 = temps[3] & 0x3FF;
-    frame->fields.temp_5 = temps[4] & 0x3FF;
+  frame->fields.mux = mux;
+  frame->fields.temp_1 = temps[0] & 0x3FF;
+  frame->fields.temp_2 = temps[1] & 0x3FF;
+  frame->fields.temp_3 = temps[2] & 0x3FF;
+  frame->fields.temp_4 = temps[3] & 0x3FF;
+  frame->fields.temp_5 = temps[4] & 0x3FF;
 
-    frame->fields.Reserved = 0;
-}
-
-// Common parsing function for both voltages and temperatures
-static parser_error_t parse_cell_data(SPI_responses_t *responses, 
-                                    uint16_t (*target_array)[MAX_CELLS_PER_STACK],
-                                    size_t stack_index) {
-    if (!responses || !target_array) {
-        ESP_LOGE(TAG, "Null pointer in parse_cell_data");
-        return PARSER_ERROR_NULL_POINTER;
-    }
-
-    size_t cell = 0;
-    size_t group = 0;
-    uint16_t PEC = 0;
-
-    while (group < MAX_GROUPS && cell < MAX_CELLS_PER_STACK) {
-        // Check PEC
-        uint8_t Data[CELLS_PER_GROUP] = {
-            responses->values[0],
-            responses->values[1],
-            responses->values[2]
-        };
-
-        if (Compute_Data_PEC(Data, sizeof(Data)) != PEC) {
-            ESP_LOGE(TAG, "PEC mismatch in stack %zu, group %zu", stack_index, group);
-            return PARSER_ERROR_PEC_MISMATCH;
-        }
-
-        // Store first cell value
-        target_array[stack_index][cell] = responses->values[0];
-
-        // Store remaining cell values if within bounds
-        if (cell < MAX_CELLS_PER_STACK - 2) {
-            target_array[stack_index][cell + 1] = responses->values[1];
-            target_array[stack_index][cell + 2] = responses->values[2];
-        }
-
-        PEC = responses->values[3];
-        group++;
-        cell += CELLS_PER_GROUP;
-    }
-
-    return PARSER_OK;
+  frame->fields.Reserved = 0;
 }

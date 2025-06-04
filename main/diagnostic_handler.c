@@ -90,7 +90,7 @@ void Diagnostic_check(void *arguments) {
     if (xSemaphoreTake(diagnostic_semaphore, portMAX_DELAY) == pdTRUE) {
       // Get stack high water mark - shows minimum free stack space during task execution
       uxHighWaterMark = uxTaskGetStackHighWaterMark(NULL);
-      ESP_LOGI(TAG, "Stack high water mark: %u", uxHighWaterMark);
+      // ESP_LOGI(TAG, "Stack high water mark: %u", uxHighWaterMark);
       
       // Perform the diagnostic test
       ESP_LOGV(TAG, "[*] Running diagnostic test...");
