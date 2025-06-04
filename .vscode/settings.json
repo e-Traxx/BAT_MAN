@@ -1,6 +1,0 @@
-{
-    "files.associations": {
-        "robin_handler.h": "c"
-    },
-    "idf.pythonInstallPath": "/usr/bin/python3"
-}
