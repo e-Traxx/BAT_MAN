@@ -66,9 +66,11 @@ env/
 venv/
 .venv/
 .ORACLE/          # your custom venv path, adjust as needed
-ORACLE/gui/lib/   # explicit path that produced the 210 MB file
+# explicit path that produced the 210 MB file
 # (add any other venv paths you sometimes create)
-
+.ORACLE/__pycache__
+.ORACLE/gui
+.ORACLE/.vscode
 # ── IDE & tooling ------------------------------------------------
 .vscode/
 .idea/
