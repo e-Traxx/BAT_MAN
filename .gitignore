@@ -50,3 +50,26 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# ── Python packaging and caches ─────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# ── Virtual-environment directories ─────────────────────────
+env/
+venv/
+.venv/
+.ORACLE/          # your custom venv path, adjust as needed
+ORACLE/gui/lib/   # explicit path that produced the 210 MB file
+# (add any other venv paths you sometimes create)
+
+# ── IDE & tooling ------------------------------------------------
+.vscode/
+.idea/
+*.swp
