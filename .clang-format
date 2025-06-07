@@ -1,0 +1,10 @@
+# .clang-format  – project root
+BasedOnStyle:  GNU  # anything not listed below inherits from Microsoft
+IndentWidth:   4
+ColumnLimit:   120
+SortIncludes:  false
+UseTab: Always
+BreakBeforeBraces: GNU 
+IndentCaseLabels: false 
+
+

@@ -13,6 +13,7 @@ idf_component_register(
         "can_handler.c"
         "spi_handler.c"
         "diagnostic_handler.c"
+        "isospi_handler.c"
     INCLUDE_DIRS 
         "include"
     REQUIRES 
