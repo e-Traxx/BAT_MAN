@@ -184,20 +184,22 @@ void Diagnostic_packet_formatter(diag_frame_t *frame, uint16_t voltage,
                                  uint16_t current, uint16_t temp, uint8_t soc,
                                  uint8_t soh, uint8_t flags[8]) {
 
-  frame->fields.Overall_voltage = voltage & 0x1FFF;
-  frame->fields.Curr_value = current & 0xFFF;
-  frame->fields.Highest_temp = temp & 0x3FFF;
-  frame->fields.SOC = soc;
-  frame->fields.SOH = soh;
-
-  frame->fields.lost_comm = (flags[0] & 0x1);
-  frame->fields.Voltage_sense_error = (flags[1] & 0x1);
-  frame->fields.Overall_overvoltage = (flags[2] & 0x1);
-  frame->fields.Balancing_on = (flags[3] & 0x1);
-  frame->fields.temp_sensor_loss = (flags[4] & 0x1);
-  frame->fields.pack_undervoltage = (flags[5] & 0x1);
-  frame->fields.Curr_sensor_loss = (flags[6] & 0x1);
-  frame->fields.high_temp = (flags[7] & 0x1);
-
-  frame->fields.Reserved = 0;
+  // Direct bit assignments matching DBC file exactly
+  frame->fields.Overall_voltage = voltage & 0x1FFF;        // 0|13@1+ (0.1,0) [0|819.1] "V"
+  frame->fields.Highest_temp_recorded = temp & 0x3FFF;     // 13|14@1+ (0.01,0) [0|163.83] "∞C"
+  frame->fields.Curr_value = current & 0xFFF;              // 27|12@1+ (0.1,0) [0|409.5] "A"
+  frame->fields.SOC = soc;                                 // 39|8@1- (1,0) [0|0]
+  
+  // Error Flags (exactly matching DBC bit positions)
+  frame->fields.lost_comm = (flags[0] & 0x1);              // 47|1@1- (1,0) [0|0]
+  frame->fields.Voltage_sensor_loss = (flags[1] & 0x1);    // 48|1@1- (1,0) [0|0]
+  frame->fields.Battery_overvoltage = (flags[2] & 0x1);    // 49|1@1- (1,0) [0|0]
+  frame->fields.Balancing_on = (flags[3] & 0x1);           // 50|1@1- (1,0) [0|0]
+  frame->fields.temp_sensor_loss = (flags[4] & 0x1);       // 51|1@1- (1,0) [0|0]
+  frame->fields.Battery_undervoltage = (flags[5] & 0x1);   // 52|1@1- (1,0) [0|0]
+  frame->fields.curr_sensor_loss = (flags[6] & 0x1);       // 53|1@1- (1,0) [0|0]
+  frame->fields.Over_templimit = (flags[7] & 0x1);         // 54|1@1- (1,0) [0|0]
+  frame->fields.System_health = 0;                         // 55|1@1+ (1,0) [0|1]
+  
+  frame->fields.Reserved = 0;                              // Remaining bits
 }

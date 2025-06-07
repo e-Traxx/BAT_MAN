@@ -14,23 +14,24 @@ extern TimerHandle_t diagnostic_timer;
 
 // TODO: REMOVE SOH AND FIX BIT ALLOCATIONS
 typedef struct {
-  uint32_t Overall_voltage : 13; // 0-12 Bits
-  uint32_t Highest_temp : 14;    // 13-26 Bits
-  uint32_t Curr_value : 12;      // 27-38 Bits
-  uint32_t SOC : 8;              // 39-46 Bits
-  uint32_t SOH : 8;              // 47-54 Bits
-
-  // Error Flags
-  uint32_t lost_comm : 1;           // Bit 55
-  uint32_t Voltage_sense_error : 1; // Bit 56
-  uint32_t Overall_overvoltage : 1; // Bit 57
-  uint32_t Balancing_on : 1;        // Bit 58
-  uint32_t temp_sensor_loss : 1;    // Bit 59
-  uint32_t pack_undervoltage : 1;   // Bit 60
-  uint32_t Curr_sensor_loss : 1;    // Bit 61
-  uint32_t high_temp : 1;           // Bit 62
-
-  uint32_t Reserved : 1;
+  uint32_t Overall_voltage : 13;    // 0-12 Bits
+  uint32_t Highest_temp_recorded : 14; // 13-26 Bits
+  uint32_t Curr_value : 12;         // 27-38 Bits
+  uint32_t SOC : 8;                 // 39-46 Bits
+  
+  // Error Flags (matching DBC bit positions)
+  uint32_t lost_comm : 1;           // Bit 47
+  uint32_t Voltage_sensor_loss : 1; // Bit 48
+  uint32_t Battery_overvoltage : 1; // Bit 49
+  uint32_t Balancing_on : 1;        // Bit 50
+  uint32_t temp_sensor_loss : 1;    // Bit 51
+  uint32_t Battery_undervoltage : 1;// Bit 52
+  uint32_t curr_sensor_loss : 1;    // Bit 53
+  uint32_t Over_templimit : 1;      // Bit 54
+  uint32_t System_health : 1;       // Bit 55
+  
+  // Reserved bits to complete the 64-bit structure
+  uint32_t Reserved : 6;            // Bits 56-63
 } Diag_message_t;
 
 // Union to access both as Struct and byte array
