@@ -48,9 +48,6 @@ static SPI_responses_t rx_temp DMA_ATTR;
 void Adbms_query_callback (TimerHandle_t adbms_timer);
 void Robin_query (void *args);
 void System_report_to_user ();
-void individual_voltages_formatter (individual_voltages_frame_t *frame, uint16_t voltages[5], uint8_t mux);
-void individual_temperatures_formatter (individual_temperatures_frame_t *frame, uint16_t temps[5], uint8_t mux);
-uint16_t extract_received_pec (uint16_t *rxbuffer);
 void adbms_broadcast_command (uint16_t *cmd, spi_device_handle_t sender);
 void adbms_addressed_command (uint16_t *cmd, uint8_t *payload);
 void adbms_read_command (uint16_t *cmd, uint8_t *responses, size_t response_len, spi_device_handle_t sender);
@@ -361,7 +358,7 @@ adbms_read_command (uint16_t *cmd, uint8_t *responses, size_t response_len, spi_
     transmission_data[1] = cmdWord[1];
     transmission_data[2] = (PEC >> 8) & 0xFF;
     transmission_data[3] = (PEC & 0xFF);
-	ESP_LOGI("ADBMS_CMD", "Command: 0x%04X, PEC: 0x%04X", *cmd, PEC);
+    ESP_LOGI ("ADBMS_CMD", "Command: 0x%04X, PEC: 0x%04X", *cmd, PEC);
     ESP_LOGE ("ADBMS_CMD", "TX: [%02X %02X %02X %02X]", transmission_data[0], transmission_data[1],
 	      transmission_data[2], transmission_data[3]);
     // Send and Read
