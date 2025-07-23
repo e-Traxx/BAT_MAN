@@ -12,6 +12,7 @@
 #include "freertos/task.h"
 #include "spi_handler.h"
 #include <stdio.h>
+#include "uart_handler.h"
 
 static const char *TAG = "Setup";
 
@@ -65,12 +66,13 @@ initialise_setups (void)
     // Setup
 
     // CAN_Setup();
-    ISOSPI_Setup ();
+    // ISOSPI_Setup ();
+    UART_Setup ();
     // WIFI_Setup();
 
     // Setup Diagnostic system
     // Diag_Setup();
-    ADBMS_Setup ();
+    // ADBMS_Setup ();
     // Albert_Setup();
 
     unsigned int system_health = *(unsigned int *)&flags;
@@ -92,11 +94,11 @@ Start_schedule (void)
     //   ESP_LOGE(TAG, "[-] Failed to start diagnostic_timer\n");
     // }
 
-    if (xTimerStart (adbms_timer, 0) != pdPASS)
-	{
-	    ESP_LOGE (TAG, "ROBIN Timer create failed – heap %" PRIu32, esp_get_free_heap_size ());
-	    ESP_LOGE (TAG, "[-] Failed to start adbms_timer");
-	}
+    //    if (xTimerStart (adbms_timer, 0) != pdPASS)
+    // {
+    //     ESP_LOGE (TAG, "ROBIN Timer create failed – heap %" PRIu32, esp_get_free_heap_size ());
+    //     ESP_LOGE (TAG, "[-] Failed to start adbms_timer");
+    // }
     //
     // if (xTimerStart(albert_timer, 0) != pdPASS) {
     //   ESP_LOGE(TAG, "ALBERT Timer create failed – heap %u",
@@ -109,7 +111,7 @@ Start_schedule (void)
     // Upon created, tasks are placed into ready state
     // xTaskCreate(Diagnostic_check, "System_diag", 4096, NULL, 2, NULL);
     // xTaskCreate(CAN_sendMessage, "Can_tx", 2048, NULL, 3, NULL);
-    xTaskCreate (Robin_query, "Robin_query", 8192, NULL, 2, NULL);
+    // xTaskCreate (Robin_query, "Robin_query", 8192, NULL, 2, NULL);
     // xTaskCreate(Albert_Query, "Albert_query", 2048, NULL, 1, NULL);
 }
 

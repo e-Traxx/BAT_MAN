@@ -5,8 +5,8 @@ idf_component_register(
     SRCS 
         "Batman_esp.c"
         "Oracle/Oracle.c"
-        "Robin/Robin_parser.c"
-        "Robin/Robin_handler.c"
+        "Robin_spi/Robin_parser.c"
+        # "Robin/Robin_handler.c"
         "Albert/Albert.c"
         "OTA/Ota_handler.c"
         "WIFI.c"
@@ -14,6 +14,8 @@ idf_component_register(
         "spi_handler.c"
         "diagnostic_handler.c"
         "isospi_handler.c"
+        "uart_handler.c"
+        "Robin_TI/Robin_handler_TI.c"
     INCLUDE_DIRS 
         "include"
     REQUIRES 

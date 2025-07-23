@@ -5,17 +5,23 @@
 #include "hal/gpio_types.h"
 #include "hal/uart_types.h"
 #include "Robin_TI_handler.h"
+#include "uart_handler.h"
 
 #define UART_PORT_NUM UART_NUM_1
 #define UART_TX_PIN GPIO_NUM_17
 #define UART_RX_PIN GPIO_NUM_16
 #define UART_BAUD_RATE 1 * 1000 * 1000 // 1Mbps
 #define UART_BUF_SIZE 256
-const char *TAG = "UART";
+static const char *TAG = "UART";
 
-static void bq79600_wake_tone ();
-static void bq79616_wake_tone ();
+void bq79600_wake_tone ();
+bool BQ79600_Read_FAULT (uint8_t *fault_byte, uint16_t REG_ADDR, uint8_t BQ_FRAME_LEN);
+uint16_t CRC16_IBM (uint8_t *pBuf, int sendLen);
+
 const uint16_t crc16_table[256];
+Robin_TI_Union_t Robin_frame;
+BQ79600_err_t BQ79600_errors_present;
+bool first_start = true;
 
 void
 UART_Setup ()
@@ -30,47 +36,92 @@ UART_Setup ()
     uart_param_config (UART_PORT_NUM, &uart_config); // Setup UART
     uart_set_pin (UART_PORT_NUM, UART_TX_PIN, UART_RX_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
     uart_driver_install (UART_PORT_NUM, UART_BUF_SIZE * 2, 0, 0, NULL, 0);
-}
 
-static void
-wake_tone ()
-{
     bq79600_wake_tone ();
-    bq79616_wake_tone ();
+
+    first_start = true;
+    // nFAULT Check
 }
 
-static void
+void
 bq79600_wake_tone ()
 {
     // Manual Control of GPIO
     /*
      * Set up TX to set itself on LOW for 3ms
      *  This is the Wake up signal.
-     *
      */
+
+    // Manual Control
     gpio_set_direction (UART_TX_PIN, GPIO_MODE_OUTPUT_OD);
     gpio_set_level (UART_TX_PIN, 0);
-    vTaskDelay (pdMS_TO_TICKS (3));
+    // Ping for x seconds
+    vTaskDelay (pdMS_TO_TICKS (BQ79600_WAKE_PING_TIME_MS));
     gpio_set_level (UART_TX_PIN, 1);
-    vTaskDelay (pdMS_TO_TICKS (4));
+    // Wait for ACTIVE
+    vTaskDelay (pdMS_TO_TICKS (BQ79600_WAKE_TONE_TIME_MS));
     gpio_set_direction (UART_TX_PIN, GPIO_MODE_INPUT_OUTPUT);
 }
 
-static void
-bq79616_wake_tone ()
+void
+ENABLE_AUTO_ADDR ()
 {
-    // Send a wake up tone to the Slave modules
-    // Manual Control of GPIO
-    /*
-     * Set up TX to set itself on LOW for 3ms
-     *  This is the Wake up signal.
-     */
 
-    gpio_set_direction (UART_TX_PIN, GPIO_MODE_OUTPUT_OD);
-    vTaskDelay (pdMS_TO_TICKS (3));
-    gpio_set_level (UART_TX_PIN, 1);
-    vTaskDelay (pdMS_TO_TICKS (4));
-    gpio_set_direction (UART_TX_PIN, GPIO_MODE_INPUT_OUTPUT);
+    // brdcast Write 0x81 to address 0x309 (enable BQ7961X-Q1 auto addressing)
+}
+
+esp_err_t
+BQ79600_Diagnostic ()
+{
+    // for all BQ79600 errors
+    // FAULT_REG
+    uint8_t Fault_bytes[8];
+    BQ79600_Read_FAULT (Fault_bytes, Bridge_FAULT_REG, 7);
+}
+
+// Detect and deal with Errors on the BQ79600 Bridge side
+bool
+BQ79600_Read_FAULT (uint8_t *fault_byte, uint16_t REG_ADDR, uint8_t BQ_FRAME_LEN)
+{
+
+    uint8_t frame[8];
+    /*
+     * After Auto addressing, the Bridge will always have the lowest address (0x00).
+     */
+    // Query and check Fault_REG
+    // 2. Build FAULT_REG read frame
+    frame[0] = CMD_SINGLE_DEV_READ; // INIT, single device read
+    frame[1] = (0x00 & 0x3F);	    // Masking to 6-Bit
+    frame[2] = REG_ADDR >> 8;	    // Reg MSB
+    frame[3] = REG_ADDR & 0xFF;	    // Reg LSB (FAULT_REG)
+    frame[4] = 0x00;		    // Read 1 byte
+    uint16_t crc = CRC16_IBM (frame, 5);
+    frame[5] = (crc >> 8);
+    frame[6] = crc & 0xFF;
+
+    /* 20-bit COMM-CLEAR (logic-0) before every frame – easiest is to
+       pull the TX line low for 20 bit-times, then leave 1 bit-time high.
+       Using UART hardware: send 0x00 with break-length 20 bits. */
+    uart_tx_chars (UART_PORT_NUM, "\0", 1); // COMM-CLEAR
+    uart_wait_tx_done (UART_PORT_NUM, 100 / portTICK_PERIOD_MS);
+
+    ESP_ERROR_CHECK (uart_write_bytes (UART_PORT_NUM, (char *)frame, BQ_FRAME_LEN));
+    ESP_ERROR_CHECK (uart_wait_tx_done (UART_PORT_NUM, 20 / portTICK_PERIOD_MS));
+
+    /* Response is also 7 bytes: INIT | DEV_ADR | REG_ADR[15:8] |
+       REG_ADR[7:0] | DATA | CRC[15:8] | CRC[7:0]                */
+    uint8_t rx[BQ_FRAME_LEN];
+    int r = uart_read_bytes (UART_PORT_NUM, rx, BQ_FRAME_LEN,
+			     pdMS_TO_TICKS (10)); // t8 in DS ≈1 ms
+    if (r != BQ_FRAME_LEN)
+	return false;
+
+    /* quick CRC check */
+    if (CRC16_IBM (rx, 5) != ((rx[5] << 8) | rx[6]))
+	return false;
+
+    *fault_byte = rx[4];
+    return true;
 }
 
 /**
@@ -80,7 +131,7 @@ bq79616_wake_tone ()
  * uint16_t: Calculated CRC value
  */
 uint16_t
-SpiCRC16 (uint8_t *pBuf, int sendLen)
+CRC16_IBM (uint8_t *pBuf, int sendLen)
 {
     uint16_t wCRC = 0xFFFF;
     int i;
@@ -122,7 +173,7 @@ bq_uart_tx_rx (const uint8_t *tx_data, size_t tx_len, uint8_t *rx_data, int rx_l
 
 // CRC16 TABLE
 // ITU_T polynomial: x^16 + x^15 + x^2 + 1
-const uint16_t crc16_table[256]
+const uint16_t TI_crc16_table[256]
     = { 0x0000, 0xC0C1, 0xC181, 0x0140, 0xC301, 0x03C0, 0x0280, 0xC241, 0xC601, 0x06C0, 0x0780, 0xC741, 0x0500, 0xC5C1,
 	0xC481, 0x0440, 0xCC01, 0x0CC0, 0x0D80, 0xCD41, 0x0F00, 0xCFC1, 0xCE81, 0x0E40, 0x0A00, 0xCAC1, 0xCB81, 0x0B40,
 	0xC901, 0x09C0, 0x0880, 0xC841, 0xD801, 0x18C0, 0x1980, 0xD941, 0x1B00, 0xDBC1, 0xDA81, 0x1A40, 0x1E00, 0xDEC1,
